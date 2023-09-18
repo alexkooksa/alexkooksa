@@ -1,0 +1,29 @@
+@mixin mq($width, $type: min) {
+    @if $type == max {
+        $width: $width - 1;
+    }
+    @media screen and (#{$type}-width: #{$width}px) {
+        @content;
+    }
+}
+
+@mixin default-font {
+    font-family: "Tilda Sans", sans-serif;
+    font-weight: 400;
+}
+
+@mixin title-font {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+}
+
+@mixin accent-font {
+    font-family: "JetBrains Mono", sans-serif;
+    font-weight: 400;
+}
+
+@mixin transition {
+    transition: all .15s ease-in-out;
+}
+
+
