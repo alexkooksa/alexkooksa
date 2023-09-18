@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Tilda Sans';
+	src: url('TildaSans-VF.woff2') format('woff2 supports variations'),
+       url('TildaSans-VF.woff2') format('woff2-variations');
+	font-weight: 400 700;
+	font-stretch: 25% 151%;
+}
+@font-face {
+	font-family: 'Unbounded';
+	src: url('Unbounded-VF.woff2') format('woff2 supports variations'),
+       url('Unbounded-VF.woff2') format('woff2-variations');
+	font-weight: 200 900;
+	font-stretch: 25% 151%;
+}
+@font-face {
+	font-family: 'JetBrains Mono';
+	src: url('JetBrainsMono-VF.woff2') format('woff2 supports variations'),
+       url('JetBrainsMono-VF.woff2') format('woff2-variations');
+	font-weight: 400 1000;
+	font-stretch: 25% 151%;
+}

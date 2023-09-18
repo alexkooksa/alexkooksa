@@ -1,0 +1,21 @@
+{% macro video(filePath, posterPath, controls = false, class = null) %}
+
+<div class="video__wrapper">
+    {% if controls == true %}
+    <button type="button" class="video__play-button" data-button-state="pause">
+        <svg class="video__play-button-icon video__play-button-icon--play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M70 140L70 140c-38.7 0-70-31.3-70-70l0 0C0 31.3 31.3 0 70 0l0 0c38.7 0 70 31.3 70 70l0 0C140 108.7 108.7 140 70 140z" />
+            <polygon fill-rule="evenodd" clip-rule="evenodd" points="57 50.9 57 89.4 88.5 70.2 " />
+        </svg>
+        <svg class="video__play-button-icon video__play-button-icon--pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M70 140L70 140c-38.7 0-70-31.3-70-70v0C0 31.3 31.3 0 70 0h0c38.7 0 70 31.3 70 70v0C140 108.7 108.7 140 70 140z" />
+            <rect fill-rule="evenodd" clip-rule="evenodd" x="56" y="50.8" class="st1" width="8.8" height="38.5" />
+            <rect fill-rule="evenodd" clip-rule="evenodd" x="75.2" y="50.8" class="st1" width="8.8" height="38.5" />
+        </svg>
+    </button>
+    {% endif %}
+
+    <video {% if class %} class="{{class}}" {%endif%} src="/content/video/{{filePath}}"  poster="/content/video/{{posterPath}}"  playsinline="true" webkit-playsinline="true" preload="auto" muted="muted"autobuffer="true"  {% if controls == true %} data-state="pause" {% else %} autoplay="true" loop="true" {% endif %} ></video>
+</div>
+
+{% endmacro %}

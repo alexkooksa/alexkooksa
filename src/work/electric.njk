@@ -1,0 +1,192 @@
+---
+tags: ['older', 'projects']
+date: 2020-01-01
+title: Магазины электрики
+short_title: Электрика
+meta_title: Кейс | Магазины электрики Schneider Electric и Jung
+short_desc: Оригинальная продукция Schneider Electric и Jung
+year: '2020'
+folder: electric
+role:
+- Дизайн
+- Вёрстка и натяжка на CMS
+---
+{% import "../_includes/components.njk" as components %}
+<section class="case-cover dark-bg overlapped">
+    <div class="wrap">
+        {# <img src="/content/{{folder}}/intro.jpg" alt=""> #}
+        {% image2 ["src/content/", folder, "/intro.jpg"] | join, "", "Schneider Russia - скриншот главной страницы",  [1376]  %}
+    </div>
+</section>
+
+<section class="brs-top">
+    <div class="wrap">
+        <h2>Задача</h2>
+        <div class="rows">
+            <p>Разработать дизайн и сверстать на CMS шаблон для интернет-магазина электрики. Официальная продукция: дизайнерские серии розеток и выключателей, дифавтоматы, контроль климата. Клиенты: дизайнеры интерьера, электрики и строительные бригады, предприятия разного масштаба.</p>
+            <p>Для каждого бренда запланирован отдельный сайт со своей цветовой гаммой. На начальном этапе это Schneider Electric и Jung.</p>
+        </div>
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Типы страниц для вёрстки</h2>
+        <ol class="numbered-list columns-list--3">
+            <li>Главная страница</li>
+            <li>Категория товаров</li>
+            <li>Категория товаров с конструктором</li>
+            <li>Страница товара</li>
+            <li>Результаты поиска</li>
+            <li>Список брендов</li>
+            <li>Пункты самовывоза</li>
+            <li>Корзина</li>
+            <li>Личный кабинет</li>
+            <li>Избранное</li>
+            <li>Статичная страница</li>
+            <li>Контакты</li>
+        </ol>
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Каталог</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>Многоуровневый каталог зафиксирован в левой части экрана.</p>
+            </div>
+
+            <div class="solution-image">
+                {# <img src="/content/{{folder}}/sch_menu.jpg" alt=""> #}
+                {% image2 ["src/content/", folder, "/sch_menu.jpg"] | join, "bordered", "Schneider Russia - скриншот меню",  [995, 1493]  %}
+            </div>
+        </div>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>Для бренда Jung дополнительно сделан предпросмотр внешнего вида серий.</p>
+            </div>
+
+            <div class="solution-image">
+                {{ components.video('jung-menu.mp4', 'jung-menu-poster.jpg', false, 'bordered') }}
+            </div>
+        </div>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>Отдельный раздел с сериями представлен в виде разноплановой сетки.</p>
+            </div>
+
+            <div class="solution-image">
+                <div class="media-bg-layer--medium-gray">
+                    {# <img src="/content/{{folder}}/series_grid.jpg" alt=""> #}
+                    {% image2 ["src/content/", folder, "/series_grid.jpg"] | join, "", "Jung Russia - скриншот страницы серий",  [995]  %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Конфигуратор (Jung)</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>На сайте Jung можно экспериментировать с сочетаниями цветов и собрать нужную комбинацию в каждой серии устройств.</p>
+            </div>
+
+            <div class="solution-image">
+                {{ components.video('jung-config.mp4', 'jung-config-poster.jpg', true, 'bordered') }}
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Страница товара</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>Самая важная информация для покупателя (помимо цены)&nbsp;—&nbsp;это наличие товара и его количество. Иногда товара на складе может быть недостаточно, тогда его нужно заказывать отдельно у производителя, об этом сразу сообщаем пользователю. На этой же странице можно подобрать рамку к розеткам и выключателям.</p>
+            </div>
+
+            <div class="solution-image">
+                {# <img class="bordered" src="/content/{{folder}}/sch_product.jpg" alt=""> #}
+                {% image2 ["src/content/", folder, "/sch_product.jpg"] | join, "bordered", "Schneider Russia - скриншот страницы товара",  [995, 1493]  %}
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Корзина</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>На этапе оформления заказа можно выбрать город получения, предпочтительный способ доставки и способ оплаты. После этого заказ отправляется в собственную CRM и обрабатывается командой магазина.</p>
+            </div>
+
+            <div class="solution-image">
+                <div class="media-bg-layer--dark-gray">
+                    {# <img src="/content/{{folder}}/cart_list.jpg" alt=""> #}
+                    {% image2 ["src/content/", folder, "/cart_list.jpg"] | join, "", "Schneider Russia - скриншот страницы корзины",  [995, 1493]  %}
+
+                    <div class="long-image-crop" data-lightbox>
+                        {# <img data-lightbox src="/content/{{folder}}/checkout.jpg" alt=""> #}
+                        {% image2 ["src/content/", folder, "/checkout.jpg"] | join, "", "Schneider Russia - страница чекаута",  [1376]  %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Результат</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <ul class="bulleted-list--custom">
+                    <li>Сайты сверстаны на собственной модификации Image CMS с модулем для магазина.</li>
+                    <li>Удобно пользоваться в том числе и на небольших устройствах.</li>
+                    <li>Четкая иерархия и SEO-оптимизация положительно повлияли органическую выдачу.</li>
+                    <li>Много активных пользователей. С момента запуска было отгружено несколько тысяч заказов по всем регионам России, десятки заказов ежедневно обрабатываются командой магазина.</li>
+                </ul>
+            </div>
+            <div class="solution-image">
+                {# <img class="" src="/content/{{folder}}/mobile.jpg" alt=""> #}
+                {# {% image2 ["src/content/", folder, "/mobile.jpg"] | join, "", "Schneider Russia / Jung Russia - скриншот мобильной версии",  [995]  %} #}
+                <div class="media-bg-layer--medium-gray">
+                    <div class="mobile-screens">
+                        <div class="grid-item">
+                            {% image2 ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Schneider Russia - скриншот мобильной версии - 01",  ""  %}
+
+                        </div>
+                        <div class="grid-item">
+                            {% image2 ["src/content/", folder, "/mobile-02.jpg"] | join, "", "Jung Russia - скриншот мобильной версии - 02",  ""  %}
+
+                        </div>
+                        <div class="grid-item">
+                            {% image2 ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Schneider Russia - скриншот мобильной версии - 03",  ""  %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top links-section">
+    <div class="wrap">
+        <h2>Ссылки</h2>
+
+        <div class="buttons-group">
+            <a href="https://schneider-russia.com" target="_blank" class="btn btn-outline--default btn-external"><span>schneider-russia.com</span></a>
+            <a href="https://jungrussia.ru/" target="_blank" class="btn btn-outline--default btn-external"><span>jungrussia.ru</span></a>
+        </div>
+    </div>
+</section>

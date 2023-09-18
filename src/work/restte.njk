@@ -1,0 +1,139 @@
+---
+tags: ['older', 'projects']
+date: 2021-01-01
+title: Restte
+meta_title: Кейс | Restte — интернет-магазин мебели
+short_desc: Интернет-магазин мебели для сегмента HoReCa
+year: '2021'
+folder: restte
+role:
+- Дизайн
+- Вёрстка и натяжка на CMS
+---
+{% import "../_includes/components.njk" as components %}
+<section class="case-cover dark-bg overlapped">
+    <div class="wrap">
+        {{ components.video('restte-menu.mp4', 'restte-menu-poster.jpg') }}
+    </div>
+</section>
+
+<section class="brs-top">
+    <div class="wrap">
+        <h2>Задача</h2>
+        <p>Разработать отдельный сайт по направлению HoReCa для постоянного клиента, владеющего интернет-магазином мебели и декора. Сайт должен быть стильным и лаконичным и иметь стандартный функционал.</p>
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Типы страниц для вёрстки</h2>
+        <ol class="numbered-list columns-list">
+            <li>Главная страница</li>
+            <li>Категория товаров</li>
+            <li>Страница товара</li>
+            <li>Результаты поиска</li>
+            <li>Избранное</li>
+            <li>Корзина</li>
+            <li>Блог</li>
+            <li>Статичная страница</li>
+            <li>Личный кабинет</li>
+            <li>Контакты</li>
+        </ol>
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Главная страница</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>На главой разместился классический блок с баннерами, которыми клиент может управлять из админки. Ниже сделан переход в основные категории: мебель для ресторанов, офисов или гостиниц. В блоке с примерами мебели в интерьере покупатель может вдохновиться использованием товара в реальной жизни.</p>
+            </div>
+
+            <div class="solution-image">
+                {# <img class="bordered" src="/content/{{folder}}/homepage.jpg" alt=""> #}
+                {% image2 ["src/content/", folder, "/homepage.jpg"] | join, "bordered", "Restte.com - скриншот главной страницы",  [995]  %}
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Категория товаров</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>В верхней части экрана сделан типовой блок-обложка: заголовок H1, состоящий из названия основной категории и подкатегории, короткого описания и стильной картинки. В самом каталоге доступно множество фильтров для подбора товара.</p>
+            </div>
+
+            <div class="solution-image">
+                {# <img class="bordered" src="/content/{{folder}}/category.jpg" alt=""> #}
+                {% image2 ["src/content/", folder, "/category.jpg"] | join, "bordered", "Restte.com - скриншот страницы категории",  [995]  %}
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Страница товара</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>Доступна вся основная информация о товаре, а также возможность оставить заявку на полный подбор мебели для проекта. У некоторых товаров есть ограничение в виде минимального количества для заказа, об этом сразу предупреждаем покупателя.</p>
+            </div>
+            <div class="solution-image">
+                <img class="bordered" src="/content/{{folder}}/product.jpg" alt="">
+                {% image2 ["src/content/", folder, "/product.jpg"] | join, "bordered", "Restte.com - скриншот страницы товара",  [995]  %}
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Результат</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <ul class="bulleted-list--custom">
+                    <li>Сайт сверстан на собственной модификации Image CMS с модулем для магазина.</li>
+                    <li>Продуманная иерархия каталога положительно отразилась на SEO. </li>
+                    <li>Удобно пользоваться в том числе и на небольших устройствах. </li>
+                    <li>Актуальность контента поддерживается модераторами клиента через админ-панель и синхронизацию.</li>
+                </ul>
+            </div>
+            <div class="solution-image">
+                {# <img class="" src="/content/{{folder}}/mobile.jpg" alt=""> #}
+                {# {% image2 ["src/content/", folder, "/mobile.jpg"] | join, "", "Restte.com - скриншот мобильной версии",  [995]  %} #}
+                <div class="media-bg-layer--dark-gray">
+                    <div class="mobile-screens">
+                        <div class="grid-item">
+                            {% image2 ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Restte - скриншот мобильной версии - 01",  ""  %}
+
+                        </div>
+                        <div class="grid-item">
+                            {% image2 ["src/content/", folder, "/mobile-02.jpg"] | join, "", "Restte - скриншот мобильной версии - 02",  ""  %}
+
+                        </div>
+                        <div class="grid-item">
+                            {% image2 ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Restte - скриншот мобильной версии - 03",  ""  %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top links-section">
+    <div class="wrap">
+        <h2>Ссылки</h2>
+        <a href="https://restte.com" target="_blank" class="btn btn-outline--default btn-external"><span>restte.com</span></a>
+    </div>
+</section>

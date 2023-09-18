@@ -1,0 +1,53 @@
+---
+layout: base.njk
+---
+
+<section class="case-intro dark-bg {% if not no_intro_block is defined %} pb-0 {% endif %}">
+    <div class="wrap">
+        <h1><span class="gradient-text">{{ title }}</span></h1>
+        <h3>{{ short_desc }}</h3>
+        <ul class="taglist">
+            {% for item in role %}
+            <li class="taglist__item">{{item}}</li>
+            {% endfor %}
+        </ul>
+        <div class="case-intro__date"><span>{{year}}</span></div>
+    </div>
+</section>
+
+{{ content | safe}}
+
+<section class="dark-bg more-cases-section brs-top">
+    <div class="wrap">
+        <h2>Другие кейсы</h2>
+
+        <ul class="caselist caselist--small">
+
+            {% for project in collections.projects | reverse  %}
+            {% if page.url !== project.url %}
+            <li>
+                <a class="caselist__item is-vertical" href="{{ project.url }}">
+                    <div class="item-content">
+                        <p class="item-title title-font">{% if project.data.short_title | length %}{{ project.data.short_title }}{% else %}{{ project.data.title }}{% endif %}</p>
+                        <p class="item-desc">{{ project.data.short_desc }}</p>
+                        {% if project.data.role | length %}
+                        <ul class="taglist">
+                            {% for item in project.data.role %}
+                            <li class="taglist__item">{{item}}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        <div class="item-content__bottom rows">
+                            {% if project.data.year | length %}
+                            <p class="item-date"><span>{{ project.data.year }}</span></p>
+                            {% endif %}
+                            <p class="btn btn-white">Смотреть кейс</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>
