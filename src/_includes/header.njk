@@ -11,7 +11,7 @@
         {% endif %}
         <nav>
             <ul class="top-menu" data-el="nav">
-                <li class="top-menu__item"><a class="top-menu__link" href="/#work">Кейсы</a></li>
+                <li class="top-menu__item"><a class="top-menu__link" href="/{% if page.url == '/' %}#{% endif %}work">Кейсы</a></li>
                 <li class="top-menu__item"><a class="top-menu__link" href="/#experience">Опыт</a></li>
                 <li class="top-menu__item"><a class="top-menu__link" href="/#contact">Связаться</a></li>
                 <li class="top-menu__item lang-switcher">
@@ -19,7 +19,11 @@
                     <a class="lang-switcher__item" href="#">en</a>
                 </li>
             </ul>
-            <button class="btn-menu-m" data-btn="open-menu"><div class="btn-menu-box"><div class="btn-menu-inner"></div></div></button>
+            <button class="btn-menu-m" data-btn="open-menu">
+                <div class="btn-menu-box">
+                    <div class="btn-menu-inner"></div>
+                </div>
+            </button>
         </nav>
     </div>
 </header>

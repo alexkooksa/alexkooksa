@@ -1,4 +1,6 @@
-console.warn('Maybe check out https://github.com/alexkooksa/portfolio instead of console ;)')
+console.warn(
+  "Maybe check out https://github.com/alexkooksa/portfolio instead of console ;)"
+);
 
 document.addEventListener("DOMContentLoaded", function (event) {
   var videoPlayButtons = document.getElementsByClassName("video__play-button");
@@ -217,14 +219,16 @@ lightboxImages.forEach((item) => {
     e.stopPropagation();
     modalPopup.classList.add("is-visible");
 
+    document.addEventListener("click", () => {
+      if (modalPopup.classList.contains("is-visible")) {
+        body.removeAttribute("style");
+        modalPopup.classList.remove("is-visible");
+        modalPopup.querySelector("picture").remove();
+      }
+    });
+
     let clonedPicture = data.cloneNode(true);
     modalPopup.querySelector(".wrap").append(clonedPicture);
-
-    document.addEventListener("click", () => {
-      body.removeAttribute("style");
-      modalPopup.classList.remove("is-visible");
-      modalPopup.querySelector("picture").remove();
-    });
   });
 });
 

@@ -15,8 +15,8 @@ module.exports = function (eleventyConfig) {
       let metadata = await Image(src, {
         widths: [...widths, null], // keep original resolution
         formats: ["avif", "webp", null], // keep original format
-        urlPath: "/img",
-        outputDir: "./public/img",
+        urlPath: "/content/img",
+        outputDir: "./public/content/img",
         sharpPngOptions: {
           progressive: true,
           quality: 85,
@@ -43,7 +43,7 @@ module.exports = function (eleventyConfig) {
           ? metadata.png[metadata.png.length - 1]
           : metadata.jpeg[metadata.jpeg.length - 1];
 
-          aspectRatio = `${highsrc.width}/${highsrc.height}`
+          aspectRatio = `${lowsrc.width}/${lowsrc.height}`
 
       return `<picture style="aspect-ratio: ${aspectRatio}">
 			${Object.values(metadata)
@@ -80,6 +80,8 @@ module.exports = function (eleventyConfig) {
       sourceMap: true,
     },
   });
+
+  eleventyConfig.addPassthroughCopy("./CNAME");
 
   eleventyConfig.addPassthroughCopy("./src/styles");
   eleventyConfig.addWatchTarget("./src/styles/");

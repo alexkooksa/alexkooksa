@@ -803,20 +803,6 @@ footer {
     @include mq(768) {
         text-align: center;
     }
-    h1 {
-        font-size: 44px;
-
-        @include mq(768) {
-            font-size: 90px;
-        }
-
-        @include mq(1280) {
-            font-size: 120px;
-        }
-        @include mq(1600) {
-            font-size: 130px;
-        }
-    }
     h3 {
         @include mq(1280, max) {
             font-size: 24px;
