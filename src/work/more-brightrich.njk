@@ -3,7 +3,7 @@ tags: ['latest', 'projects']
 date: 2023-01-01
 title: Больше для Bright Rich
 meta_title: Кейс | Другие проекты для Bright Rich
-short_desc: BR Home, CREMAP (UAE / RU), BR Cash, BR CRM +1
+short_desc: BR Home, CREMAP (UAE / RU), BR Cash, BR CRM etc.
 year: 2022–2023
 folder: more-brightrich
 role:
@@ -14,7 +14,17 @@ no_intro_block: true
 
 ---
 {% import "../_includes/components.njk" as components %}
+
 <section class="brs-top">
+    <div class="wrap">
+        <h2>О компании</h2>
+        <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
+        <h2>Задачи</h2>
+        <p>Помимо переноса основного сайта (о котором можно прочитать в <a href="/work/brightrich" class="link">этом кейсе</a>) для компании был выполнено множество других проектов. Вот некоторые из них.</p>
+    </div>
+</section>
+
+<section class="border-top">
     <div class="wrap">
         <h2><span class="gradient-text">BR Home</span></h2>
         <div class="solution-layout">
@@ -43,19 +53,18 @@ no_intro_block: true
                 <div class="media-bg-layer--gray">
                     {{ components.video('brhome-video.webm', 'brhome-video-poster.jpg', true) }}
                 </div>
-                {# {% image2 ["src/content/", folder, "/brhome-mobile.jpg"] | join, "", "BR Home - скриншот мобильной версии",  [995, 1493]  %} #}
                 <div class="media-bg-layer--gray">
                     <div class="mobile-screens">
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/brhome-mobile-01.jpg"] | join, "", "BR Home - скриншот мобильной версии - 01",  ""  %}
+                            {% image ["src/content/", folder, "/brhome-mobile-01.jpg"] | join, "", "BR Home - скриншот мобильной версии - 01",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/brhome-mobile-02.jpg"] | join, "", "BR Home - скриншот мобильной версии - 02",  ""  %}
+                            {% image ["src/content/", folder, "/brhome-mobile-02.jpg"] | join, "", "BR Home - скриншот мобильной версии - 02",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/brhome-mobile-03.jpg"] | join, "", "BR Home - скриншот мобильной версии - 03",  ""  %}
+                            {% image ["src/content/", folder, "/brhome-mobile-03.jpg"] | join, "", "BR Home - скриншот мобильной версии - 03",  ""  %}
                         </div>
                     </div>
                 </div>
@@ -92,10 +101,10 @@ no_intro_block: true
             <div class="solution-image media-bg-layer--dark-green">
                 <div class="long-image-crop" data-lightbox>
                     {# <img data-lightbox src="/content/{{folder}}/cremap-01.jpg" alt=""> #}
-                    {% image2 ["src/content/", folder, "/cremap-01.jpg"] | join, "", "Cremap.ae - скриншот главной страницы",  [1376]  %}
+                    {% image ["src/content/", folder, "/cremap-01.jpg"] | join, "", "Cremap.ae - скриншот главной страницы",  [1376]  %}
                 </div>
                 {# <img src="/content/{{folder}}/cremap-02.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/cremap-02.jpg"] | join, "", "Cremap.ae - скриншот списка предложений",  [1376]  %}
+                {% image ["src/content/", folder, "/cremap-02.jpg"] | join, "", "Cremap.ae - скриншот списка предложений",  [1376]  %}
             </div>
         </div>
     </div>
@@ -130,7 +139,7 @@ no_intro_block: true
             </div>
             <div class="solution-image">
                 {# <img src="/content/{{folder}}/bcmoscowcity/01-1.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/bcmoscowcity/01-1.jpg"] | join, "", "bcmoscowcity.com - 01-01",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/bcmoscowcity/01-1.jpg"] | join, "", "bcmoscowcity.com - 01-01",  [995, 1493]  %}
 
             </div>
 
@@ -144,7 +153,7 @@ no_intro_block: true
             </div>
             <div class="solution-image">
                 {# <img class="bordered" src="/content/{{folder}}/bcmoscowcity/01-2.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/bcmoscowcity/01-2.jpg"] | join, "bordered", "bcmoscowcity.com - 01-02",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/bcmoscowcity/01-2.jpg"] | join, "bordered", "bcmoscowcity.com - 01-02",  [995, 1493]  %}
 
             </div>
         </div>
@@ -162,7 +171,7 @@ no_intro_block: true
             </div>
             <div class="solution-image">
                 {# <img class="bordered" src="/content/{{folder}}/bcmoscowcity/03-1.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/bcmoscowcity/03-1.jpg"] | join, "bordered", "bcmoscowcity.com - 03-01",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/bcmoscowcity/03-1.jpg"] | join, "bordered", "bcmoscowcity.com - 03-01",  [995, 1493]  %}
 
             </div>
         </div>
@@ -175,7 +184,7 @@ no_intro_block: true
             </div>
             <div class="solution-image">
                 {# <img class="bordered" src="/content/{{folder}}/bcmoscowcity/03-2.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/bcmoscowcity/03-2.jpg"] | join, "bordered", "bcmoscowcity.com - 03-02",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/bcmoscowcity/03-2.jpg"] | join, "bordered", "bcmoscowcity.com - 03-02",  [995, 1493]  %}
 
             </div>
         </div>
@@ -193,7 +202,7 @@ no_intro_block: true
             </div>
             <div class="solution-image">
                 {# <img class="bordered" src="/content/{{folder}}/bcmoscowcity/04-1.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/bcmoscowcity/04-1.jpg"] | join, "bordered", "bcmoscowcity.com - 04-01",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/bcmoscowcity/04-1.jpg"] | join, "bordered", "bcmoscowcity.com - 04-01",  [995, 1493]  %}
 
             </div>
         </div>
@@ -206,7 +215,7 @@ no_intro_block: true
             </div>
             <div class="solution-image">
                 {# <img src="/content/{{folder}}/bcmoscowcity/04-2.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/bcmoscowcity/04-2.jpg"] | join, "", "bcmoscowcity.com - 04-02",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/bcmoscowcity/04-2.jpg"] | join, "", "bcmoscowcity.com - 04-02",  [995, 1493]  %}
             </div>
         </div>
     </div>
@@ -231,7 +240,7 @@ no_intro_block: true
                 </div>
             </div>
             <div class="solution-image">
-                {% image2 ["src/content/", folder, "/bcmoscowcity/catalog-02.jpg"] | join, "bordered", "bcmoscowcity.com - каталог башен",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/bcmoscowcity/catalog-02.jpg"] | join, "bordered", "bcmoscowcity.com - каталог башен",  [995, 1493]  %}
             </div>
         </div>
     </div>
@@ -249,7 +258,7 @@ no_intro_block: true
             <div class="solution-image media-bg-layer--dark-gray">
                 <div class="long-image-crop" data-lightbox>
                     {# <img src="/content/{{folder}}/bcmoscowcity/product-01.jpg" alt=""> #}
-                    {% image2 ["src/content/", folder, "/bcmoscowcity/product-01.jpg"] | join, "", "bcmoscowcity.com - страница БЦ",  [1376]  %}
+                    {% image ["src/content/", folder, "/bcmoscowcity/product-01.jpg"] | join, "", "bcmoscowcity.com - страница БЦ",  [1376]  %}
                 </div>
             </div>
         </div>
@@ -275,21 +284,19 @@ no_intro_block: true
                 <a href="https://bc-moscow-city.com" target="_blank" class="btn btn-outline--default btn-external"><span>bc-moscow-city.com</span></a>
             </div>
             <div class="solution-image">
-                {# <img src="/content/{{folder}}/bcmoscowcity/mobile.jpg" alt=""> #}
-                {# {% image2 ["src/content/", folder, "/bcmoscowcity/mobile.jpg"] | join, "", "bcmoscowcity.com - скриншот мобильной версии",  [995, 1493]  %} #}
 
                 <div class="media-bg-layer--dark-gray">
                     <div class="mobile-screens">
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/bcmoscowcity/mobile-01.jpg"] | join, "", "Скриншот мобильной версии bcmoscowcity.com - 01",  ""  %}
+                            {% image ["src/content/", folder, "/bcmoscowcity/mobile-01.jpg"] | join, "", "Скриншот мобильной версии bcmoscowcity.com - 01",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/bcmoscowcity/mobile-02.jpg"] | join, "", "Скриншот мобильной версии bcmoscowcity.com - 02",  ""  %}
+                            {% image ["src/content/", folder, "/bcmoscowcity/mobile-02.jpg"] | join, "", "Скриншот мобильной версии bcmoscowcity.com - 02",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/bcmoscowcity/mobile-03.jpg"] | join, "", "Скриншот мобильной версии bcmoscowcity.com - 03",  ""  %}
+                            {% image ["src/content/", folder, "/bcmoscowcity/mobile-03.jpg"] | join, "", "Скриншот мобильной версии bcmoscowcity.com - 03",  ""  %}
                         </div>
                     </div>
                 </div>
@@ -321,10 +328,10 @@ no_intro_block: true
             </div>
             <div class="solution-image">
                 {# <img class="bordered" src="/content/{{folder}}/brcash-01.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/brcash-01.jpg"] | join, "bordered", "BR Cash - скриншот 02",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcash-01.jpg"] | join, "bordered", "BR Cash - скриншот 02",  [995, 1493]  %}
 
                 {# <img class="bordered" src="/content/{{folder}}/brcash-02.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/brcash-02.jpg"] | join, "bordered", "BR Cash - скриншот 01",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcash-02.jpg"] | join, "bordered", "BR Cash - скриншот 01",  [995, 1493]  %}
 
             </div>
         </div>
@@ -356,13 +363,13 @@ no_intro_block: true
             </div>
             <div class="solution-image">
                 {# <img class="bordered" src="/content/{{folder}}/brcrm-grid.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/brcrm-grid.jpg"] | join, "bordered", "BR CRM - скриншот 01",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcrm-grid.jpg"] | join, "bordered", "BR CRM - скриншот 01",  [995, 1493]  %}
 
                 {# <img class="bordered" src="/content/{{folder}}/brcrm-list.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/brcrm-list.jpg"] | join, "bordered", "BR CRM - скриншот 02",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcrm-list.jpg"] | join, "bordered", "BR CRM - скриншот 02",  [995, 1493]  %}
 
                 {# <img class="bordered" src="/content/{{folder}}/brcrm-popup.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/brcrm-popup.jpg"] | join, "bordered", "BR CRM - скриншот 03",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcrm-popup.jpg"] | join, "bordered", "BR CRM - скриншот 03",  [995, 1493]  %}
 
             </div>
         </div>

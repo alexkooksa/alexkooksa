@@ -1,6 +1,33 @@
 @import "variables";
 @import "mixins";
 
+@font-face {
+    font-family: "Tilda Sans";
+    src: url("fonts/TildaSans-VF.woff2") format("woff2 supports variations"),
+        url("fonts/TildaSans-VF.woff2") format("woff2-variations");
+    font-weight: 400 700;
+    font-stretch: 25% 151%;
+}
+@font-face {
+    font-family: "Unbounded";
+    src: url("fonts/Unbounded-VF.woff2") format("woff2 supports variations"),
+        url("fonts/Unbounded-VF.woff2") format("woff2-variations");
+    font-weight: 200 900;
+    font-stretch: 25% 151%;
+}
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono-VF.woff2") format("woff2 supports variations"),
+        url("fonts/JetBrainsMono-VF.woff2") format("woff2-variations");
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+}
+
+::-moz-selection {
+    background-color: $primary-color;
+    color: #fff;
+}
+
 ::selection {
     background-color: $primary-color;
     color: #fff;
@@ -77,13 +104,41 @@ section {
     }
 }
 
-img {
+img,
+picture {
     border-radius: $brs-xxs;
     @include mq(768) {
         border-radius: $brs-m;
     }
     &.brs-0 {
         border-radius: 0;
+    }
+}
+
+picture {
+    background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 10%, #ddd 20%);
+    background-size: 200%;
+    -webkit-animation: shine-lines 1.6s infinite linear;
+    animation: shine-lines 1.6s infinite linear;
+}
+
+@-webkit-keyframes shine-lines {
+    0% {
+        background-position: 100%;
+    }
+    60%,
+    100% {
+        background-position: -140%;
+    }
+}
+
+@keyframes shine-lines {
+    0% {
+        background-position: 100%;
+    }
+    60%,
+    100% {
+        background-position: -140%;
     }
 }
 
@@ -126,6 +181,9 @@ hr {
     color: #fff;
     .link {
         color: $primary-color;
+        &:hover {
+            opacity: 0.85 !important;
+        }
     }
 }
 
@@ -134,9 +192,12 @@ hr {
 }
 
 .wavy-underline {
+    -webkit-text-decoration: underline wavy;
     text-decoration: underline wavy;
     text-underline-offset: 0.3em;
+    -webkit-text-decoration-skip-ink: none;
     text-decoration-skip-ink: none;
+    -webkit-text-decoration-color: #edfb55;
     text-decoration-color: #edfb55;
     text-decoration-thickness: 0.07em;
 }
@@ -181,8 +242,8 @@ h3.has-wavy {
     background-color: $primary-color;
     background: $gradient--primary;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
 }
 
@@ -304,7 +365,7 @@ button {
 .btn {
     @include accent-font;
     color: $black;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 100px;
     line-height: 1.1;
     padding: 12px 16px;
@@ -431,6 +492,12 @@ button {
     &.email-icon::before {
         background-image: url("images/email.svg");
     }
+    &.github-icon::before {
+        background-image: url("images/github.svg");
+    }
+    &.github-icon-w::before {
+        background-image: url("images/github-w.svg");
+    }
 }
 
 .btn-external {
@@ -497,7 +564,9 @@ button {
     text-align: right;
     background: linear-gradient(92.82deg, #50d7c6 15.83%, #41cd6b 104.74%, #41cd42 104.74%, #abdaaa 104.75%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    text-fill-color: rgba(0, 0, 0, 0);
 }
 .numbered-list li:nth-child(-n + 9)::before {
     content: "0" counter(list-item);
@@ -513,12 +582,14 @@ button {
     left: 0;
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
+    -webkit-animation: 500ms fadeIn;
     animation: 500ms fadeIn;
     display: none;
     padding: 32px 24px;
     @include mq(768) {
         padding: 48px 32px;
     }
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     &.is-visible {
         display: block;
@@ -528,6 +599,7 @@ button {
     }
 
     .btn-close {
+        position: -webkit-sticky;
         position: sticky;
         top: 0;
         width: 32px;
@@ -550,6 +622,15 @@ button {
     }
 }
 
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -566,12 +647,19 @@ button {
     }
     position: relative;
     overflow: hidden;
+    picture {
+        aspect-ratio: unset !important;
+    }
     img {
         position: absolute;
+        -o-object-fit: cover;
         object-fit: cover;
         -webkit-mask-image: url(images/mask-wave.svg);
+        mask-image: url(images/mask-wave.svg);
         -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
         -webkit-mask-size: 100%;
+        mask-size: 100%;
     }
 
     .btn-zoom {

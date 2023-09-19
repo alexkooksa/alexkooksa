@@ -15,7 +15,7 @@ role:
 <section class="case-cover dark-bg overlapped">
     <div class="wrap">
         {# <img src="/content/{{folder}}/intro.jpg" alt=""> #}
-        {% image2 ["src/content/", folder, "/intro.jpg"] | join, "", "Schneider Russia - скриншот главной страницы",  [1376]  %}
+        {% image ["src/content/", folder, "/intro.jpg"] | join, "", "Schneider Russia - скриншот главной страницы",  [1376]  %}
     </div>
 </section>
 
@@ -59,7 +59,7 @@ role:
 
             <div class="solution-image">
                 {# <img src="/content/{{folder}}/sch_menu.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/sch_menu.jpg"] | join, "bordered", "Schneider Russia - скриншот меню",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/sch_menu.jpg"] | join, "bordered", "Schneider Russia - скриншот меню",  [995, 1493]  %}
             </div>
         </div>
         <div class="solution-layout">
@@ -79,7 +79,7 @@ role:
             <div class="solution-image">
                 <div class="media-bg-layer--medium-gray">
                     {# <img src="/content/{{folder}}/series_grid.jpg" alt=""> #}
-                    {% image2 ["src/content/", folder, "/series_grid.jpg"] | join, "", "Jung Russia - скриншот страницы серий",  [995]  %}
+                    {% image ["src/content/", folder, "/series_grid.jpg"] | join, "", "Jung Russia - скриншот страницы серий",  [995]  %}
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@ role:
 
             <div class="solution-image">
                 {# <img class="bordered" src="/content/{{folder}}/sch_product.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/sch_product.jpg"] | join, "bordered", "Schneider Russia - скриншот страницы товара",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/sch_product.jpg"] | join, "bordered", "Schneider Russia - скриншот страницы товара",  [995, 1493]  %}
             </div>
         </div>
 
@@ -131,11 +131,11 @@ role:
             <div class="solution-image">
                 <div class="media-bg-layer--dark-gray">
                     {# <img src="/content/{{folder}}/cart_list.jpg" alt=""> #}
-                    {% image2 ["src/content/", folder, "/cart_list.jpg"] | join, "", "Schneider Russia - скриншот страницы корзины",  [995, 1493]  %}
+                    {% image ["src/content/", folder, "/cart_list.jpg"] | join, "", "Schneider Russia - скриншот страницы корзины",  [995, 1493]  %}
 
                     <div class="long-image-crop" data-lightbox>
                         {# <img data-lightbox src="/content/{{folder}}/checkout.jpg" alt=""> #}
-                        {% image2 ["src/content/", folder, "/checkout.jpg"] | join, "", "Schneider Russia - страница чекаута",  [1376]  %}
+                        {% image ["src/content/", folder, "/checkout.jpg"] | join, "", "Schneider Russia - страница чекаута",  [1376]  %}
                     </div>
                 </div>
             </div>
@@ -158,19 +158,18 @@ role:
             </div>
             <div class="solution-image">
                 {# <img class="" src="/content/{{folder}}/mobile.jpg" alt=""> #}
-                {# {% image2 ["src/content/", folder, "/mobile.jpg"] | join, "", "Schneider Russia / Jung Russia - скриншот мобильной версии",  [995]  %} #}
                 <div class="media-bg-layer--medium-gray">
                     <div class="mobile-screens">
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Schneider Russia - скриншот мобильной версии - 01",  ""  %}
+                            {% image ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Schneider Russia - скриншот мобильной версии - 01",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/mobile-02.jpg"] | join, "", "Jung Russia - скриншот мобильной версии - 02",  ""  %}
+                            {% image ["src/content/", folder, "/mobile-02.jpg"] | join, "", "Jung Russia - скриншот мобильной версии - 02",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Schneider Russia - скриншот мобильной версии - 03",  ""  %}
+                            {% image ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Schneider Russia - скриншот мобильной версии - 03",  ""  %}
                         </div>
                     </div>
                 </div>

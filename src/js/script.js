@@ -1,20 +1,10 @@
-// let screenWidth = document.querySelector("html").clientWidth;
-// console.log(screenWidth);
-var imgLoad = imagesLoaded(document.querySelector("body"));
-imgLoad.on("progress", function (instance, image) {
-  var result = image.isLoaded ? "loaded" : "broken";
-  console.log("image is " + result + " for " + image.img.src);
-});
+console.warn('Maybe check out https://github.com/alexkooksa/portfolio instead of console ;)')
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  // Get all videos
-  var videos = document.getElementsByClassName("video__play-button");
+  var videoPlayButtons = document.getElementsByClassName("video__play-button");
 
-  // Loop through all videos
-  for (var i = 0; i < videos.length; i++) {
-    // On click play button
-    videos[i].onclick = function () {
-      // Find video element
+  for (var i = 0; i < videoPlayButtons.length; i++) {
+    videoPlayButtons[i].onclick = function () {
       video = this.nextElementSibling;
       video_wrapper = this.parentElement;
 

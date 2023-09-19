@@ -4,7 +4,7 @@ const path = require("path");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode(
-    "image2",
+    "image",
     async function (src, cls, alt, widths, sizes = "100vw") {
       if (alt === undefined) {
         throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
@@ -35,6 +35,7 @@ module.exports = function (eleventyConfig) {
 
       let lowsrc;
       let highsrc;
+      let aspectRatio
 
       lowsrc = inputExtension == "png" ? metadata.png[0] : metadata.jpeg[0];
       highsrc =
@@ -42,7 +43,9 @@ module.exports = function (eleventyConfig) {
           ? metadata.png[metadata.png.length - 1]
           : metadata.jpeg[metadata.jpeg.length - 1];
 
-      return `<picture>
+          aspectRatio = `${highsrc.width}/${highsrc.height}`
+
+      return `<picture style="aspect-ratio: ${aspectRatio}">
 			${Object.values(metadata)
         .map((imageFormat) => {
           return `  <source type="${

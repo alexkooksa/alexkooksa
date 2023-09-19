@@ -3,7 +3,7 @@ tags: ['latest', 'projects']
 date: 2022-01-01
 title: Bright Rich
 meta_title: Кейс | Основной сайт Bright Rich
-short_desc: Полная переверстка основного сайта и улучшение UI/UX
+short_desc: Полная переверстка основного сайта и улучшение UI/UX.
 short_desc_add: Подробный кейс.
 year: Ноябрь 2022
 folder: brightrich
@@ -16,7 +16,7 @@ role:
 {% import "../_includes/components.njk" as components %}
 <section class="case-cover dark-bg overlapped">
     <div class="wrap">
-        {% image2 ["src/content/", folder, "/cover.jpg"] | join, "", "Bright Rich - скриншот главной страницы",  [1376]  %}
+        {% image ["src/content/", folder, "/cover.jpg"] | join, "", "Bright Rich - скриншот главной страницы",  [1376]  %}
     </div>
 </section>
 
@@ -56,8 +56,7 @@ role:
                 <li>Ошибка 404</li>
             </ol>
             <div class="block-image">
-                {# todo: разобраться с sizes #}
-                {% image2 ["src/content/", folder, "/types-1.jpg"] | join, "brs-0", "Типы страниц для верстки",  [750, 1127]  %}
+                {% image ["src/content/", folder, "/types-1.jpg"] | join, "brs-0", "Типы страниц для верстки",  [750, 1127]  %}
             </div>
         </div>
     </div>
@@ -80,7 +79,7 @@ role:
             <div class="grid-item">
                 <div class="long-image-crop" data-lightbox>
                     {# <img  src="/content/{{folder}}/apartments.jpg" alt=""> #}
-                    {% image2 ["src/content/", folder, "/apartments.jpg"] | join, "", "Страница апартаментов",  [1376]  %}
+                    {% image ["src/content/", folder, "/apartments.jpg"] | join, "", "Страница апартаментов",  [1376]  %}
 
                 </div>
             </div>
@@ -88,7 +87,7 @@ role:
             <div class="grid-item">
                 <div class="long-image-crop" data-lightbox>
                     {# <img src="/content/{{folder}}/analytics.jpg"> #}
-                    {% image2 ["src/content/", folder, "/analytics.jpg"] | join, "", "Страница аналитики",  [1376]  %}
+                    {% image ["src/content/", folder, "/analytics.jpg"] | join, "", "Страница аналитики",  [1376]  %}
                 </div>
             </div>
         </div>
@@ -101,7 +100,7 @@ role:
         <div class="rows">
             <p>Для блока об инфраструктуре на странице апартаментов было подобрано и приведено к единой стилистике более 40 иконок</p>
             {# <img src="/content/{{folder}}/icons.jpg" alt="Иконки для страницы апартаментов"> #}
-            {% image2 ["src/content/", folder, "/icons.jpg"] | join, "", "Иконки для страницы апартаментов",  [1376, 2064]  %}
+            {% image ["src/content/", folder, "/icons.jpg"] | join, "", "Иконки для страницы апартаментов",  [1376, 2064]  %}
         </div>
     </div>
 </section>
@@ -118,7 +117,7 @@ role:
 
         <p>Новый сайт сверстан с использованием шаблонизатора Smarty и SCSS.</p>
         <p>Промежуточную версию обновленного кода можно посмотреть на GitHub.</p>
-        <a href="#" target="_blank" class="btn btn-white">Код на GitHub</a>
+        <a href="#" target="_blank" class="btn btn-white"><span class="btn-icon github-icon">Код на GitHub</span></a>
     </div>
 </div>
 
@@ -161,13 +160,13 @@ role:
             <div class="item">
                 <h3>Было</h3>
                 {# <img src="/content/brightrich/card-before.png" alt=""> #}
-                {% image2 ["src/content/", folder, "/card-before.jpg"] | join, "", "Карточка предложения - до",  [658, 987]  %}
+                {% image ["src/content/", folder, "/card-before.jpg"] | join, "", "Карточка предложения - до",  [658, 987]  %}
 
             </div>
             <div class="item">
                 <h3>Стало</h3>
                 {# <img src="/content/brightrich/card-after.png" alt=""> #}
-                {% image2 ["src/content/", folder, "/card-after.jpg"] | join, "", "Карточка предложения - после",  [658, 987]  %}
+                {% image ["src/content/", folder, "/card-after.jpg"] | join, "", "Карточка предложения - после",  [658, 987]  %}
 
             </div>
         </div>
@@ -186,7 +185,7 @@ role:
             </div>
             <div class="solution-image">
                 {# <img src="/content/brightrich/variants-before.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/variants-before.jpg"] | join, "", "Таблица вариантов - до",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/variants-before.jpg"] | join, "", "Таблица вариантов - до",  [995, 1493]  %}
 
             </div>
         </div>
@@ -199,7 +198,7 @@ role:
             </div>
             <div class="solution-image">
                 {# <img src="/content/brightrich/variants-after.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/variants-after.jpg"] | join, "", "Таблица вариантов - после",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/variants-after.jpg"] | join, "", "Таблица вариантов - после",  [995, 1493]  %}
             </div>
         </div>
     </div>
@@ -216,7 +215,7 @@ role:
             </div>
             <div class="solution-image">
                 {# <img src="/content/{{folder}}/features-01.jpg" class="bordered" alt=""> #}
-                {% image2 ["src/content/", folder, "/features-01.jpg"] | join, "bordered", "Слайдер - до",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/features-01.jpg"] | join, "bordered", "Слайдер - до",  [995, 1493]  %}
 
             </div>
         </div>
@@ -229,7 +228,7 @@ role:
             </div>
             <div class="solution-image">
                 {# <img src="/content/{{folder}}/features-02.jpg" class="bordered" alt=""> #}
-                {% image2 ["src/content/", folder, "/features-02.jpg"] | join, "bordered", "Слайдер - до",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/features-02.jpg"] | join, "bordered", "Слайдер - до",  [995, 1493]  %}
 
             </div>
         </div>
@@ -247,7 +246,7 @@ role:
             </div>
             <div class="solution-image">
                 {# <img src="/content/brightrich/services-before.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/services-before.jpg"] | join, "", "Услуги - до",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/services-before.jpg"] | join, "", "Услуги - до",  [995, 1493]  %}
 
             </div>
         </div>
@@ -260,7 +259,7 @@ role:
             </div>
             <div class="solution-image">
                 {# <img src="/content/brightrich/services-after.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/services-after.jpg"] | join, "", "Услуги - после",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/services-after.jpg"] | join, "", "Услуги - после",  [995, 1493]  %}
 
             </div>
         </div>
@@ -320,17 +319,17 @@ role:
         <div class="mobile-screens">
             <div class="grid-item">
                 {# <img src="/content/brightrich/mobile-01.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Скриншот мобильной версии Bright Rich - 01",  ""  %}
+                {% image ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Скриншот мобильной версии Bright Rich - 01",  ""  %}
 
             </div>
             <div class="grid-item">
                 {# <img src="/content/brightrich/mobile-02.png" alt=""> #}
-                {% image2 ["src/content/", folder, "/mobile-02.png"] | join, "", "Скриншот мобильной версии Bright Rich - 02",  ""  %}
+                {% image ["src/content/", folder, "/mobile-02.png"] | join, "", "Скриншот мобильной версии Bright Rich - 02",  ""  %}
 
             </div>
             <div class="grid-item">
                 {# <img src="/content/brightrich/mobile-03.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Скриншот мобильной версии Bright Rich - 03",  ""  %}
+                {% image ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Скриншот мобильной версии Bright Rich - 03",  ""  %}
             </div>
         </div>
     </div>

@@ -3,7 +3,6 @@ meta_title: Александра Кукса — Frontend-разработчик 
 layout: base.njk
 templateEngineOverride: njk
 ---
-<p>TEST</p>
 <section class="homepage-intro dark-bg">
 	<div class="wrap">
 		<p class="greeting">Привет, я Александра <span class="wavy-underline">Кукса</span>&nbsp;&mdash;</p>
@@ -42,18 +41,7 @@ templateEngineOverride: njk
 						<p class="btn btn-white">Смотреть кейс</p>
 					</div>
 					<div class="item-image">
-						{#
-							<source type="image/avif" srcset="/img/MC4bN1vM1W-740.avif 740w" sizes="768px, (min-width: 1280px)">
-
-							до 450 - 450
-							768 - 1023 - 650
-							от 1024 до 1279 - 370
-							1280+ - 650
-						<img src="/content/{{project.data.folder}}/case-preview.png" alt="Превью кейса - {{project.data.title}}">
-#}
-
-
-						{% image2 ["src/content/", project.data.folder, "/case-preview.png"] | join, "", "Превью кейса",  [690, 1380]  %}
+						{% image ["src/content/", project.data.folder, "/case-preview.png"] | join, "", "Превью кейса",  [690, 1380]  %}
 
 					</div>
 				</a>
@@ -69,7 +57,7 @@ templateEngineOverride: njk
 			<h2><span class="gradient-text" data-gsap="opacity">Сайты постарше</span></h2>
 			<p data-gsap="opacity">Кроме Bright Rich были и другие проекты, например:</p>
 		</div>
-		<ul class="caselist caselist--small" >
+		<ul class="caselist caselist--small">
 			{% for project in collections.older | reverse  %}
 			<li data-gsap="groupTranslateY">
 				<a class="caselist__item is-vertical" href="{{ project.url }}">
@@ -94,7 +82,7 @@ templateEngineOverride: njk
 			</li>
 			{% endfor %}
 
-			<li class="caselist__item is-vertical caselist__item--last"  data-gsap="groupTranslateY">
+			<li class="caselist__item is-vertical caselist__item--last" data-gsap="groupTranslateY">
 				<div class="item-content">
 					<p class="item-title title-font"><span class="gradient-text">И ещё</span></p>
 					<p class="stats-block"><span class="stats-number">100+</span><span class="stats-unit">проектов <br />за 7 лет</span></p>
@@ -294,12 +282,15 @@ templateEngineOverride: njk
 		<div class="about-group">
 			<div class="about-info">
 				<h2 data-gsap="opacity">Обо мне</h2>
-				<p data-gsap="opacity">Здесь будет классный текст о том, почему я суперспециалист, который может ващщщще всё. Надо себя похвалить, конечно, да. Может еще что-то придумаю, но объем будет примерно такой. Может, чуть побольше. Но не больше листа А4. Размеры листа А4, кстати, двести десять на двести девяносто семь миллиметров. Полезная информация, если вы дизайнер или просто выбираете подходящую бумагу для записей ваших крутых идей. </p>
-				<div class="contacts-block" id="contact"  data-gsap="opacity">
+				<div class="rows">
+					<p data-gsap="opacity">Здесь будет классный текст о том, почему я суперспециалист, который может ващщщще всё. Надо себя похвалить, конечно, да. Может еще что-то придумаю, но объем будет примерно такой. Может, чуть побольше. Но не больше листа А4. Размеры листа А4, кстати, двести десять на двести девяносто семь миллиметров. Полезная информация, если вы дизайнер или просто выбираете подходящую бумагу для записей ваших крутых идей. </p>
+					<p><a href="https://github.com/alexkooksa/portfolio" target="_blank" data-gsap="opacity" class="link"><span class="btn-icon github-icon-w">Код портфолио на GitHub</span></a></p>
+				</div>
+				<div class="contacts-block" id="contact" data-gsap="opacity">
 					<h2><span class="gradient-text">Связаться</span></h2>
 					<div class="buttons-group">
 						<a href="tg://resolve?domain=alexkooksa" class="btn btn-white"><span class="btn-icon telegram-icon">Telegram</span></a>
-						<a href="#" class="btn btn-white"><span class="btn-icon linkedin-icon">LinkedIn</span></a>
+						<a href="https://www.linkedin.com/in/alexkooksa/" target="_blank" class="btn btn-white"><span class="btn-icon linkedin-icon">LinkedIn</span></a>
 						<a href="mailto:alex.kooksa@gmail.com" class="btn btn-white"><span class="btn-icon email-icon">E-mail</span></a>
 					</div>
 				</div>

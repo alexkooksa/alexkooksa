@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 
-<section class="case-intro dark-bg {% if not no_intro_block is defined %} pb-0 {% endif %}">
+<section class="case-intro dark-bg {% if not no_intro_block is defined %} pb-0 {% else %} overlapped {% endif %}">
     <div class="wrap">
         <h1><span class="gradient-text">{{ title }}</span></h1>
         <h3>{{ short_desc }}</h3>

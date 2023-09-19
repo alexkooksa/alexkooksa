@@ -52,7 +52,7 @@ role:
 
             <div class="solution-image">
                 {# <img class="bordered" src="/content/{{folder}}/homepage.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/homepage.jpg"] | join, "bordered", "Restte.com - скриншот главной страницы",  [995]  %}
+                {% image ["src/content/", folder, "/homepage.jpg"] | join, "bordered", "Restte.com - скриншот главной страницы",  [995]  %}
             </div>
         </div>
 
@@ -69,7 +69,7 @@ role:
 
             <div class="solution-image">
                 {# <img class="bordered" src="/content/{{folder}}/category.jpg" alt=""> #}
-                {% image2 ["src/content/", folder, "/category.jpg"] | join, "bordered", "Restte.com - скриншот страницы категории",  [995]  %}
+                {% image ["src/content/", folder, "/category.jpg"] | join, "bordered", "Restte.com - скриншот страницы категории",  [995]  %}
 
             </div>
         </div>
@@ -86,7 +86,7 @@ role:
             </div>
             <div class="solution-image">
                 <img class="bordered" src="/content/{{folder}}/product.jpg" alt="">
-                {% image2 ["src/content/", folder, "/product.jpg"] | join, "bordered", "Restte.com - скриншот страницы товара",  [995]  %}
+                {% image ["src/content/", folder, "/product.jpg"] | join, "bordered", "Restte.com - скриншот страницы товара",  [995]  %}
 
             </div>
         </div>
@@ -107,20 +107,18 @@ role:
                 </ul>
             </div>
             <div class="solution-image">
-                {# <img class="" src="/content/{{folder}}/mobile.jpg" alt=""> #}
-                {# {% image2 ["src/content/", folder, "/mobile.jpg"] | join, "", "Restte.com - скриншот мобильной версии",  [995]  %} #}
                 <div class="media-bg-layer--dark-gray">
                     <div class="mobile-screens">
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Restte - скриншот мобильной версии - 01",  ""  %}
+                            {% image ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Restte - скриншот мобильной версии - 01",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/mobile-02.jpg"] | join, "", "Restte - скриншот мобильной версии - 02",  ""  %}
+                            {% image ["src/content/", folder, "/mobile-02.jpg"] | join, "", "Restte - скриншот мобильной версии - 02",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image2 ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Restte - скриншот мобильной версии - 03",  ""  %}
+                            {% image ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Restte - скриншот мобильной версии - 03",  ""  %}
                         </div>
                     </div>
                 </div>

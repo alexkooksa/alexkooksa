@@ -1,30 +1,27 @@
 {
-  "name": "kooksa.digital",
+  "name": "kooksa.codes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-"watch:eleventy": "eleventy --serve",
-"build:eleventy": "ELEVENTY_ENV=development eleventy",
-"start": "npm run watch:eleventy",
-"build": "npm run build:eleventy",
-"build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
-"build:prod": "npm run build:eleventy:prod"
-
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "ELEVENTY_ENV=development eleventy",
+    "start": "npm run watch:eleventy",
+    "build": "npm run build:eleventy",
+    "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
+    "build:prod": "npm run build:eleventy:prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^3.1.0",
-    "gulp": "^4.0.2",
-    "gulp-html-img-to-picture": "^1.0.3"
+    "@11ty/eleventy-img": "^3.1.0"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.15",
     "eleventy-sass": "^2.2.1",
-    "sass": "^1.62.1"
+    "postcss": "^8.4.30"
   }
 }
-
