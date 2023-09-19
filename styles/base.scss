@@ -116,10 +116,11 @@ picture {
 }
 
 picture {
-    background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 10%, #ddd 20%);
+    background-color: #ddd;
+/*     background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 10%, #ddd 20%);
     background-size: 200%;
     -webkit-animation: shine-lines 1.6s infinite linear;
-    animation: shine-lines 1.6s infinite linear;
+    animation: shine-lines 1.6s infinite linear; */
 }
 
 @-webkit-keyframes shine-lines {
@@ -301,6 +302,22 @@ h3.has-wavy {
 
 a {
     @include transition;
+}
+
+
+h1 {
+    font-size: 44px;
+
+    @include mq(768) {
+        font-size: 90px;
+    }
+
+    @include mq(1280) {
+        font-size: 120px;
+    }
+    @include mq(1600) {
+        font-size: 130px;
+    }
 }
 
 h1,
@@ -647,6 +664,7 @@ button {
     }
     position: relative;
     overflow: hidden;
+
     picture {
         aspect-ratio: unset !important;
     }
@@ -756,4 +774,10 @@ button {
 
 .video__play-button[data-button-state="play"]:hover {
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.page-404 {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
 }
