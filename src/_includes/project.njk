@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 
-<section class="case-intro dark-bg {% if not no_intro_block is defined %} pb-0 {% else %}  {% endif %}">
+<section class="case-intro dark-bg {% if not no_intro_block is defined %} pb-0 {% else %}  {% endif %}" data-gsap-el="pageCover">
     <div class="wrap">
         <h1 data-gsap-el="coverTitle"><span class="gradient-text">{{ title }}</span></h1>
         <h3 data-gsap-el="coverDesc">{{ short_desc }}</h3>

@@ -254,6 +254,10 @@ h3.has-wavy {
     @include accent-font;
 }
 
+i {
+    font-style: italic;
+}
+
 .gradient-text {
     background-color: $primary-color;
     background: $gradient--primary;
