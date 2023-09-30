@@ -125,7 +125,7 @@ ScrollTrigger.batch('[data-gsap="groupTranslateY"] > div', {
 
 // coverTimeline start
 
-if (document.querySelector(".case-intro")) {
+if (document.querySelector('[data-gsap-el="pageCover"]')) {
   /*   document.scrollingElement.scrollTo(0, 0);
   document.body.style.overflow = "hidden"; */
 
@@ -175,7 +175,7 @@ if (document.querySelector(".case-intro")) {
       onComplete: function () {
         document
           .querySelector('[data-gsap-el="coverDate"]')
-          .classList.add("gsap-visible");
+          .classList.add("gsap-complete");
       },
     },
     ">-0.1"

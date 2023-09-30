@@ -24,7 +24,7 @@
 }
 
 [data-gsap-el="section-rounded"] section {
-    transform: translateY(100px);
+    transform: translateY(50px);
 }
 
 [data-gsap="bg-reveal"] {
@@ -302,15 +302,8 @@
     [data-gsap-el="bg1"] {
         opacity: 1;
     }
-    [data-gsap-el="mainline-1"] {
-        transform: translateY(-10px);
-    }
     [data-gsap-el="mainline-2"] {
-        transform: translateY(10px);
         margin-bottom: 12px;
-    }
-    [data-gsap-el="secondline"] {
-        border-bottom: 0px solid;
     }
 }
 .case-intro [data-gsap-el],
@@ -359,13 +352,13 @@
         position: relative;
         z-index: 1;
         display: flex;
+        flex-direction: column;
         flex-grow: 1;
-        @include mq(1280, max) {
-            flex-direction: column;
-        }
+        justify-content: center;
+        align-items: center;
     }
 
-    .intro-left-col {
+    /*     .intro-left-col {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -383,7 +376,7 @@
         @include mq(1366) {
             padding-bottom: 60px;
         }
-    }
+    } */
 
     .accent-font {
         color: #fff;
@@ -408,14 +401,12 @@
     h1 {
         font-size: 36px;
         line-height: 1.1;
-        font-weight: 800;
+        font-weight: 200;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         @include mq(576) {
             font-size: 52px;
-            font-weight: 700;
-            line-height: 1;
         }
         @include mq(768) {
             font-size: 72px;
@@ -446,6 +437,13 @@
             margin-bottom: 12px;
         }
     }
+
+    .tagline {
+        font-style: italic;
+        span {
+            font-size: 0.8em;
+        }
+    }
     .accent-font {
         padding: 12px 0;
     }
@@ -471,33 +469,14 @@
         bottom: 0;
         background-color: $black;
         z-index: -1;
+        transition: 1s all ease-in-out;
     }
-    .intro-footnote {
-        color: #d1d0d0;
-        padding: 8px 20px 20px;
-        border-radius: 16px;
-        background-color: $black;
-        border: 1px solid #d1d0d0;
-        margin-top: 36px;
-        font-size: 12px;
-        max-width: 330px;
-        @include mq(415, max) {
-            max-width: none;
-            width: 100%;
-        }
-        @include mq(768) {
-            margin-left: auto;
-            margin-top: 0;
-            font-size: 14px;
-        }
-        @include accent-font;
-    }
+}
 
-    .intro-footnote span {
-        font-size: 30px;
-        color: #edfb55;
-        text-align: left;
-        @include accent-font;
+.no-underlay {
+    .text-underlay::before,
+    .accent-font::before {
+        opacity: 0;
     }
 }
 
@@ -926,10 +905,36 @@
 footer {
     background-color: $black;
     color: #999;
-    font-size: 15px;
-    text-align: center;
+    font-size: 12px;
     padding: 12px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    @include mq(768) {
+        .wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .footer-footnote,
+        .copyright {
+            flex-grow: 0.5;
+        }
+        .footer-footnote::after {
+            content: "";
+            position: absolute;
+            left: 100%;
+            width: 2px;
+            background-color: $secondary-color;
+            transform: skew(-15deg);
+            top: 4px;
+            bottom: 4px;
+        }
+        .copyright {
+            text-align: right;
+            margin-top: auto;
+        }
+    }
+
     a {
         color: #ebebeb;
         text-decoration: underline;
@@ -937,6 +942,30 @@ footer {
             color: $primary-color;
         }
     }
+}
+
+.footer-footnote {
+    color: #d1d0d0;
+    position: relative;
+    @include accent-font;
+    @include mq(576, max) {
+        span:not(.asterisk) {
+            display: block;
+        }
+    }
+}
+
+.footer-footnote .asterisk {
+    font-size: 30px;
+    color: #edfb55;
+    text-align: left;
+    @include accent-font;
+}
+
+.copyright {
+    padding-top: 12px;
+    margin-top: 16px;
+    @include accent-font;
 }
 
 .experience-section-outer {
@@ -1052,8 +1081,8 @@ footer {
             transition: 0.5s all ease-in-out;
             visibility: hidden;
         }
-        &.gsap-enter::before,
-        &.gsap-enter::after {
+        &.gsap-complete::before,
+        &.gsap-complete::after {
             visibility: visible;
             flex-grow: 1;
         }
