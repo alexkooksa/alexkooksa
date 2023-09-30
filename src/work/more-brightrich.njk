@@ -15,16 +15,20 @@ no_intro_block: true
 ---
 {% import "../_includes/components.njk" as components %}
 
-<section class="brs-top">
-    <div class="wrap">
-        <h2>О компании</h2>
-        <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
-        <h2>Задачи</h2>
-        <p>Помимо переноса основного сайта (о котором можно прочитать в <a href="/work/brightrich" class="link">этом кейсе</a>) для компании был выполнено множество других проектов. Вот некоторые из них.</p>
-    </div>
-</section>
+<div class="brs-top-outer--dark" >
+    <section class="brs-top">
+        <div class="wrap">
+            <div class="readable">
+                <h2>О компании</h2>
+                <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
+                <h2>Задачи</h2>
+                <p>Помимо переноса основного сайта (о котором можно прочитать в <a href="/work/brightrich" class="link">этом кейсе</a>) для компании был выполнено множество других проектов. Вот некоторые из них.</p>
+            </div>
+        </div>
+    </section>
+</div>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">BR Home</span></h2>
         <div class="solution-layout">
@@ -54,7 +58,7 @@ no_intro_block: true
                     {{ components.video('brhome-video.webm', 'brhome-video-poster.jpg', true) }}
                 </div>
                 <div class="media-bg-layer--gray">
-                    <div class="mobile-screens">
+                    <div class="mobile-screens" data-gsap="groupTranslateY">
                         <div class="grid-item">
                             {% image ["src/content/", folder, "/brhome-mobile-01.jpg"] | join, "", "BR Home - скриншот мобильной версии - 01",  ""  %}
 
@@ -74,7 +78,7 @@ no_intro_block: true
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">CREMAP (UAE / RU)</span></h2>
         <div class="solution-layout">
@@ -100,8 +104,8 @@ no_intro_block: true
             </div>
             <div class="solution-image media-bg-layer--dark-green">
                 <div class="long-image-crop" data-lightbox>
-                    {# <img data-lightbox src="/content/{{folder}}/cremap-01.jpg" alt=""> #}
-                    {% image ["src/content/", folder, "/cremap-01.jpg"] | join, "", "Cremap.ae - скриншот главной страницы",  [1376]  %}
+                    {% image ["src/content/", folder, "/cremap-01-preview.jpg"] | join, "", "Cremap.ae - скриншот главной страницы - превью",  [995]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/cremap-01.jpg"] | join, "", "Cremap.ae - скриншот главной страницы",  [1376]  %}</div>
                 </div>
                 {# <img src="/content/{{folder}}/cremap-02.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/cremap-02.jpg"] | join, "", "Cremap.ae - скриншот списка предложений",  [1376]  %}
@@ -110,20 +114,24 @@ no_intro_block: true
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">Moscow City Broker</span></h2>
 
-        <div class="rows">
+        <div class="rows readable">
             <ul class="taglist taglist--small">
                 <li class="taglist__item">Аудит</li>
                 <li class="taglist__item">Редизайн</li>
                 <li class="taglist__item">Вёрстка и натяжка на CMS</li>
             </ul>
-            <h3>Задача</h3>
-            <p>Сделать небольшой редизайн и улучшить UX на имеющемся сайте. Перевестать с нуля на собственной CMS Evernet, заточенной под работу с недвижимостью.</p>
-            <h3>Процесс</h3>
-            <p>Провели аудит и составили список багов и неудобств (примеры далее). Нарисовали макеты и согласовали их с клиентом. Провели ряд работ по SEO для поднятия сайта в органической выдаче.</p>
+            <div>
+                <h3>Задача</h3>
+                <p>Сделать небольшой редизайн и улучшить UX на имеющемся сайте. Перевестать с нуля на собственной CMS Evernet, заточенной под работу с недвижимостью.</p>
+            </div>
+            <div>
+                <h3>Процесс</h3>
+                <p>Провели аудит и составили список багов и неудобств (примеры далее). Нарисовали макеты и согласовали их с клиентом. Провели ряд работ по SEO для поднятия сайта в органической выдаче.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -252,13 +260,13 @@ no_intro_block: true
             <div class="solution-desc">
                 <div class="solution-desc__inner">
                     <h3 class="underline-red">Проблема</h3>
-                    <p>Не был предусмотрен слайдер для показа фото</p>
+                    <p>Не был предусмотрен слайдер для показа фото, вместо реальных фото помещений отображалось фото БЦ</p>
                 </div>
             </div>
             <div class="solution-image media-bg-layer--dark-gray">
                 <div class="long-image-crop" data-lightbox>
-                    {# <img src="/content/{{folder}}/bcmoscowcity/product-01.jpg" alt=""> #}
-                    {% image ["src/content/", folder, "/bcmoscowcity/product-01.jpg"] | join, "", "bcmoscowcity.com - страница БЦ",  [1376]  %}
+                    {% image ["src/content/", folder, "/bcmoscowcity/product-01-preview.jpg"] | join, "", "bcmoscowcity.com - страница БЦ - превью",  [995]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/bcmoscowcity/product-01.jpg"] | join, "", "bcmoscowcity.com - страница БЦ",  [1376]  %}</div>
                 </div>
             </div>
         </div>
@@ -306,7 +314,7 @@ no_intro_block: true
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">BR Cash</span></h2>
         <div class="solution-layout">
@@ -338,7 +346,7 @@ no_intro_block: true
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">BR CRM</span></h2>
         <div class="solution-layout">

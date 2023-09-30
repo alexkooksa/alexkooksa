@@ -81,6 +81,8 @@ module.exports = function (eleventyConfig) {
     },
   });
 
+  eleventyConfig.setUseGitIgnore(false);
+
   eleventyConfig.addPassthroughCopy("./CNAME");
 
   eleventyConfig.addPassthroughCopy("./src/styles");

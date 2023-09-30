@@ -11,18 +11,19 @@ role:
 - Вёрстка и натяжка на CMS
 ---
 {% import "../_includes/components.njk" as components %}
-<section class="case-cover dark-bg overlapped">
+<section class="case-cover dark-bg">
     <div class="wrap">
         {{ components.video('restte-menu.mp4', 'restte-menu-poster.jpg') }}
     </div>
 </section>
-
-<section class="brs-top">
-    <div class="wrap">
-        <h2>Задача</h2>
-        <p>Разработать отдельный сайт по направлению HoReCa для постоянного клиента, владеющего интернет-магазином мебели и декора. Сайт должен быть стильным и лаконичным и иметь стандартный функционал.</p>
-    </div>
-</section>
+<div class="brs-top-outer--dark">
+    <section class="brs-top">
+        <div class="wrap">
+            <h2>Задача</h2>
+            <p>Разработать отдельный сайт по направлению HoReCa для постоянного клиента, владеющего интернет-магазином мебели и декора. Сайт должен быть стильным и лаконичным и иметь стандартный функционал.</p>
+        </div>
+    </section>
+</div>
 
 <section class="border-top">
     <div class="wrap">
@@ -85,7 +86,7 @@ role:
                 <p>Доступна вся основная информация о товаре, а также возможность оставить заявку на полный подбор мебели для проекта. У некоторых товаров есть ограничение в виде минимального количества для заказа, об этом сразу предупреждаем покупателя.</p>
             </div>
             <div class="solution-image">
-                <img class="bordered" src="/content/{{folder}}/product.jpg" alt="">
+                {# <img class="bordered" src="/content/{{folder}}/product.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/product.jpg"] | join, "bordered", "Restte.com - скриншот страницы товара",  [995]  %}
 
             </div>

@@ -12,22 +12,23 @@ role:
 - Вёрстка и натяжка на CMS
 ---
 {% import "../_includes/components.njk" as components %}
-<section class="case-cover dark-bg overlapped">
+<section class="case-cover dark-bg">
     <div class="wrap">
         {# <img src="/content/{{folder}}/intro.jpg" alt=""> #}
         {% image ["src/content/", folder, "/intro.jpg"] | join, "", "Schneider Russia - скриншот главной страницы",  [1376]  %}
     </div>
 </section>
-
-<section class="brs-top">
-    <div class="wrap">
-        <h2>Задача</h2>
-        <div class="rows">
-            <p>Разработать дизайн и сверстать на CMS шаблон для интернет-магазина электрики. Официальная продукция: дизайнерские серии розеток и выключателей, дифавтоматы, контроль климата. Клиенты: дизайнеры интерьера, электрики и строительные бригады, предприятия разного масштаба.</p>
-            <p>Для каждого бренда запланирован отдельный сайт со своей цветовой гаммой. На начальном этапе это Schneider Electric и Jung.</p>
+<div class="brs-top-outer--dark">
+    <section class="brs-top">
+        <div class="wrap">
+            <h2>Задача</h2>
+            <div class="rows">
+                <p>Разработать дизайн и сверстать на CMS шаблон для интернет-магазина электрики. Официальная продукция: дизайнерские серии розеток и выключателей, дифавтоматы, контроль климата. Клиенты: дизайнеры интерьера, электрики и строительные бригады, предприятия разного масштаба.</p>
+                <p>Для каждого бренда запланирован отдельный сайт со своей цветовой гаммой. На начальном этапе это Schneider Electric и Jung.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <section class="border-top">
     <div class="wrap">
@@ -130,13 +131,10 @@ role:
 
             <div class="solution-image">
                 <div class="media-bg-layer--dark-gray">
-                    {# <img src="/content/{{folder}}/cart_list.jpg" alt=""> #}
+
                     {% image ["src/content/", folder, "/cart_list.jpg"] | join, "", "Schneider Russia - скриншот страницы корзины",  [995, 1493]  %}
 
-                    <div class="long-image-crop" data-lightbox>
-                        {# <img data-lightbox src="/content/{{folder}}/checkout.jpg" alt=""> #}
-                        {% image ["src/content/", folder, "/checkout.jpg"] | join, "", "Schneider Russia - страница чекаута",  [1376]  %}
-                    </div>
+                    {% image ["src/content/", folder, "/checkout.jpg"] | join, "", "Schneider Russia - оформление заказа",  [995]  %}
                 </div>
             </div>
         </div>

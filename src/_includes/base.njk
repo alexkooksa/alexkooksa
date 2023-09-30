@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#1a1c21">
 </head>
 
-<body>
+<body {% if page.url == '/' %} class="homepage" {% endif %}>
 
     {% include 'header.njk' %}
     {{ content | safe}}
@@ -48,6 +48,11 @@
 </body>
 <script src="/js/gsap.min.js"></script>
 <script src="/js/ScrollTrigger.min.js"></script>
+{% if page.url == '/' %}
+<script src="/js/TextPlugin.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/intro.js"></script>
+{% endif %}
 <script src="/js/script.js"></script>
 
 </html>

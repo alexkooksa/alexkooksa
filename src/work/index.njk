@@ -10,4 +10,9 @@ layout: base.njk
         <h3>{{ short_desc }}</h3>
     </div>
 </section>
-{% include 'projectsList.njk' %}
+<section class="cases-section dark-bg pt-0">
+    <div class="wrap">
+        {% include 'projectsListLatest.njk' %}
+        {% include 'projectsListOlder.njk' %}
+    </div>
+</section>

@@ -20,21 +20,25 @@ role:
     </div>
 </section>
 
-<section class="brs-top">
-    <div class="wrap">
-        <h2>О компании</h2>
-        <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
-        <h2>Задачи</h2>
-        <p>На сайте накопилось много проблем, которые довольно медленно исправлялись штатным специалистом. Компания планировала расширяться в Казахстан и ОАЭ, поэтому нам было поручено оперативно привести сайт в порядок. Для этого планировалось:</p>
-        <ul class="bulleted-list--custom">
-            <li>провести ручное тестирование для обнаружения неучтенных проблем;
-            </li>
-            <li>перенести сайт на собственную CMS веб-студии Evernet, заточенную под работу с недвижимостью.</li>
-        </ul>
-    </div>
-</section>
+<div class="brs-top-outer--dark" >
+    <section class="brs-top">
+        <div class="wrap">
+            <div class="readable">
+                <h2>О компании</h2>
+                <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
+                <h2>Задачи</h2>
+                <p>На сайте накопилось много проблем, которые довольно медленно исправлялись штатным специалистом. Компания планировала расширяться в Казахстан и ОАЭ, поэтому нам было поручено оперативно привести сайт в порядок. Для этого планировалось:</p>
+                <ul class="bulleted-list--custom">
+                    <li>провести ручное тестирование для обнаружения неучтенных проблем;
+                    </li>
+                    <li>перенести сайт на собственную CMS веб-студии Evernet, заточенную под работу с недвижимостью.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2>Типы страниц для вёрстки</h2>
         <div class="pages-type-layout">
@@ -62,10 +66,10 @@ role:
     </div>
 </section>
 
-<section class="dark-bg overlapped">
+<section class="dark-bg overlapped" >
     <div class="wrap">
 
-        <div class="rows">
+        <div class="rows readable">
             <h2>Нужно больше страниц</h2>
             <p>В ходе переноса добавились еще два типа страниц, для которых нужно было разработать дизайн в фирменном стиле с использованием уже имеющихся компонентов:</p>
 
@@ -78,34 +82,33 @@ role:
         <div class="screens-grid-2">
             <div class="grid-item">
                 <div class="long-image-crop" data-lightbox>
-                    {# <img  src="/content/{{folder}}/apartments.jpg" alt=""> #}
-                    {% image ["src/content/", folder, "/apartments.jpg"] | join, "", "Страница апартаментов",  [1376]  %}
-
+                    {% image ["src/content/", folder, "/apartments-preview.jpg"] | join, "", "Страница апартаментов - превью",  [658]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/apartments.jpg"] | join, "", "Страница апартаментов",  [1376]  %}</div>
                 </div>
             </div>
 
             <div class="grid-item">
                 <div class="long-image-crop" data-lightbox>
-                    {# <img src="/content/{{folder}}/analytics.jpg"> #}
-                    {% image ["src/content/", folder, "/analytics.jpg"] | join, "", "Страница аналитики",  [1376]  %}
+                    {% image ["src/content/", folder, "/analytics-preview.jpg"] | join, "", "Страница аналитики - превью",  [658]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/analytics.jpg"] | join, "", "Страница аналитики",  [1376]  %}</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="brs-top">
+<section class="brs-top" >
     <div class="wrap">
         <h2>Нужно больше иконок</h2>
         <div class="rows">
-            <p>Для блока об инфраструктуре на странице апартаментов было подобрано и приведено к единой стилистике более 40 иконок</p>
+            <p>Для блока об инфраструктуре на странице апартаментов было подобрано и приведено к единому стилю более 40 иконок</p>
             {# <img src="/content/{{folder}}/icons.jpg" alt="Иконки для страницы апартаментов"> #}
             {% image ["src/content/", folder, "/icons.jpg"] | join, "", "Иконки для страницы апартаментов",  [1376, 2064]  %}
         </div>
     </div>
 </section>
 
-<div class="wrap">
+<div class="wrap" >
     <div class="dark-bg rounded-incut rows">
         <h2>Глобальная проблема: <span class="wavy-underline">лишний&nbsp;код</span></h2>
         <p>На сайте нерационально использовалась библиотека Bootstrap. Активно применялись только классы для сетки, а стили для всех остальных элементов были избыточными и часто переопределяли дефолтные стили библиотеки, из-за чего её использование теряло смысл. В HTML была излишняя вложенность в больших количествах.</p>
@@ -117,11 +120,11 @@ role:
 
         <p>Новый сайт сверстан с использованием шаблонизатора Smarty и SCSS.</p>
         <p>Промежуточную версию обновленного кода можно посмотреть на GitHub.</p>
-        <a href="#" target="_blank" class="btn btn-white"><span class="btn-icon github-icon">Код на GitHub</span></a>
+        <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-white"><span class="btn-icon github-icon">Частичный на GitHub</span></a>
     </div>
 </div>
 
-<section>
+<section >
     <div class="wrap">
         <h2>Не только код</h2>
         <div class="sided-callout-layout">
@@ -143,7 +146,7 @@ role:
     </div>
 </section>
 
-<section class="dark-bg overlapped">
+<section class="dark-bg overlapped" >
     <div class="wrap">
         <h2>Изменения в карточке предложения</h2>
         <ul class="bulleted-list--custom">
@@ -160,20 +163,20 @@ role:
             <div class="item">
                 <h3>Было</h3>
                 {# <img src="/content/brightrich/card-before.png" alt=""> #}
-                {% image ["src/content/", folder, "/card-before.jpg"] | join, "", "Карточка предложения - до",  [658, 987]  %}
+                {% image ["src/content/", folder, "/card-before.jpg"] | join, "brs-0", "Карточка предложения - до",  [658, 987]  %}
 
             </div>
             <div class="item">
                 <h3>Стало</h3>
                 {# <img src="/content/brightrich/card-after.png" alt=""> #}
-                {% image ["src/content/", folder, "/card-after.jpg"] | join, "", "Карточка предложения - после",  [658, 987]  %}
+                {% image ["src/content/", folder, "/card-after.jpg"] | join, "brs-0", "Карточка предложения - после",  [658, 987]  %}
 
             </div>
         </div>
     </div>
 </section>
 
-<section class="brs-top">
+<section class="brs-top" >
     <div class="wrap">
         <h2>Примеры других проблем</h2>
         <div class="solution-layout">
@@ -204,7 +207,7 @@ role:
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <div class="solution-layout">
             <div class="solution-desc">
@@ -235,7 +238,7 @@ role:
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <div class="solution-layout">
             <div class="solution-desc">
@@ -266,16 +269,17 @@ role:
     </div>
 </section>
 
-<section class="dark-bg brs-top">
+<section class="dark-bg brs-top" >
     <div class="wrap rows">
 
-        <h2>Пример вёрстки</h2>
+        <h2>Пример готовой страницы</h2>
         <p>Главная страница содержит большое количество слайдеров, табов и других интерактивных элементов.</p>
 
         {{ components.video('brightrich-video.webm', 'brightrich-video-poster.jpg', true) }}
 
     </div>
 </section>
+
 <section class="dark-bg border-top--light">
     <div class="wrap">
 
@@ -334,12 +338,12 @@ role:
         </div>
     </div>
 </section>
-<section class="links-section">
+<section class="links-section" >
     <div class="wrap">
         <h2>Ссылки</h2>
         <div class="buttons-group">
             <a href="https://brightrich.ru" target="_blank" class="btn btn-outline--default btn-external"><span>brightrich.ru</span></a>
-            <a href="#" class="btn btn-outline--default btn-external"><span>Частичный код на GitHub</span></a>
+            <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-outline--default btn-external"><span>Частичный код на GitHub</span></a>
         </div>
     </div>
 </section>
