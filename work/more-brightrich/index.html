@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#1a1c21">
 </head>
 
-<body>
+<body >
 
     <header class="top-nav">
     <div class="wrap">
@@ -56,11 +56,11 @@
     </div>
 </header>
     
-<section class="case-intro dark-bg  overlapped ">
+<section class="case-intro dark-bg   ">
     <div class="wrap">
-        <h1><span class="gradient-text">Больше для Bright Rich</span></h1>
-        <h3>BR Home, CREMAP (UAE / RU), BR Cash, BR CRM etc.</h3>
-        <ul class="taglist">
+        <h1 data-gsap-el="coverTitle"><span class="gradient-text">Больше для Bright Rich</span></h1>
+        <h3 data-gsap-el="coverDesc">BR Home, CREMAP (UAE / RU), BR Cash, BR CRM etc.</h3>
+        <ul class="taglist" data-gsap-el="tagList">
             
             <li class="taglist__item">Дизайн / редизайн</li>
             
@@ -69,22 +69,26 @@
             <li class="taglist__item">Вёрстка и натяжка на CMS</li>
             
         </ul>
-        <div class="case-intro__date"><span>2022–2023</span></div>
+        <div class="case-intro__date" data-gsap-el="coverDate"><span>2022–2023</span></div>
     </div>
 </section>
 
 
 
-<section class="brs-top">
-    <div class="wrap">
-        <h2>О компании</h2>
-        <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
-        <h2>Задачи</h2>
-        <p>Помимо переноса основного сайта (о котором можно прочитать в <a href="/work/brightrich" class="link">этом кейсе</a>) для компании был выполнено множество других проектов. Вот некоторые из них.</p>
-    </div>
-</section>
+<div class="brs-top-outer--dark" >
+    <section class="brs-top">
+        <div class="wrap">
+            <div class="readable">
+                <h2>О компании</h2>
+                <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
+                <h2>Задачи</h2>
+                <p>Помимо переноса основного сайта (о котором можно прочитать в <a href="/work/brightrich" class="link">этом кейсе</a>) для компании был выполнено множество других проектов. Вот некоторые из них.</p>
+            </div>
+        </div>
+    </section>
+</div>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">BR Home</span></h2>
         <div class="solution-layout">
@@ -134,7 +138,7 @@
 
                 </div>
                 <div class="media-bg-layer--gray">
-                    <div class="mobile-screens">
+                    <div class="mobile-screens" data-gsap="groupTranslateY">
                         <div class="grid-item">
                             <picture style="aspect-ratio: 600/1166">
 			  <source type="image/avif" srcset="/content/img/Y7Agovy4es-600.avif 600w" sizes="100vw">
@@ -187,7 +191,7 @@
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">CREMAP (UAE / RU)</span></h2>
         <div class="solution-layout">
@@ -213,8 +217,19 @@
             </div>
             <div class="solution-image media-bg-layer--dark-green">
                 <div class="long-image-crop" data-lightbox>
-                    
-                    <picture style="aspect-ratio: 1376/6154">
+                    <picture style="aspect-ratio: 995/665">
+			  <source type="image/avif" srcset="/content/img/NLpHaG5qHg-995.avif 995w, /content/img/NLpHaG5qHg-1600.avif 1600w" sizes="100vw">
+  <source type="image/webp" srcset="/content/img/NLpHaG5qHg-995.webp 995w, /content/img/NLpHaG5qHg-1600.webp 1600w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/img/NLpHaG5qHg-995.jpeg 995w, /content/img/NLpHaG5qHg-1600.jpeg 1600w" sizes="100vw">
+				<img
+					src="/content/img/NLpHaG5qHg-1600.jpeg"
+          class=""
+          alt="Cremap.ae - скриншот главной страницы - превью"
+
+					loading="lazy"
+					decoding="async">
+			</picture>
+                    <div data-full-image><picture style="aspect-ratio: 1376/6154">
 			  <source type="image/avif" srcset="/content/img/dILUHzhXXS-1376.avif 1376w, /content/img/dILUHzhXXS-1600.avif 1600w" sizes="100vw">
   <source type="image/webp" srcset="/content/img/dILUHzhXXS-1376.webp 1376w, /content/img/dILUHzhXXS-1600.webp 1600w" sizes="100vw">
   <source type="image/jpeg" srcset="/content/img/dILUHzhXXS-1376.jpeg 1376w, /content/img/dILUHzhXXS-1600.jpeg 1600w" sizes="100vw">
@@ -225,7 +240,7 @@
 
 					loading="lazy"
 					decoding="async">
-			</picture>
+			</picture></div>
                 </div>
                 
                 <picture style="aspect-ratio: 1376/1736">
@@ -245,20 +260,24 @@
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">Moscow City Broker</span></h2>
 
-        <div class="rows">
+        <div class="rows readable">
             <ul class="taglist taglist--small">
                 <li class="taglist__item">Аудит</li>
                 <li class="taglist__item">Редизайн</li>
                 <li class="taglist__item">Вёрстка и натяжка на CMS</li>
             </ul>
-            <h3>Задача</h3>
-            <p>Сделать небольшой редизайн и улучшить UX на имеющемся сайте. Перевестать с нуля на собственной CMS Evernet, заточенной под работу с недвижимостью.</p>
-            <h3>Процесс</h3>
-            <p>Провели аудит и составили список багов и неудобств (примеры далее). Нарисовали макеты и согласовали их с клиентом. Провели ряд работ по SEO для поднятия сайта в органической выдаче.</p>
+            <div>
+                <h3>Задача</h3>
+                <p>Сделать небольшой редизайн и улучшить UX на имеющемся сайте. Перевестать с нуля на собственной CMS Evernet, заточенной под работу с недвижимостью.</p>
+            </div>
+            <div>
+                <h3>Процесс</h3>
+                <p>Провели аудит и составили список багов и неудобств (примеры далее). Нарисовали макеты и согласовали их с клиентом. Провели ряд работ по SEO для поднятия сайта в органической выдаче.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -464,13 +483,24 @@
             <div class="solution-desc">
                 <div class="solution-desc__inner">
                     <h3 class="underline-red">Проблема</h3>
-                    <p>Не был предусмотрен слайдер для показа фото</p>
+                    <p>Не был предусмотрен слайдер для показа фото, вместо реальных фото помещений отображалось фото БЦ</p>
                 </div>
             </div>
             <div class="solution-image media-bg-layer--dark-gray">
                 <div class="long-image-crop" data-lightbox>
-                    
-                    <picture style="aspect-ratio: 1376/2005">
+                    <picture style="aspect-ratio: 995/665">
+			  <source type="image/avif" srcset="/content/img/eeYinR-Rm0-995.avif 995w, /content/img/eeYinR-Rm0-1990.avif 1990w" sizes="100vw">
+  <source type="image/webp" srcset="/content/img/eeYinR-Rm0-995.webp 995w, /content/img/eeYinR-Rm0-1990.webp 1990w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/img/eeYinR-Rm0-995.jpeg 995w, /content/img/eeYinR-Rm0-1990.jpeg 1990w" sizes="100vw">
+				<img
+					src="/content/img/eeYinR-Rm0-1990.jpeg"
+          class=""
+          alt="bcmoscowcity.com - страница БЦ - превью"
+
+					loading="lazy"
+					decoding="async">
+			</picture>
+                    <div data-full-image><picture style="aspect-ratio: 1376/2005">
 			  <source type="image/avif" srcset="/content/img/uILaoF-jXJ-1376.avif 1376w, /content/img/uILaoF-jXJ-1990.avif 1990w" sizes="100vw">
   <source type="image/webp" srcset="/content/img/uILaoF-jXJ-1376.webp 1376w, /content/img/uILaoF-jXJ-1990.webp 1990w" sizes="100vw">
   <source type="image/jpeg" srcset="/content/img/uILaoF-jXJ-1376.jpeg 1376w, /content/img/uILaoF-jXJ-1990.jpeg 1990w" sizes="100vw">
@@ -481,7 +511,7 @@
 
 					loading="lazy"
 					decoding="async">
-			</picture>
+			</picture></div>
                 </div>
             </div>
         </div>
@@ -582,7 +612,7 @@
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">BR Cash</span></h2>
         <div class="solution-layout">
@@ -636,7 +666,7 @@
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2><span class="gradient-text">BR CRM</span></h2>
         <div class="solution-layout">
@@ -815,6 +845,7 @@
 </body>
 <script src="/js/gsap.min.js"></script>
 <script src="/js/ScrollTrigger.min.js"></script>
+
 <script src="/js/script.js"></script>
 
 </html>

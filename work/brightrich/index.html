@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#1a1c21">
 </head>
 
-<body>
+<body >
 
     <header class="top-nav">
     <div class="wrap">
@@ -58,9 +58,9 @@
     
 <section class="case-intro dark-bg  pb-0 ">
     <div class="wrap">
-        <h1><span class="gradient-text">Bright Rich</span></h1>
-        <h3>Полная переверстка основного сайта и улучшение UI/UX.</h3>
-        <ul class="taglist">
+        <h1 data-gsap-el="coverTitle"><span class="gradient-text">Bright Rich</span></h1>
+        <h3 data-gsap-el="coverDesc">Полная переверстка основного сайта и улучшение UI/UX.</h3>
+        <ul class="taglist" data-gsap-el="tagList">
             
             <li class="taglist__item">Оптимизация UX/UI</li>
             
@@ -69,7 +69,7 @@
             <li class="taglist__item">Дизайн дополнительных страниц</li>
             
         </ul>
-        <div class="case-intro__date"><span>Ноябрь 2022</span></div>
+        <div class="case-intro__date" data-gsap-el="coverDate"><span>Ноябрь 2022</span></div>
     </div>
 </section>
 
@@ -92,21 +92,25 @@
     </div>
 </section>
 
-<section class="brs-top">
-    <div class="wrap">
-        <h2>О компании</h2>
-        <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
-        <h2>Задачи</h2>
-        <p>На сайте накопилось много проблем, которые довольно медленно исправлялись штатным специалистом. Компания планировала расширяться в Казахстан и ОАЭ, поэтому нам было поручено оперативно привести сайт в порядок. Для этого планировалось:</p>
-        <ul class="bulleted-list--custom">
-            <li>провести ручное тестирование для обнаружения неучтенных проблем;
-            </li>
-            <li>перенести сайт на собственную CMS веб-студии Evernet, заточенную под работу с недвижимостью.</li>
-        </ul>
-    </div>
-</section>
+<div class="brs-top-outer--dark" >
+    <section class="brs-top">
+        <div class="wrap">
+            <div class="readable">
+                <h2>О компании</h2>
+                <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
+                <h2>Задачи</h2>
+                <p>На сайте накопилось много проблем, которые довольно медленно исправлялись штатным специалистом. Компания планировала расширяться в Казахстан и ОАЭ, поэтому нам было поручено оперативно привести сайт в порядок. Для этого планировалось:</p>
+                <ul class="bulleted-list--custom">
+                    <li>провести ручное тестирование для обнаружения неучтенных проблем;
+                    </li>
+                    <li>перенести сайт на собственную CMS веб-студии Evernet, заточенную под работу с недвижимостью.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <h2>Типы страниц для вёрстки</h2>
         <div class="pages-type-layout">
@@ -145,10 +149,10 @@
     </div>
 </section>
 
-<section class="dark-bg overlapped">
+<section class="dark-bg overlapped" >
     <div class="wrap">
 
-        <div class="rows">
+        <div class="rows readable">
             <h2>Нужно больше страниц</h2>
             <p>В ходе переноса добавились еще два типа страниц, для которых нужно было разработать дизайн в фирменном стиле с использованием уже имеющихся компонентов:</p>
 
@@ -161,8 +165,19 @@
         <div class="screens-grid-2">
             <div class="grid-item">
                 <div class="long-image-crop" data-lightbox>
-                    
-                    <picture style="aspect-ratio: 1376/4886">
+                    <picture style="aspect-ratio: 658/440">
+			  <source type="image/avif" srcset="/content/img/RZ4yo95KAv-658.avif 658w, /content/img/RZ4yo95KAv-1316.avif 1316w" sizes="100vw">
+  <source type="image/webp" srcset="/content/img/RZ4yo95KAv-658.webp 658w, /content/img/RZ4yo95KAv-1316.webp 1316w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/img/RZ4yo95KAv-658.jpeg 658w, /content/img/RZ4yo95KAv-1316.jpeg 1316w" sizes="100vw">
+				<img
+					src="/content/img/RZ4yo95KAv-1316.jpeg"
+          class=""
+          alt="Страница апартаментов - превью"
+
+					loading="lazy"
+					decoding="async">
+			</picture>
+                    <div data-full-image><picture style="aspect-ratio: 1376/4886">
 			  <source type="image/avif" srcset="/content/img/Id3YGlA5Hh-1376.avif 1376w, /content/img/Id3YGlA5Hh-1920.avif 1920w" sizes="100vw">
   <source type="image/webp" srcset="/content/img/Id3YGlA5Hh-1376.webp 1376w, /content/img/Id3YGlA5Hh-1920.webp 1920w" sizes="100vw">
   <source type="image/jpeg" srcset="/content/img/Id3YGlA5Hh-1376.jpeg 1376w, /content/img/Id3YGlA5Hh-1920.jpeg 1920w" sizes="100vw">
@@ -173,15 +188,25 @@
 
 					loading="lazy"
 					decoding="async">
-			</picture>
-
+			</picture></div>
                 </div>
             </div>
 
             <div class="grid-item">
                 <div class="long-image-crop" data-lightbox>
-                    
-                    <picture style="aspect-ratio: 1376/4570">
+                    <picture style="aspect-ratio: 658/440">
+			  <source type="image/avif" srcset="/content/img/6gezIG6Kdo-658.avif 658w, /content/img/6gezIG6Kdo-1316.avif 1316w" sizes="100vw">
+  <source type="image/webp" srcset="/content/img/6gezIG6Kdo-658.webp 658w, /content/img/6gezIG6Kdo-1316.webp 1316w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/img/6gezIG6Kdo-658.jpeg 658w, /content/img/6gezIG6Kdo-1316.jpeg 1316w" sizes="100vw">
+				<img
+					src="/content/img/6gezIG6Kdo-1316.jpeg"
+          class=""
+          alt="Страница аналитики - превью"
+
+					loading="lazy"
+					decoding="async">
+			</picture>
+                    <div data-full-image><picture style="aspect-ratio: 1376/4570">
 			  <source type="image/avif" srcset="/content/img/becEpsUomR-1376.avif 1376w, /content/img/becEpsUomR-1920.avif 1920w" sizes="100vw">
   <source type="image/webp" srcset="/content/img/becEpsUomR-1376.webp 1376w, /content/img/becEpsUomR-1920.webp 1920w" sizes="100vw">
   <source type="image/jpeg" srcset="/content/img/becEpsUomR-1376.jpeg 1376w, /content/img/becEpsUomR-1920.jpeg 1920w" sizes="100vw">
@@ -192,18 +217,18 @@
 
 					loading="lazy"
 					decoding="async">
-			</picture>
+			</picture></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="brs-top">
+<section class="brs-top" >
     <div class="wrap">
         <h2>Нужно больше иконок</h2>
         <div class="rows">
-            <p>Для блока об инфраструктуре на странице апартаментов было подобрано и приведено к единой стилистике более 40 иконок</p>
+            <p>Для блока об инфраструктуре на странице апартаментов было подобрано и приведено к единому стилю более 40 иконок</p>
             
             <picture style="aspect-ratio: 1376/789">
 			  <source type="image/avif" srcset="/content/img/vgrzmXdWk0-1376.avif 1376w, /content/img/vgrzmXdWk0-2064.avif 2064w, /content/img/vgrzmXdWk0-2752.avif 2752w" sizes="100vw">
@@ -221,7 +246,7 @@
     </div>
 </section>
 
-<div class="wrap">
+<div class="wrap" >
     <div class="dark-bg rounded-incut rows">
         <h2>Глобальная проблема: <span class="wavy-underline">лишний&nbsp;код</span></h2>
         <p>На сайте нерационально использовалась библиотека Bootstrap. Активно применялись только классы для сетки, а стили для всех остальных элементов были избыточными и часто переопределяли дефолтные стили библиотеки, из-за чего её использование теряло смысл. В HTML была излишняя вложенность в больших количествах.</p>
@@ -233,11 +258,11 @@
 
         <p>Новый сайт сверстан с использованием шаблонизатора Smarty и SCSS.</p>
         <p>Промежуточную версию обновленного кода можно посмотреть на GitHub.</p>
-        <a href="#" target="_blank" class="btn btn-white"><span class="btn-icon github-icon">Код на GitHub</span></a>
+        <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-white"><span class="btn-icon github-icon">Частичный на GitHub</span></a>
     </div>
 </div>
 
-<section>
+<section >
     <div class="wrap">
         <h2>Не только код</h2>
         <div class="sided-callout-layout">
@@ -259,7 +284,7 @@
     </div>
 </section>
 
-<section class="dark-bg overlapped">
+<section class="dark-bg overlapped" >
     <div class="wrap">
         <h2>Изменения в карточке предложения</h2>
         <ul class="bulleted-list--custom">
@@ -276,13 +301,13 @@
             <div class="item">
                 <h3>Было</h3>
                 
-                <picture style="aspect-ratio: 658/608">
-			  <source type="image/avif" srcset="/content/img/WzvBEUGzH6-658.avif 658w, /content/img/WzvBEUGzH6-987.avif 987w, /content/img/WzvBEUGzH6-1316.avif 1316w" sizes="100vw">
-  <source type="image/webp" srcset="/content/img/WzvBEUGzH6-658.webp 658w, /content/img/WzvBEUGzH6-987.webp 987w, /content/img/WzvBEUGzH6-1316.webp 1316w" sizes="100vw">
-  <source type="image/jpeg" srcset="/content/img/WzvBEUGzH6-658.jpeg 658w, /content/img/WzvBEUGzH6-987.jpeg 987w, /content/img/WzvBEUGzH6-1316.jpeg 1316w" sizes="100vw">
+                <picture style="aspect-ratio: 658/609">
+			  <source type="image/avif" srcset="/content/img/xJ5-0srxGV-658.avif 658w, /content/img/xJ5-0srxGV-987.avif 987w, /content/img/xJ5-0srxGV-1316.avif 1316w" sizes="100vw">
+  <source type="image/webp" srcset="/content/img/xJ5-0srxGV-658.webp 658w, /content/img/xJ5-0srxGV-987.webp 987w, /content/img/xJ5-0srxGV-1316.webp 1316w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/img/xJ5-0srxGV-658.jpeg 658w, /content/img/xJ5-0srxGV-987.jpeg 987w, /content/img/xJ5-0srxGV-1316.jpeg 1316w" sizes="100vw">
 				<img
-					src="/content/img/WzvBEUGzH6-1316.jpeg"
-          class=""
+					src="/content/img/xJ5-0srxGV-1316.jpeg"
+          class="brs-0"
           alt="Карточка предложения - до"
 
 					loading="lazy"
@@ -293,13 +318,13 @@
             <div class="item">
                 <h3>Стало</h3>
                 
-                <picture style="aspect-ratio: 658/609">
-			  <source type="image/avif" srcset="/content/img/aUnHxW5tdS-658.avif 658w, /content/img/aUnHxW5tdS-987.avif 987w, /content/img/aUnHxW5tdS-1316.avif 1316w" sizes="100vw">
-  <source type="image/webp" srcset="/content/img/aUnHxW5tdS-658.webp 658w, /content/img/aUnHxW5tdS-987.webp 987w, /content/img/aUnHxW5tdS-1316.webp 1316w" sizes="100vw">
-  <source type="image/jpeg" srcset="/content/img/aUnHxW5tdS-658.jpeg 658w, /content/img/aUnHxW5tdS-987.jpeg 987w, /content/img/aUnHxW5tdS-1316.jpeg 1316w" sizes="100vw">
+                <picture style="aspect-ratio: 658/610">
+			  <source type="image/avif" srcset="/content/img/lz3i_1vC9M-658.avif 658w, /content/img/lz3i_1vC9M-987.avif 987w, /content/img/lz3i_1vC9M-1316.avif 1316w" sizes="100vw">
+  <source type="image/webp" srcset="/content/img/lz3i_1vC9M-658.webp 658w, /content/img/lz3i_1vC9M-987.webp 987w, /content/img/lz3i_1vC9M-1316.webp 1316w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/img/lz3i_1vC9M-658.jpeg 658w, /content/img/lz3i_1vC9M-987.jpeg 987w, /content/img/lz3i_1vC9M-1316.jpeg 1316w" sizes="100vw">
 				<img
-					src="/content/img/aUnHxW5tdS-1316.jpeg"
-          class=""
+					src="/content/img/lz3i_1vC9M-1316.jpeg"
+          class="brs-0"
           alt="Карточка предложения - после"
 
 					loading="lazy"
@@ -311,7 +336,7 @@
     </div>
 </section>
 
-<section class="brs-top">
+<section class="brs-top" >
     <div class="wrap">
         <h2>Примеры других проблем</h2>
         <div class="solution-layout">
@@ -364,7 +389,7 @@
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <div class="solution-layout">
             <div class="solution-desc">
@@ -417,7 +442,7 @@
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" >
     <div class="wrap">
         <div class="solution-layout">
             <div class="solution-desc">
@@ -470,10 +495,10 @@
     </div>
 </section>
 
-<section class="dark-bg brs-top">
+<section class="dark-bg brs-top" >
     <div class="wrap rows">
 
-        <h2>Пример вёрстки</h2>
+        <h2>Пример готовой страницы</h2>
         <p>Главная страница содержит большое количество слайдеров, табов и других интерактивных элементов.</p>
 
         
@@ -500,6 +525,7 @@
 
     </div>
 </section>
+
 <section class="dark-bg border-top--light">
     <div class="wrap">
 
@@ -591,12 +617,12 @@
         </div>
     </div>
 </section>
-<section class="links-section">
+<section class="links-section" >
     <div class="wrap">
         <h2>Ссылки</h2>
         <div class="buttons-group">
             <a href="https://brightrich.ru" target="_blank" class="btn btn-outline--default btn-external"><span>brightrich.ru</span></a>
-            <a href="#" class="btn btn-outline--default btn-external"><span>Частичный код на GitHub</span></a>
+            <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-outline--default btn-external"><span>Частичный код на GitHub</span></a>
         </div>
     </div>
 </section>
@@ -709,6 +735,7 @@
 </body>
 <script src="/js/gsap.min.js"></script>
 <script src="/js/ScrollTrigger.min.js"></script>
+
 <script src="/js/script.js"></script>
 
 </html>

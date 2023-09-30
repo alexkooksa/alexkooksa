@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#1a1c21">
 </head>
 
-<body>
+<body  class="homepage" >
 
     <header class="top-nav">
     <div class="wrap">
@@ -55,49 +55,66 @@
         </nav>
     </div>
 </header>
-    <section class="homepage-intro dark-bg">
+    
+<!-- TODO critical css for intro -->
+
+<section class="homepage-intro">
+	<img src="/styles/images/bg1.jpg" alt="" data-gsap-el="bg1">
+	<img src="/styles/images/bg2.jpg" alt="" data-gsap-el="bg2">
+	<img src="/styles/images/bg3.jpg" alt="" data-gsap-el="bg3">
 	<div class="wrap">
-		<p class="greeting">Привет, я Александра <span class="wavy-underline">Кукса</span>&nbsp;&mdash;</p>
-		<h1><span class="gradient-text">Frontend-разработчик</span> <span class="accent-font">// с опытом в&nbsp;UI/UX</span></h1>
-		<a href="#work" class="btn btn-white">Интересно, дальше</a>
+		<div class="intro-left-col">
+			<p class="greeting accent-font" data-gsap-el="greeting">Привет, я Александра Кукса&nbsp;&mdash;</p>
+			<h1>
+				<span class="text-underlay" data-gsap-el="mainline-1"><span class="gradient-text">Frontend-</span>
+				</span>
+				<span class="text-underlay" data-gsap-el="mainline-2"><span class="gradient-text">разработчик</span></span>
+				<span class="accent-font" data-gsap-el="secondline">// с опытом в&nbsp;UI/UX</span>
+			</h1>
+		</div>
+		<!-- <a href="#work" class="btn btn-white">Интересно, дальше</a> -->
+
+		<div class="intro-right-col">
+			<p class="intro-footnote" data-gsap-el="footnote"><span>*</span> Kooksa <i>['kuk-sa]</i> <br /><!-- proper noun  --> 1) от англ. «kook» — totally cool; <br /> 2) искаж. «kuksa» — финская кружка</p>
+		</div>
 	</div>
-	<p class="wrap intro-footnote"><span>*</span> 1) от англ. «kook» — totally cool; 2) искаж. «kuksa» — финская кружка</p>
 </section>
 
-<section class="cases-section dark-bg" id="work" data-gsap="section-overlap">
-    <div class="wrap">
-        <div class="title-group centered">
-            <h2><span class="gradient-text" data-gsap="opacity">Недавние кейсы</span></h2>
-            <p data-gsap="opacity">Проекты запущены, поддерживаются и развиваются</p>
-        </div>
-        <ul class="caselist">
-            
-            <li data-gsap="scale">
-                <a href="/work/brightrich/" class="caselist__item is-large">
-                    <div class="item-content">
-                        <p class="item-title title-font">Bright Rich</p>
+<div class="brs-top-outer--dark" data-gsap-el="section-rounded">
+	<section class="cases-section dark-bg" id="work">
+		<div class="wrap">
+			<div class="title-group centered">
+				<h2><span class="gradient-text" data-gsap="opacity">Недавние кейсы</span></h2>
+				<p data-gsap="opacity">Проекты запущены, поддерживаются и развиваются</p>
+			</div>
+			<ul class="caselist">
+    
+    <li data-gsap="scale">
+        <a href="/work/brightrich/" class="caselist__item is-large">
+            <div class="item-content">
+                <p class="item-title title-font">Bright Rich</p>
 
-                        <p class="item-desc">Полная переверстка основного сайта и улучшение UI/UX. Подробный кейс.</p>
+                <p class="item-desc">Полная переверстка основного сайта и улучшение UI/UX. Подробный кейс.</p>
 
-                        
-                        <ul class="taglist">
-                            
-                            <li class="taglist__item">Оптимизация UX/UI</li>
-                            
-                            <li class="taglist__item">Вёрстка и натяжка на CMS</li>
-                            
-                            <li class="taglist__item">Дизайн дополнительных страниц</li>
-                            
-                        </ul>
-                        
+                
+                <ul class="taglist">
+                    
+                    <li class="taglist__item">Оптимизация UX/UI</li>
+                    
+                    <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+                    
+                    <li class="taglist__item">Дизайн дополнительных страниц</li>
+                    
+                </ul>
+                
 
-                        
-                        <p class="item-date"><span>Ноябрь 2022</span></p>
-                        
-                        <p class="btn btn-white">Смотреть кейс</p>
-                    </div>
-                    <div class="item-image">
-                        <picture style="aspect-ratio: 690/407">
+                
+                <p class="item-date"><span>Ноябрь 2022</span></p>
+                
+                <p class="btn btn-white">Смотреть кейс</p>
+            </div>
+            <div class="item-image">
+                <picture style="aspect-ratio: 690/407">
 			  <source type="image/avif" srcset="/content/img/TOPyrH5U6C-690.avif 690w, /content/img/TOPyrH5U6C-1380.avif 1380w" sizes="100vw">
   <source type="image/webp" srcset="/content/img/TOPyrH5U6C-690.webp 690w, /content/img/TOPyrH5U6C-1380.webp 1380w" sizes="100vw">
   <source type="image/png" srcset="/content/img/TOPyrH5U6C-690.png 690w, /content/img/TOPyrH5U6C-1380.png 1380w" sizes="100vw">
@@ -110,36 +127,36 @@
 					decoding="async">
 			</picture>
 
-                    </div>
-                </a>
-            </li>
-            
-            <li data-gsap="scale">
-                <a href="/work/more-brightrich/" class="caselist__item is-large">
-                    <div class="item-content">
-                        <p class="item-title title-font">Больше для Bright Rich</p>
+            </div>
+        </a>
+    </li>
+    
+    <li data-gsap="scale">
+        <a href="/work/more-brightrich/" class="caselist__item is-large">
+            <div class="item-content">
+                <p class="item-title title-font">Больше для Bright Rich</p>
 
-                        <p class="item-desc">BR Home, CREMAP (UAE / RU), BR Cash, BR CRM etc.</p>
+                <p class="item-desc">BR Home, CREMAP (UAE / RU), BR Cash, BR CRM etc.</p>
 
-                        
-                        <ul class="taglist">
-                            
-                            <li class="taglist__item">Дизайн / редизайн</li>
-                            
-                            <li class="taglist__item">Аудит</li>
-                            
-                            <li class="taglist__item">Вёрстка и натяжка на CMS</li>
-                            
-                        </ul>
-                        
+                
+                <ul class="taglist">
+                    
+                    <li class="taglist__item">Дизайн / редизайн</li>
+                    
+                    <li class="taglist__item">Аудит</li>
+                    
+                    <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+                    
+                </ul>
+                
 
-                        
-                        <p class="item-date"><span>2022–2023</span></p>
-                        
-                        <p class="btn btn-white">Смотреть кейс</p>
-                    </div>
-                    <div class="item-image">
-                        <picture style="aspect-ratio: 690/407">
+                
+                <p class="item-date"><span>2022–2023</span></p>
+                
+                <p class="btn btn-white">Смотреть кейс</p>
+            </div>
+            <div class="item-image">
+                <picture style="aspect-ratio: 690/407">
 			  <source type="image/avif" srcset="/content/img/poazAVsvZi-690.avif 690w, /content/img/poazAVsvZi-1380.avif 1380w" sizes="100vw">
   <source type="image/webp" srcset="/content/img/poazAVsvZi-690.webp 690w, /content/img/poazAVsvZi-1380.webp 1380w" sizes="100vw">
   <source type="image/png" srcset="/content/img/poazAVsvZi-690.png 690w, /content/img/poazAVsvZi-1380.png 1380w" sizes="100vw">
@@ -152,176 +169,177 @@
 					decoding="async">
 			</picture>
 
-                    </div>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-</section>
+            </div>
+        </a>
+    </li>
+    
+</ul>
+		</div>
+	</section>
+</div>
 
-<section class="older-section dark-bg overlapped">
-    <div class="wrap">
-        <div class="centered title-group">
-            <h2><span class="gradient-text" data-gsap="opacity">Сайты постарше</span></h2>
-            <p data-gsap="opacity">Кроме Bright Rich были и другие проекты, например:</p>
-        </div>
-        <ul class="caselist caselist--small">
-            
-            <li data-gsap="groupTranslateY">
-                <a class="caselist__item is-vertical" href="/work/restte/">
-                    <div class="item-content">
-                        <p class="item-title title-font">Restte</p>
-                        <p class="item-desc">Интернет-магазин мебели для сегмента HoReCa</p>
-                        
-                        <ul class="taglist">
-                            
-                            <li class="taglist__item">Дизайн</li>
-                            
-                            <li class="taglist__item">Вёрстка и натяжка на CMS</li>
-                            
-                        </ul>
-                        
-                        <div class="item-content__bottom rows">
-                            
-                            <p class="item-date"><span>2021</span></p>
-                            
-                            <p class="btn btn-white">Смотреть кейс</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            
-            <li data-gsap="groupTranslateY">
-                <a class="caselist__item is-vertical" href="/work/electric/">
-                    <div class="item-content">
-                        <p class="item-title title-font">Электрика</p>
-                        <p class="item-desc">Оригинальная продукция Schneider Electric и Jung</p>
-                        
-                        <ul class="taglist">
-                            
-                            <li class="taglist__item">Дизайн</li>
-                            
-                            <li class="taglist__item">Вёрстка и натяжка на CMS</li>
-                            
-                        </ul>
-                        
-                        <div class="item-content__bottom rows">
-                            
-                            <p class="item-date"><span>2020</span></p>
-                            
-                            <p class="btn btn-white">Смотреть кейс</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            
-
-            <li class="caselist__item is-vertical caselist__item--last" data-gsap="groupTranslateY">
-                <div class="item-content">
-                    <p class="item-title title-font"><span class="gradient-text">И ещё</span></p>
-                    <p class="stats-block"><span class="stats-number">100+</span><span class="stats-unit">проектов <br />за 7 лет</span></p>
-                    <p class="item-desc">E-commerce, недвижимость, внутренние CRM, корпоративные сайты</p>
-                    <div class="item-content__bottom rows">
-                        <p class="item-date"><span>2016 - 2023</span></p>
-                        <a href="/#experience" class="btn btn-outline--primary">Откуда столько?</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<section class="brs-top" id="experience">
+<section class="older-section dark-bg">
 	<div class="wrap">
 		<div class="centered title-group">
-			<h2 class="section-title" data-gsap="opacity">Опыт работы</h2>
-			<p><span data-gsap="opacity">Спойлер: 7 лет в веб-разработке</span></p>
+			<h2><span class="gradient-text" data-gsap="opacity">Сайты постарше</span></h2>
+			<p data-gsap="opacity">Кроме Bright Rich были и другие проекты, например:</p>
 		</div>
-		<ul class="timeline">
-			<li class="timeline-item" data-gsap="opacity">
-				<div class="timeline-item__info">
-					<p class="timeline-item__date">апрель 2017 - март 2023</p>
-					<p class="timeline-item__place">Evernet</p>
-				</div>
-				<div class="timeline-item__content">
-					<h3><span class="bg-text">Frontend-разработчик + UI/UX-дизайнер</span></h3>
-					<ul class="responsibilities-list bulleted-list--default">
-						<li>с 2022 года участвовала преимущественно в проектах для клиента Bright&nbsp;Rich: <a href="/work/brightrich" class="link">основной кейс</a>, <a href="/work/more-brightrich" class="link">еще кейсы</a></li>
-						<li>расширенная область ответственности внутри компании</li>
-						<li>участие во всех этапах разработки проекта: дизайн, создание шаблонов с версткой для CMS (CodeIgniter + Smarty), наполнение контентом, настройка модулей для вывода клиентского контента в админке, сопровождение и внедрение новых функций после запуска</li>
-						<li>внесение небольших правок на бэкенде (PHP)</li>
-						<li>взаимодействие с командой клиента (дизайнеры, маркетологи)</li>
-						<li>проведение юзабилити-аудитов</li>
-					</ul>
-				</div>
-			</li>
-			<li class="timeline-item" data-gsap="opacity">
-				<div class="timeline-item__info">
-					<p class="timeline-item__date">октябрь 2016 - март 2017</p>
-					<p class="timeline-item__place">Evernet</p>
-				</div>
-				<div class="timeline-item__content">
-					<h3><span class="bg-text">Верстальщик + UI/UX-дизайнер</span></h3>
-					<ul class="responsibilities-list bulleted-list--default">
-						<li>расширенная область ответственности внутри компании</li>
-						<li>адаптивная верстка по собственным и клиентским макетам</li>
-						<li>работа в команде с backend-разработчиком</li>
-						<li>поддержка проектов: дизайн и верстка новых компонентов, оптимизация существующих компонентов, устранение багов</li>
-					</ul>
-				</div>
-			</li>
-			<li class="timeline-item" data-gsap="opacity">
-				<div class="timeline-item__info">
-					<p class="timeline-item__date">март 2016 - сентябрь 2016</p>
-					<p class="timeline-item__place">Evernet</p>
-				</div>
-				<div class="timeline-item__content">
-					<h3><span class="bg-text">UI/UX-дизайнер</span></h3>
-					<ul class="responsibilities-list bulleted-list--default">
-						<li>разработка дизайн-макетов для новых сайтов</li>
-						<li>редизайн существующих сайтов клиентов</li>
-						<li>поддержка готовых проектов (работа с контентом, внесение правок)</li>
-					</ul>
-				</div>
-			</li>
-			<li class="timeline-item" data-gsap="opacity" hidden>
-				<div class="timeline-item__info">
-					<p class="timeline-item__date">сентябрь 2015 - февраль 2016</p>
-					<p class="timeline-item__place">Home, sweet home</p>
-				</div>
-				<div class="timeline-item__content">
-					<h3><span class="bg-text">Фрилансер</span></h3>
-					<ul class="responsibilities-list bulleted-list--default">
-						<li>разработка дизайн-макетов</li>
-						<li>тренировка насмотренности, изучение материалов для перехода из полиграфии в веб-дизайн</li>
-					</ul>
-				</div>
-			</li>
-			<li class="timeline-item" data-gsap="opacity" hidden>
-				<div class="timeline-item__info">
-					<p class="timeline-item__date">сентябрь 2013 - август 2015</p>
-					<p class="timeline-item__place">Маркетинговое агентство <br />«Открытый мир»</p>
-				</div>
-				<div class="timeline-item__content">
-					<h3><span class="bg-text">Дизайнер + фотограф</span></h3>
-					<ul class="responsibilities-list bulleted-list--default">
-						<li>создание дизайн-макетов и презентаций</li>
-						<li>работа с типографиями</li>
-						<li>съемка спортивных мероприятий локального и международного уровня</li>
-					</ul>
-				</div>
-			</li>
-		</ul>
+		<ul class="caselist caselist--small"  data-gsap="groupTranslateY">
+    
+    <li>
+        <a class="caselist__item is-vertical" href="/work/restte/">
+            <div class="item-content">
+                <p class="item-title title-font">Restte</p>
+                <p class="item-desc">Интернет-магазин мебели для сегмента HoReCa</p>
+                
+                <ul class="taglist">
+                    
+                    <li class="taglist__item">Дизайн</li>
+                    
+                    <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+                    
+                </ul>
+                
+                <div class="item-content__bottom rows">
+                    
+                    <p class="item-date"><span>2021</span></p>
+                    
+                    <p class="btn btn-white">Смотреть кейс</p>
+                </div>
+            </div>
+        </a>
+    </li>
+    
+    <li>
+        <a class="caselist__item is-vertical" href="/work/electric/">
+            <div class="item-content">
+                <p class="item-title title-font">Электрика</p>
+                <p class="item-desc">Оригинальная продукция Schneider Electric и Jung</p>
+                
+                <ul class="taglist">
+                    
+                    <li class="taglist__item">Дизайн</li>
+                    
+                    <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+                    
+                </ul>
+                
+                <div class="item-content__bottom rows">
+                    
+                    <p class="item-date"><span>2020</span></p>
+                    
+                    <p class="btn btn-white">Смотреть кейс</p>
+                </div>
+            </div>
+        </a>
+    </li>
+    
 
-		<button class="btn btn-default" data-btn="show-jobs">+ 2 места работы</button>
+    <li class="caselist__item is-vertical caselist__item--last">
+        <div class="item-content">
+            <p class="item-title title-font"><span class="gradient-text">И ещё</span></p>
+            <p class="stats-block"><span class="stats-number">100+</span><span class="stats-unit">проектов <br />за 7 лет</span></p>
+            <p class="item-desc">E-commerce, недвижимость, внутренние CRM, корпоративные сайты</p>
+            <div class="item-content__bottom rows">
+                <p class="item-date"><span>2016 - 2023</span></p>
+                <a href="/#experience" class="btn btn-outline--primary">Откуда столько?</a>
+            </div>
+        </div>
+    </li>
+</ul>
 	</div>
 </section>
 
-<div class="wrap skills-wrap dark-bg" data-gsap="opacity">
+<div class="brs-top-outer--dark" data-gsap-el="section-rounded">
+	<section class="brs-top" id="experience">
+		<div class="wrap">
+			<div class="centered title-group">
+				<h2 class="section-title" data-gsap="opacity"><span class="gradient-text">Опыт работы</span></h2>
+			</div>
+			<ul class="timeline">
+				<li class="timeline-item" data-gsap="opacity">
+					<div class="timeline-item__info">
+						<p class="timeline-item__date">апрель 2017 - март 2023</p>
+						<p class="timeline-item__place">Evernet</p>
+					</div>
+					<div class="timeline-item__content">
+						<h3><span class="bg-text">Frontend-разработчик + UI/UX-дизайнер</span></h3>
+						<ul class="responsibilities-list bulleted-list--default">
+							<li>с 2022 года участвовала преимущественно в проектах для клиента Bright&nbsp;Rich: <a href="/work/brightrich" class="link">основной кейс</a>, <a href="/work/more-brightrich" class="link">еще кейсы</a></li>
+							<li>расширенная область ответственности внутри компании</li>
+							<li>участие во всех этапах разработки проекта: дизайн, создание шаблонов с версткой для CMS (CodeIgniter + Smarty), наполнение контентом, настройка модулей для вывода клиентского контента в админке, сопровождение и внедрение новых функций после запуска</li>
+							<li>внесение небольших правок на бэкенде (PHP)</li>
+							<li>взаимодействие с командой клиента (дизайнеры, маркетологи)</li>
+							<li>проведение юзабилити-аудитов</li>
+						</ul>
+					</div>
+				</li>
+				<li class="timeline-item" data-gsap="opacity">
+					<div class="timeline-item__info">
+						<p class="timeline-item__date">октябрь 2016 - март 2017</p>
+						<p class="timeline-item__place">Evernet</p>
+					</div>
+					<div class="timeline-item__content">
+						<h3><span class="bg-text">Верстальщик + UI/UX-дизайнер</span></h3>
+						<ul class="responsibilities-list bulleted-list--default">
+							<li>расширенная область ответственности внутри компании</li>
+							<li>адаптивная верстка по собственным и клиентским макетам</li>
+							<li>работа в команде с backend-разработчиком</li>
+							<li>поддержка проектов: дизайн и верстка новых компонентов, оптимизация существующих компонентов, устранение багов</li>
+						</ul>
+					</div>
+				</li>
+				<li class="timeline-item" data-gsap="opacity">
+					<div class="timeline-item__info">
+						<p class="timeline-item__date">март 2016 - сентябрь 2016</p>
+						<p class="timeline-item__place">Evernet</p>
+					</div>
+					<div class="timeline-item__content">
+						<h3><span class="bg-text">UI/UX-дизайнер</span></h3>
+						<ul class="responsibilities-list bulleted-list--default">
+							<li>разработка дизайн-макетов для новых сайтов</li>
+							<li>редизайн существующих сайтов клиентов</li>
+							<li>поддержка готовых проектов (работа с контентом, внесение правок)</li>
+						</ul>
+					</div>
+				</li>
+				<li class="timeline-item" data-gsap="opacity" hidden>
+					<div class="timeline-item__info">
+						<p class="timeline-item__date">сентябрь 2015 - февраль 2016</p>
+						<p class="timeline-item__place">Home, sweet home</p>
+					</div>
+					<div class="timeline-item__content">
+						<h3><span class="bg-text">Фрилансер</span></h3>
+						<ul class="responsibilities-list bulleted-list--default">
+							<li>разработка дизайн-макетов</li>
+							<li>тренировка насмотренности, изучение материалов для перехода из полиграфии в веб-дизайн</li>
+						</ul>
+					</div>
+				</li>
+				<li class="timeline-item" data-gsap="opacity" hidden>
+					<div class="timeline-item__info">
+						<p class="timeline-item__date">сентябрь 2013 - август 2015</p>
+						<p class="timeline-item__place">Маркетинговое агентство <br />«Открытый мир»</p>
+					</div>
+					<div class="timeline-item__content">
+						<h3><span class="bg-text">Дизайнер + фотограф</span></h3>
+						<ul class="responsibilities-list bulleted-list--default">
+							<li>создание дизайн-макетов и презентаций</li>
+							<li>работа с типографиями</li>
+							<li>съемка спортивных мероприятий локального и международного уровня</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+
+			<button class="btn btn-default" data-btn="show-jobs">+ 2 места работы</button>
+		</div>
+	</section>
+</div>
+<div class="wrap skills-wrap dark-bg" data-gsap="translateY">
 	<h2 data-gsap="opacity"><span class="gradient-text">Навыки</span></h2>
 	<div class="skills-grid">
-		<div class="grid-item" data-gsap="groupOpacity">
+		<div class="grid-item" >
 			<h3>Hard skills</h3>
 			<ul class="bulleted-list--custom">
 				<li><b>Языки и инструменты:</b> HTML, CSS / SASS, JavaScript, Smarty, Eleventy, Git (basics)</li>
@@ -335,7 +353,7 @@
 				<li><b>Иностранные языки:</b> английский (разговорный, чтение документации), французский (начальный)</li>
 			</ul>
 		</div>
-		<div class="grid-item" data-gsap="groupOpacity">
+		<div class="grid-item" >
 			<h3>Soft skills</h3>
 			<ol class="numbered-list">
 				<li>Умею расставлять приоритеты</li>
@@ -345,16 +363,16 @@
 				<li>Не стесняюсь задавать вопросы, но и с гуглом дружу</li>
 			</ol>
 		</div>
-		<div class="grid-item" data-gsap="groupOpacity">
+		<div class="grid-item" >
 			<h3 class="has-wavy"><span class="wavy-underline">В процессе</span></h3>
 			<ul class="bulleted-list--custom">
 				<li>Курс «Фундаментальный JavaScript»</li>
 				<li>Курс «React для современных веб-приложений»</li>
 			</ul>
 		</div>
-		<div class="grid-item skills-callout" data-gsap="groupOpacity">
+		<div class="grid-item skills-callout" >
 			<div class="callout">
-				<span class="callout-inner">Готова изучить всё, <br> чего не хватает</span>
+				<span class="callout-inner">Открыта для новых знаний&nbsp;&#129299;</span>
 			</div>
 		</div>
 	</div>
@@ -363,8 +381,7 @@
 <section>
 	<div class="wrap">
 		<div class="title-group centered">
-			<h2 data-gsap="opacity">Образование</h2>
-			<p data-gsap="opacity">Высшее + сотни часов самообразования</p>
+			<h2 data-gsap="opacity"><span class="gradient-text">Образование</span></h2>
 		</div>
 		<ul class="timeline">
 			<li class="timeline-item" data-gsap="opacity">
@@ -412,14 +429,14 @@
 	</div>
 </section>
 
-<section class=" dark-bg brs-top">
+<section class="dark-bg brs-top" data-gsap-el="section">
 	<div class="wrap">
 		<div class="about-group">
 			<div class="about-info">
-				<h2 data-gsap="opacity">Обо мне</h2>
-				<div class="rows">
-					<p data-gsap="opacity">Здесь будет классный текст о том, почему я суперспециалист, который может ващщщще всё. Надо себя похвалить, конечно, да. Может еще что-то придумаю, но объем будет примерно такой. Может, чуть побольше. Но не больше листа А4. Размеры листа А4, кстати, двести десять на двести девяносто семь миллиметров. Полезная информация, если вы дизайнер или просто выбираете подходящую бумагу для записей ваших крутых идей. </p>
-					<p><a href="https://github.com/alexkooksa/portfolio" target="_blank" data-gsap="opacity" class="link"><span class="btn-icon github-icon-w">Код портфолио на GitHub</span></a></p>
+				<h2 data-gsap="opacity"><span class="gradient-text">Обо мне</span></h2>
+				<div class="rows" data-gsap="opacity">
+					<p>Здесь будет классный текст о том, почему я суперспециалист, который может ващщщще всё. Надо себя похвалить, конечно, да. Может еще что-то придумаю, но объем будет примерно такой. Может, чуть побольше. Но не больше листа А4. Размеры листа А4, кстати, двести десять на двести девяносто семь миллиметров. Полезная информация, если вы дизайнер или просто выбираете подходящую бумагу для записей ваших крутых идей. В веб-разработке с 2016 года. </p>
+					<p><a href="https://github.com/alexkooksa/portfolio" target="_blank" class="link"><span class="btn-icon github-icon-w">Код портфолио на GitHub</span></a></p>
 				</div>
 				<div class="contacts-block" id="contact" data-gsap="opacity">
 					<h2><span class="gradient-text">Связаться</span></h2>
@@ -453,6 +470,11 @@
 </body>
 <script src="/js/gsap.min.js"></script>
 <script src="/js/ScrollTrigger.min.js"></script>
+
+<script src="/js/TextPlugin.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/intro.js"></script>
+
 <script src="/js/script.js"></script>
 
 </html>

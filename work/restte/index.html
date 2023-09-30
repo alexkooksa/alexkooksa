@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#1a1c21">
 </head>
 
-<body>
+<body >
 
     <header class="top-nav">
     <div class="wrap">
@@ -58,21 +58,21 @@
     
 <section class="case-intro dark-bg  pb-0 ">
     <div class="wrap">
-        <h1><span class="gradient-text">Restte</span></h1>
-        <h3>Интернет-магазин мебели для сегмента HoReCa</h3>
-        <ul class="taglist">
+        <h1 data-gsap-el="coverTitle"><span class="gradient-text">Restte</span></h1>
+        <h3 data-gsap-el="coverDesc">Интернет-магазин мебели для сегмента HoReCa</h3>
+        <ul class="taglist" data-gsap-el="tagList">
             
             <li class="taglist__item">Дизайн</li>
             
             <li class="taglist__item">Вёрстка и натяжка на CMS</li>
             
         </ul>
-        <div class="case-intro__date"><span>2021</span></div>
+        <div class="case-intro__date" data-gsap-el="coverDate"><span>2021</span></div>
     </div>
 </section>
 
 
-<section class="case-cover dark-bg overlapped">
+<section class="case-cover dark-bg">
     <div class="wrap">
         
 
@@ -85,13 +85,14 @@
 
     </div>
 </section>
-
-<section class="brs-top">
-    <div class="wrap">
-        <h2>Задача</h2>
-        <p>Разработать отдельный сайт по направлению HoReCa для постоянного клиента, владеющего интернет-магазином мебели и декора. Сайт должен быть стильным и лаконичным и иметь стандартный функционал.</p>
-    </div>
-</section>
+<div class="brs-top-outer--dark">
+    <section class="brs-top">
+        <div class="wrap">
+            <h2>Задача</h2>
+            <p>Разработать отдельный сайт по направлению HoReCa для постоянного клиента, владеющего интернет-магазином мебели и декора. Сайт должен быть стильным и лаконичным и иметь стандартный функционал.</p>
+        </div>
+    </section>
+</div>
 
 <section class="border-top">
     <div class="wrap">
@@ -176,7 +177,7 @@
                 <p>Доступна вся основная информация о товаре, а также возможность оставить заявку на полный подбор мебели для проекта. У некоторых товаров есть ограничение в виде минимального количества для заказа, об этом сразу предупреждаем покупателя.</p>
             </div>
             <div class="solution-image">
-                <img class="bordered" src="/content/restte/product.jpg" alt="">
+                
                 <picture style="aspect-ratio: 995/1304">
 			  <source type="image/avif" srcset="/content/img/Frd4bkLZ4B-995.avif 995w, /content/img/Frd4bkLZ4B-1990.avif 1990w" sizes="100vw">
   <source type="image/webp" srcset="/content/img/Frd4bkLZ4B-995.webp 995w, /content/img/Frd4bkLZ4B-1990.webp 1990w" sizes="100vw">
@@ -381,6 +382,7 @@
 </body>
 <script src="/js/gsap.min.js"></script>
 <script src="/js/ScrollTrigger.min.js"></script>
+
 <script src="/js/script.js"></script>
 
 </html>

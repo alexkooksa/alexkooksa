@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#1a1c21">
 </head>
 
-<body>
+<body >
 
     <header class="top-nav">
     <div class="wrap">
@@ -58,21 +58,21 @@
     
 <section class="case-intro dark-bg  pb-0 ">
     <div class="wrap">
-        <h1><span class="gradient-text">Магазины электрики</span></h1>
-        <h3>Оригинальная продукция Schneider Electric и Jung</h3>
-        <ul class="taglist">
+        <h1 data-gsap-el="coverTitle"><span class="gradient-text">Магазины электрики</span></h1>
+        <h3 data-gsap-el="coverDesc">Оригинальная продукция Schneider Electric и Jung</h3>
+        <ul class="taglist" data-gsap-el="tagList">
             
             <li class="taglist__item">Дизайн</li>
             
             <li class="taglist__item">Вёрстка и натяжка на CMS</li>
             
         </ul>
-        <div class="case-intro__date"><span>2020</span></div>
+        <div class="case-intro__date" data-gsap-el="coverDate"><span>2020</span></div>
     </div>
 </section>
 
 
-<section class="case-cover dark-bg overlapped">
+<section class="case-cover dark-bg">
     <div class="wrap">
         
         <picture style="aspect-ratio: 1376/778">
@@ -89,16 +89,17 @@
 			</picture>
     </div>
 </section>
-
-<section class="brs-top">
-    <div class="wrap">
-        <h2>Задача</h2>
-        <div class="rows">
-            <p>Разработать дизайн и сверстать на CMS шаблон для интернет-магазина электрики. Официальная продукция: дизайнерские серии розеток и выключателей, дифавтоматы, контроль климата. Клиенты: дизайнеры интерьера, электрики и строительные бригады, предприятия разного масштаба.</p>
-            <p>Для каждого бренда запланирован отдельный сайт со своей цветовой гаммой. На начальном этапе это Schneider Electric и Jung.</p>
+<div class="brs-top-outer--dark">
+    <section class="brs-top">
+        <div class="wrap">
+            <h2>Задача</h2>
+            <div class="rows">
+                <p>Разработать дизайн и сверстать на CMS шаблон для интернет-магазина электрики. Официальная продукция: дизайнерские серии розеток и выключателей, дифавтоматы, контроль климата. Клиенты: дизайнеры интерьера, электрики и строительные бригады, предприятия разного масштаба.</p>
+                <p>Для каждого бренда запланирован отдельный сайт со своей цветовой гаммой. На начальном этапе это Schneider Electric и Jung.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <section class="border-top">
     <div class="wrap">
@@ -262,7 +263,7 @@
 
             <div class="solution-image">
                 <div class="media-bg-layer--dark-gray">
-                    
+
                     <picture style="aspect-ratio: 995/518">
 			  <source type="image/avif" srcset="/content/img/Rbllz8bxun-995.avif 995w, /content/img/Rbllz8bxun-1493.avif 1493w, /content/img/Rbllz8bxun-1990.avif 1990w" sizes="100vw">
   <source type="image/webp" srcset="/content/img/Rbllz8bxun-995.webp 995w, /content/img/Rbllz8bxun-1493.webp 1493w, /content/img/Rbllz8bxun-1990.webp 1990w" sizes="100vw">
@@ -276,21 +277,18 @@
 					decoding="async">
 			</picture>
 
-                    <div class="long-image-crop" data-lightbox>
-                        
-                        <picture style="aspect-ratio: 1376/2562">
-			  <source type="image/avif" srcset="/content/img/s_kcJfbWbX-1376.avif 1376w, /content/img/s_kcJfbWbX-2160.avif 2160w" sizes="100vw">
-  <source type="image/webp" srcset="/content/img/s_kcJfbWbX-1376.webp 1376w, /content/img/s_kcJfbWbX-2160.webp 2160w" sizes="100vw">
-  <source type="image/jpeg" srcset="/content/img/s_kcJfbWbX-1376.jpeg 1376w, /content/img/s_kcJfbWbX-2160.jpeg 2160w" sizes="100vw">
+                    <picture style="aspect-ratio: 995/1509">
+			  <source type="image/avif" srcset="/content/img/devqYIWIbu-995.avif 995w, /content/img/devqYIWIbu-1280.avif 1280w" sizes="100vw">
+  <source type="image/webp" srcset="/content/img/devqYIWIbu-995.webp 995w, /content/img/devqYIWIbu-1280.webp 1280w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/img/devqYIWIbu-995.jpeg 995w, /content/img/devqYIWIbu-1280.jpeg 1280w" sizes="100vw">
 				<img
-					src="/content/img/s_kcJfbWbX-2160.jpeg"
+					src="/content/img/devqYIWIbu-1280.jpeg"
           class=""
-          alt="Schneider Russia - страница чекаута"
+          alt="Schneider Russia - оформление заказа"
 
 					loading="lazy"
 					decoding="async">
 			</picture>
-                    </div>
                 </div>
             </div>
         </div>
@@ -487,6 +485,7 @@
 </body>
 <script src="/js/gsap.min.js"></script>
 <script src="/js/ScrollTrigger.min.js"></script>
+
 <script src="/js/script.js"></script>
 
 </html>
