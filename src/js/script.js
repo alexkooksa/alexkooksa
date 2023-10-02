@@ -14,7 +14,7 @@ gsap.utils.toArray('[data-gsap="opacity"]').forEach((el, i) => {
     autoAlpha: 1,
     scrollTrigger: {
       trigger: el,
-      start: "top 85%",
+      start: "top 90%",
       end: "+=100",
       scrub: true,
       // markers: true,
@@ -122,7 +122,6 @@ ScrollTrigger.batch('[data-gsap="groupTranslateY"] > div', {
   // markers: true,
 });
 
-
 // coverTimeline start
 
 if (document.querySelector('[data-gsap-el="pageCover"]')) {
@@ -159,35 +158,39 @@ if (document.querySelector('[data-gsap-el="pageCover"]')) {
     autoAlpha: 1,
   });
 
-  coverTimeline.to('[data-gsap-el="tagList"] li', {
-    autoAlpha: 1,
-    delay: 0.2,
-    duration: 0.3,
-    scale: 1,
-    stagger: 0.2,
-  });
-
   coverTimeline.to(
-    '[data-gsap-el="coverDate"]',
+    '[data-gsap-el="tagList"] li',
     {
       autoAlpha: 1,
-      duration: 0.3,
-      onComplete: function () {
-        document
-          .querySelector('[data-gsap-el="coverDate"]')
-          .classList.add("gsap-complete");
-      },
+      delay: 0.2,
+      duration: 0.2,
+      scale: 1,
+      stagger: 0.2,
     },
     ">-0.1"
   );
 
-  coverTimeline.to(".case-cover picture", {
+  coverTimeline.to('[data-gsap-el="coverDate"]', {
     autoAlpha: 1,
+    duration: 0.3,
+    onComplete: function () {
+      document
+        .querySelector('[data-gsap-el="coverDate"]')
+        .classList.add("gsap-complete");
+    },
   });
 
-  coverTimeline.to(".case-cover video", {
-    autoAlpha: 1,
-  });
+  if (document.querySelectorAll(".case-cover picture").length) {
+    coverTimeline.to(".case-cover picture", {
+      autoAlpha: 1,
+    });
+  }
+
+  if (document.querySelectorAll(".case-cover video").length) {
+    coverTimeline.to(".case-cover video", {
+      autoAlpha: 1,
+    });
+  }
 }
 
 // coverTimeline end
@@ -265,10 +268,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 
-window.onscroll = function () {
-  fixHeader();
-};
-
 let body = document.querySelector("body");
 let header = document.querySelector(".top-nav");
 let firstSectionHeight =
@@ -285,11 +284,15 @@ function fixHeader() {
     header.classList.remove("fixed");
   }
   if (window.pageYOffset > firstSectionHeight + headerHeight) {
-    header.classList.add("visible");
+    header.classList.add("is-visible");
   } else {
-    header.classList.remove("visible");
+    header.classList.remove("is-visible");
   }
 }
+
+window.onscroll = function () {
+  fixHeader();
+};
 
 // super simple lightbox - for this portfolio purposes only
 

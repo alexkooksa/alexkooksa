@@ -15,7 +15,7 @@
     </button>
     {% endif %}
 
-    <video {% if class %} class="{{class}}" {%endif%} src="/content/video/{{filePath}}"  poster="/content/video/{{posterPath}}"  playsinline="true" webkit-playsinline="true" preload="auto" muted="muted"autobuffer="true"  {% if controls == true %} data-state="pause" {% else %} autoplay="true" loop="true" {% endif %} ></video>
+    <video {% if class %} class="{{class}}" {%endif%} src="/content/video/{{filePath}}"  poster="/content/video/{{posterPath}}"  playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" autobuffer="true"  {% if controls == true %} data-state="pause" {% else %} autoplay="true" loop="true" {% endif %} ></video>
 </div>
 
 {% endmacro %}

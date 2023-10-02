@@ -54,8 +54,8 @@ body {
 }
 
 section {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 36px;
+    padding-bottom: 36px;
 
     @include mq(768) {
         padding-top: 72px;
@@ -357,7 +357,7 @@ h3 {
     }
 }
 h2 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 450;
     @include mq(768) {
         font-size: 44px;
