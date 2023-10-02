@@ -15,7 +15,7 @@
     <link rel="preload" as="font" href="/styles/fonts/Unbounded-VF.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/styles/fonts/TildaSans-VF.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/styles/fonts/JetBrainsMono-VF.woff2" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/style.css?1696276774" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/styles/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/styles/favicon/favicon-32x32.png">
@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#1a1c21">
 </head>
 
-<body >
+<body  >
 
     <header class="top-nav">
     <div class="wrap">
@@ -43,14 +43,14 @@
                 <li class="top-menu__item"><a class="top-menu__link" href="/#experience">Опыт</a></li>
                 <li class="top-menu__item"><a class="top-menu__link" href="/#contact">Связаться</a></li>
                 <li class="top-menu__item lang-switcher">
-                    <span class="lang-switcher__item is-active" href="/">ru</span><span>&nbsp;/&nbsp;</span>
+                    <span class="lang-switcher__item is-active">ru</span><span>&nbsp;/&nbsp;</span>
                     <a class="lang-switcher__item" href="#">en</a>
                 </li>
             </ul>
             <button class="btn-menu-m" data-btn="open-menu">
-                <div class="btn-menu-box">
-                    <div class="btn-menu-inner"></div>
-                </div>
+                <span class="btn-menu-box">
+                    <span class="btn-menu-inner"></span>
+                </span>
             </button>
         </nav>
     </div>
@@ -276,7 +276,7 @@
             </div>
             <aside>
                 <div class="callout">
-                    <p class="stats-block"><span class="stats-number">50+</span><span class="stats-unit">страниц <br />в гуглодоке</span></p>
+                    <p class="stats-block"><span class="stats-number">50+</span><span class="stats-unit">страниц <br>в гуглодоке</span></p>
                     <p class="stats-desc">Столько багов и неудобств было зафиксировано на текущем сайте перед началом работ</p>
                 </div>
             </aside>
@@ -518,7 +518,7 @@
     </button>
     
 
-    <video  src="/content/video/brightrich-video.webm"  poster="/content/video/brightrich-video-poster.jpg"  playsinline="true" webkit-playsinline="true" preload="auto" muted="muted"autobuffer="true"   data-state="pause"  ></video>
+    <video  src="/content/video/brightrich-video.webm"  poster="/content/video/brightrich-video-poster.jpg"  playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" autobuffer="true"   data-state="pause"  ></video>
 </div>
 
 
@@ -728,21 +728,22 @@
     </div>
 
     <footer>
-        <div class="wrap">
-            <div class="footer-footnote">
-                <p><span class="asterisk">*</span> Kooksa <i>['kuk-sa]</i></p>
-                <p>
-                    <span>1)&nbsp;от англ. «kook» — totally&nbsp;cool;</span>
-                    <span>2)&nbsp;искаж. «kuksa» — финская&nbsp;кружка</span>
-                </p>
-            </div>
-            <p class="copyright">&copy; 2023 kooksa.codes | Made&nbsp;with&nbsp;<a href="https://github.com/11ty/eleventy/" target="_blank">11ty</a> | Hosted on&nbsp;<a href="https://github.com/alexkooksa/portfolio" target="_blank">GitHub&nbsp;Pages</a></p>
+    <div class="wrap">
+        <div class="footer-footnote">
+            <p><span class="asterisk">*</span> Kooksa <i>['kuk-sa]</i></p>
+            <p>
+                <span>1)&nbsp;от англ. «kook» — totally&nbsp;cool;</span>
+                <span>2)&nbsp;искаж. «kuksa» — финская&nbsp;кружка</span>
+            </p>
         </div>
-    </footer>
-</body>
-<script src="/js/gsap.min.js"></script>
-<script src="/js/ScrollTrigger.min.js"></script>
+        <p class="copyright">&copy; 2023 kooksa.codes | Made&nbsp;with&nbsp;<a href="https://github.com/11ty/eleventy/" target="_blank">11ty</a> | Hosted&nbsp;on&nbsp;<a href="https://github.com/alexkooksa/portfolio" target="_blank">GitHub&nbsp;Pages</a></p>
+    </div>
+</footer>
 
-<script src="/js/script.js"></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/ScrollTrigger.min.js"></script>
+    
+    <script src="/js/script.js?"></script>
+</body>
 
 </html>

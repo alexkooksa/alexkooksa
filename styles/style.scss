@@ -47,10 +47,16 @@
 [data-gsap-el="section"] {
     transform: translateY(50px);
 }
+.homepage {
+    background-color: $black;
+}
 
 .top-nav {
     background-color: $black;
     padding: 8px 0;
+    @include mq(768) {
+        padding: 20px 0;
+    }
     &.fixed {
         position: fixed;
         left: 0;
@@ -59,13 +65,14 @@
         z-index: 100;
         padding-top: 8px;
         padding-bottom: 8px;
-        transform: translateY(-10px);
-        opacity: 0;
         border-bottom: 1px solid #8d8e90;
+        transition: 0.2s all ease-in-out;
         @include mq(768) {
             .top-menu__item {
                 font-size: 16px;
             }
+            transform: translateY(-10px);
+            opacity: 0;
         }
         @include mq(768, max) {
             border-bottom: 0;
@@ -87,14 +94,10 @@
         .logo {
             width: 110px;
         }
-        &.visible {
-            transition: 0.2s all ease-in-out;
+        &.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
-    }
-    @include mq(768) {
-        padding: 20px 0;
     }
     .wrap {
         display: flex;
@@ -326,16 +329,8 @@
         height: 100%;
         object-position: top;
     }
-    // animation: bg-blur 3s forwards;
-
-    // background-image: url("images/bg1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /*     background-image: url('images/pattern-blurred.png');
-    background-repeat: repeat;
-    background-size: 400px auto;
-    background-color: $black;
-    background-position-y: 40px; */
     min-height: calc(100vh - 52px);
     @include mq(768) {
         min-height: calc(100vh - 80px);
@@ -358,29 +353,10 @@
         align-items: center;
     }
 
-    /*     .intro-left-col {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        flex-grow: 1;
-    }
-
-    .intro-right-col {
-        display: flex;
-        flex-shrink: 0;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        padding-bottom: 30px;
-        @include mq(1366) {
-            padding-bottom: 60px;
-        }
-    } */
-
     .accent-font {
         color: #fff;
         font-size: 18px;
+        min-height: 1em;
         @include mq(768) {
             font-size: 24px;
         }
@@ -424,8 +400,8 @@
             font-size: 120px;
         }
         .accent-font {
-            padding-top: 12px;
-            margin-top: 12px;
+            padding-top: .2em;
+            margin-top: .2em;
         }
     }
     .btn {
@@ -433,19 +409,21 @@
     }
     .greeting {
         @include mq(768) {
-            margin-top: -32px;
-            margin-bottom: 12px;
+            margin-bottom: .2em;
         }
     }
 
     .tagline {
         font-style: italic;
+        color: #d5d5d5;
         span {
             font-size: 0.8em;
+            min-height: 0.8em;
+            display: inline-block;
         }
     }
     .accent-font {
-        padding: 12px 0;
+        padding: .3em 0;
     }
     .text-underlay,
     .accent-font {
@@ -453,11 +431,11 @@
         z-index: 0;
     }
     .text-underlay {
-        padding-top: 12px;
+        padding-top: .2em;
     }
     .text-underlay + .text-underlay {
         padding-top: 0;
-        padding-bottom: 12px;
+        padding-bottom: .2em;
     }
     .text-underlay::before,
     .accent-font::before {
@@ -947,6 +925,7 @@ footer {
 .footer-footnote {
     color: #d1d0d0;
     position: relative;
+    max-width: 66ch;
     @include accent-font;
     @include mq(576, max) {
         span:not(.asterisk) {
@@ -1034,8 +1013,9 @@ footer {
 }
 
 .case-intro {
-    @include mq(768) {
-        text-align: center;
+    text-align: center;
+    img {
+        background-color: $black;
     }
     h3 {
         @include mq(1280, max) {
@@ -1054,6 +1034,7 @@ footer {
     .taglist {
         display: inline-flex;
         font-size: 12px;
+        justify-content: center;
         @include mq(768) {
             font-size: 14px;
         }
@@ -1094,10 +1075,6 @@ footer {
         @include mq(768, max) {
             max-width: none;
             margin: 24px 0 0;
-            &::before {
-                flex-grow: 0;
-                width: 40px;
-            }
         }
     }
 }
