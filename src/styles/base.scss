@@ -1,6 +1,10 @@
 @import "variables";
 @import "mixins";
 
+:root {
+    --100vh: 100%;
+}
+
 @font-face {
     font-family: "Tilda Sans";
     src: url("fonts/TildaSans-VF.woff2") format("woff2 supports variations"),
@@ -183,6 +187,15 @@ hr {
     margin-top: 16px;
     @include mq(768) {
         margin-top: 32px;
+    }
+}
+
+.text-block {
+    h3:not(:first-child) {
+        margin-top: 32px;
+    }
+    p {
+        margin-top: 16px;
     }
 }
 
@@ -414,6 +427,7 @@ button {
     cursor: pointer;
     position: relative;
     outline: none;
+    margin-top: 4px;
 
     @include mq(1024) {
         padding: 16px 20px;

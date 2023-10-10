@@ -1,6 +1,8 @@
-<ul class="caselist caselist--small"  data-gsap="groupTranslateY">
-    {% for project in collections.older | reverse  %}
-    <li>
+{% import "components.njk" as components %}
+<ul class="caselist caselist--small" data-gsap="groupTranslateY">
+    {% for project in collections["older_" + page.lang] | reverse  %}
+    {{ components.caselistItemSmall(project) }}
+    {#    <li>
         <a class="caselist__item is-vertical" href="{{ project.url }}">
             <div class="item-content">
                 <p class="item-title title-font">{% if project.data.short_title | length %}{{ project.data.short_title }}{% else %}{{ project.data.title }}{% endif %}</p>
@@ -20,7 +22,7 @@
                 </div>
             </div>
         </a>
-    </li>
+    </li>#}
     {% endfor %}
 
     <li class="caselist__item is-vertical caselist__item--last">

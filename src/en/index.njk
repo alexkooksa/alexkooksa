@@ -7,28 +7,14 @@ templateEngineOverride: njk
 {# TODO critical css for intro #}
 
 
-<section class="homepage-intro">
-	<img src="/styles/images/bg1.jpg" alt="" data-gsap-el="bg1">
-	<img src="/styles/images/bg2.jpg" alt="" data-gsap-el="bg2">
-	<img src="/styles/images/bg3.jpg" alt="" data-gsap-el="bg3">
-	<div class="wrap">
-		<p class="greeting accent-font" data-gsap-el="greeting">Привет, я Александра Кукса&nbsp;&mdash;</p>
-		<h1>
-			<span class="text-underlay" data-gsap-el="mainline-1"><span class="gradient-text">Frontend-</span>
-			</span>
-			<span class="text-underlay" data-gsap-el="mainline-2"><span class="gradient-text">разработчик</span></span>
-			<span class="tagline accent-font" data-gsap-el="tagline"><span>// с опытом в&nbsp;UI/UX</span></span>
-		</h1>
-		<a href="#work" class="btn btn-white" data-gsap-el="buttonNext">Интересно, дальше</a>
-	</div>
-</section>
+{% include 'homepageIntro.njk' %}
 
 <div class="brs-top-outer--dark" data-gsap-el="section-rounded">
-	<section class="cases-section dark-bg" id="work">
+	<section class="cases-section dark-bg" id="projects">
 		<div class="wrap">
 			<div class="title-group centered">
-				<h2><span class="gradient-text" data-gsap="opacity">Недавние кейсы</span></h2>
-				<p data-gsap="opacity">Проекты запущены, поддерживаются и развиваются</p>
+				<h2><span class="gradient-text" data-gsap="opacity">Recent projects</span></h2>
+				<p data-gsap="opacity">These sites are successfully launched and maintained</p>
 			</div>
 			{% include 'projectsListLatest.njk' %}
 		</div>
@@ -38,18 +24,18 @@ templateEngineOverride: njk
 <section class="older-section dark-bg">
 	<div class="wrap">
 		<div class="centered title-group">
-			<h2><span class="gradient-text" data-gsap="opacity">Сайты постарше</span></h2>
-			<p data-gsap="opacity">Кроме Bright Rich были и другие проекты, например:</p>
+			<h2><span class="gradient-text" data-gsap="opacity">Older projects</span></h2>
+			<p data-gsap="opacity">There were other sites besides Bright Rich. For instance:</p>
 		</div>
 		{% include 'projectsListOlder.njk' %}
 	</div>
 </section>
 
 <div class="brs-top-outer--dark" data-gsap-el="section-rounded">
-	<section class="brs-top" id="experience">
+	<section class="brs-top" id="about">
 		<div class="wrap">
 			<div class="centered title-group">
-				<h2 class="section-title" data-gsap="opacity"><span class="gradient-text">Опыт работы</span></h2>
+				<h2 class="section-title" data-gsap="opacity"><span class="gradient-text">Experience</span></h2>
 			</div>
 			<ul class="timeline">
 				<li class="timeline-item" data-gsap="opacity">
@@ -60,7 +46,7 @@ templateEngineOverride: njk
 					<div class="timeline-item__content">
 						<h3><span class="bg-text">Frontend-разработчик + UI/UX-дизайнер</span></h3>
 						<ul class="responsibilities-list bulleted-list--default">
-							<li>с 2022 года участвовала преимущественно в проектах для клиента Bright&nbsp;Rich: <a href="/work/brightrich" class="link">основной кейс</a>, <a href="/work/more-brightrich" class="link">еще кейсы</a></li>
+							<li>с 2022 года участвовала преимущественно в проектах для клиента Bright&nbsp;Rich: <a href="/projects/brightrich" class="link">основной кейс</a>, <a href="/projects/more-brightrich" class="link">еще кейсы</a></li>
 							<li>расширенная область ответственности внутри компании</li>
 							<li>участие во всех этапах разработки проекта: дизайн, создание шаблонов с версткой для CMS (CodeIgniter + Smarty), наполнение контентом, настройка модулей для вывода клиентского контента в админке, сопровождение и внедрение новых функций после запуска</li>
 							<li>внесение небольших правок на бэкенде (PHP)</li>
@@ -211,12 +197,14 @@ templateEngineOverride: njk
 						<li>соревнования в сфере дизайна</li>
 						<li>концепт для магазина Chlorophylle Bio Coop</li>
 						<li>французский язык и культура</li>
-						<!-- 						<li>Visual arts</li>
+						{#
+							<li>Visual arts</li>
 						<li>Colour drawing</li>
 						<li>Computer graphic 2D, 3Ds Max, Processing</li>
 						<li>Design competition</li>
 						<li>Chlorophylle Bio Coop Concept Store Project</li>
-						<li>French language and culture</li> -->
+						<li>French language and culture</li>
+						#}
 					</ul>
 				</div>
 			</li>
@@ -224,14 +212,21 @@ templateEngineOverride: njk
 	</div>
 </section>
 
-<section class="dark-bg brs-top" data-gsap-el="section">
+<section class="dark-bg" data-gsap-el="section">
 	<div class="wrap">
 		<div class="about-group">
 			<div class="about-info">
 				<h2 data-gsap="opacity"><span class="gradient-text">Обо мне</span></h2>
-				<div class="rows" data-gsap="opacity">
-					<p>Здесь будет классный текст о том, почему я суперспециалист, который может ващщщще всё. Надо себя похвалить, конечно, да. Может еще что-то придумаю, но объем будет примерно такой. Может, чуть побольше. Но не больше листа А4. Размеры листа А4, кстати, двести десять на двести девяносто семь миллиметров. Полезная информация, если вы дизайнер или просто выбираете подходящую бумагу для записей ваших крутых идей. В веб-разработке с 2016 года. </p>
-					<p><a href="https://github.com/alexkooksa/portfolio" target="_blank" class="link"><span class="btn-icon github-icon-w">Код портфолио на GitHub</span></a></p>
+				<div class="text-block" data-gsap="opacity">
+
+					<p>В веб-разработке более 7 лет. За это время участвовала в более 100 проектах различного масштаба, от начала и до конца в роли дизайнера и фронтендера. Для меня важна визуальная составляющая, мне нравится создавать и реализовывать минималистичные и логичные дизайны и уделять внимание деталям. При верстке всегда стараюсь найти наиболее рациональное решение и писать код, который будет удобно поддерживать и масштабировать. Ценю чётко налаженные процессы и честную обратную связь.</p>
+
+					<p>Мне нравится: красивая архитектура и ландшафты, активный отдых, однодневные горные походы, паназиатская кухня и римская пицца, инди-рок и инди-игры, мебель из Икеи, кастомные механические клавиатуры.</p>
+
+					<h3>О сайте</h3>
+					<p>В исходном коде Nunjucks, SCSS, Vanilla JS, GSAP. Статичные страницы генерируются с помощью Eleventy и деплоятся на GitHub Pages.</p>
+					<p><a href="https://github.com/alexkooksa/kooksa.codes" target="_blank" class="link"><span class="btn-icon github-icon-w">Код на GitHub</span></a></p>
+
 				</div>
 				<div class="contacts-block" id="contact" data-gsap="opacity">
 					<h2><span class="gradient-text">Связаться</span></h2>
@@ -243,7 +238,10 @@ templateEngineOverride: njk
 				</div>
 			</div>
 			<div class="about-pic" data-gsap="translateY">
-				<div style="background-color: #f0f0f0; width: 100%; padding-bottom: 120%; border-radius: 24px;"></div>
+				<div class="about-pic__inner">
+					<img loading="lazy" decoding="async" src="/content/images/avatar.jpg" alt="Аватарка">
+					<p class="about-pic__commment">Это я играю с модными градиентами</p>
+				</div>
 			</div>
 		</div>
 

@@ -1,8 +1,13 @@
 const eleventySass = require("eleventy-sass");
 const Image = require("@11ty/eleventy-img");
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const path = require("path");
-
+const fs = require('fs');
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: "en",
+  });
+
   eleventyConfig.addShortcode(
     "image",
     async function (src, cls, alt, widths, sizes = "100vw") {
@@ -24,7 +29,7 @@ module.exports = function (eleventyConfig) {
         sharpJpegOptions: {
           progressive: true,
           quality: 85,
-        }
+        },
         /*         filenameFormat: function (id, src, width, format, options) {
           const extension = path.extname(src);
           const name = path.basename(src, extension);
@@ -35,7 +40,7 @@ module.exports = function (eleventyConfig) {
 
       let lowsrc;
       let highsrc;
-      let aspectRatio
+      let aspectRatio;
 
       lowsrc = inputExtension == "png" ? metadata.png[0] : metadata.jpeg[0];
       highsrc =
@@ -43,7 +48,7 @@ module.exports = function (eleventyConfig) {
           ? metadata.png[metadata.png.length - 1]
           : metadata.jpeg[metadata.jpeg.length - 1];
 
-          aspectRatio = `${lowsrc.width}/${lowsrc.height}`
+      aspectRatio = `${lowsrc.width}/${lowsrc.height}`;
 
       return `<picture style="aspect-ratio: ${aspectRatio}">
 			${Object.values(metadata)
@@ -84,6 +89,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addPassthroughCopy("./CNAME");
+  eleventyConfig.addPassthroughCopy("./_redirects");
 
   eleventyConfig.addPassthroughCopy("./src/styles");
   eleventyConfig.addWatchTarget("./src/styles/");
@@ -94,11 +100,28 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/content/");
 
   eleventyConfig.addPassthroughCopy("./src/content/video");
+  eleventyConfig.addPassthroughCopy("./src/content/images");
 
   eleventyConfig.addPassthroughCopy("./img");
   eleventyConfig.addWatchTarget("./img");
 
   eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
+  eleventyConfig.on(
+    "eleventy.after",
+    async ({  }) => {
+      const filePath = './public/en/index.html'
+      const copy = './public/index.html'
+
+      fs.copyFile(filePath, copy, (error) => {
+        if (error) {
+          throw error
+        } else {
+          console.log('File has been moved to another folder.')
+        }
+      })
+    }
+  );
 
   return {
     dir: {

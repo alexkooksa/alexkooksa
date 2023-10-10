@@ -148,6 +148,7 @@
         visibility: hidden;
         opacity: 0;
         height: 100vh;
+        height: var(--100vh);
         overflow-y: auto;
         left: 0;
         top: 0;
@@ -187,9 +188,9 @@
 .lang-switcher__item {
     color: #fff;
     text-decoration: none;
-    &.is-active::before {
+    &.is-active:before {
         content: "";
-        display: inline-block;
+        display: inline-flex;
         vertical-align: middle;
         width: 4px;
         height: 4px;
@@ -332,8 +333,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: calc(100vh - 52px);
+    min-height: calc(var(--100vh) - 52px);
     @include mq(768) {
         min-height: calc(100vh - 80px);
+        min-height: calc(var(--100vh) - 80px);
     }
     display: flex;
     justify-content: center;
@@ -400,8 +403,8 @@
             font-size: 120px;
         }
         .accent-font {
-            padding-top: .2em;
-            margin-top: .2em;
+            padding-top: 0.2em;
+            margin-top: 0.2em;
         }
     }
     .btn {
@@ -409,7 +412,7 @@
     }
     .greeting {
         @include mq(768) {
-            margin-bottom: .2em;
+            margin-bottom: 0.2em;
         }
     }
 
@@ -423,7 +426,7 @@
         }
     }
     .accent-font {
-        padding: .3em 0;
+        padding: 0.3em 0;
     }
     .text-underlay,
     .accent-font {
@@ -431,11 +434,11 @@
         z-index: 0;
     }
     .text-underlay {
-        padding-top: .2em;
+        padding-top: 0.2em;
     }
     .text-underlay + .text-underlay {
         padding-top: 0;
-        padding-bottom: .2em;
+        padding-bottom: 0.2em;
     }
     .text-underlay::before,
     .accent-font::before {
@@ -551,6 +554,9 @@
             .item-title {
                 font-size: 32px;
                 line-height: 1.2;
+            }
+            .item-date {
+                padding: 12px 0;
             }
         }
         .item-image {
@@ -669,6 +675,7 @@
     }
     .btn {
         display: block;
+        margin-top: 24px;
     }
     .item-content > * + * {
         margin-top: 16px;
@@ -925,12 +932,14 @@ footer {
 .footer-footnote {
     color: #d1d0d0;
     position: relative;
-    max-width: 66ch;
     @include accent-font;
     @include mq(576, max) {
         span:not(.asterisk) {
             display: block;
         }
+    }
+    p {
+        max-width: 66ch;
     }
 }
 
@@ -994,18 +1003,80 @@ footer {
     flex: 1 0 auto;
     gap: 100px;
     @include mq(768, max) {
+        gap: 32px;
         flex-direction: column;
     }
+    .about-info {
+        flex-grow: 1;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 32px;
+    }
     .about-pic {
-        width: 30%;
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        @include mq(768) {
+            max-width: 250px;
+        }
+        @include mq(1024) {
+            max-width: 300px;
+        }
+        @include mq(1280) {
+            max-width: 350px;
+        }
         flex-shrink: 0;
+        img {
+            border-radius: 100%;
+        }
+        text-align: center;
+        &__inner {
+            position: sticky;
+            top: 100px;
+        }
+    }
+    .about-pic__commment {
+        @include accent-font;
+        padding: 24px;
+        color: #ccc;
+        border: 2px solid #ccc;
+        border-radius: 16px;
+        font-size: 14px;
+        position: relative;
+        display: inline-block;
+        margin-top: 24px;
+        &::after,
+        &::before {
+            bottom: 100%;
+            right: 30px;
+            border: solid transparent;
+            content: "";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        &::after {
+            border-width: 17px 0 0 17px;
+            border-color: transparent transparent transparent $black;
+            transform: translateX(-3px);
+        }
+        &::before {
+            border-width: 22px 0 0 22px;
+            border-color: transparent transparent transparent #ccc;
+        }
     }
 }
 
 .contacts-block {
     padding-top: 32px;
-    margin-top: 32px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    @include mq(576, max) {
+        text-align: center;
+        .buttons-group {
+            justify-content: center;
+        }
+    }
 }
 
 .title-group + * {
@@ -1267,6 +1338,9 @@ video,
 }
 
 .links-section {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
     text-align: center;
     .buttons-group {
         justify-content: center;

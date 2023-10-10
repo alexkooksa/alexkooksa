@@ -15,7 +15,31 @@
     </button>
     {% endif %}
 
-    <video {% if class %} class="{{class}}" {%endif%} src="/content/video/{{filePath}}"  poster="/content/video/{{posterPath}}"  playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" autobuffer="true"  {% if controls == true %} data-state="pause" {% else %} autoplay="true" loop="true" {% endif %} ></video>
+    <video {% if class %} class="{{class}}" {%endif%} src="/content/video/{{filePath}}" poster="/content/video/{{posterPath}}" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" autobuffer="true" {% if controls == true %} data-state="pause" {% else %} autoplay="true" loop="true" {% endif %}></video>
 </div>
 
+{% endmacro %}
+
+{% macro caselistItemSmall(project) %}
+<li>
+    <a class="caselist__item is-vertical" href="{{ project.url}}"> {#  | locale_url #}
+        <div class="item-content">
+            <p class="item-title title-font">{% if project.data.short_title | length %}{{ project.data.short_title }}{% else %}{{ project.data.title }}{% endif %}</p>
+            <p class="item-desc">{{ project.data.short_desc }}</p>
+            {% if project.data.role | length %}
+            <ul class="taglist">
+                {% for item in project.data.role %}
+                <li class="taglist__item">{{item}}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <div class="item-content__bottom rows">
+                {% if project.data.year | length %}
+                <p class="item-date"><span>{{ project.data.year }}</span></p>
+                {% endif %}
+                <p class="btn btn-white">Смотреть кейс</p>
+            </div>
+        </div>
+    </a>
+</li>
 {% endmacro %}

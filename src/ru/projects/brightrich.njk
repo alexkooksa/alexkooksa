@@ -1,5 +1,5 @@
 ---
-tags: ['latest', 'projects']
+tags: ['latest_ru', 'projects_ru']
 date: 2022-01-01
 title: Bright Rich
 meta_title: Кейс | Основной сайт Bright Rich
@@ -13,7 +13,7 @@ role:
 - Дизайн дополнительных страниц
 ---
 
-{% import "../_includes/components.njk" as components %}
+{% import "../../_includes/components.njk" as components %}
 <section class="case-cover dark-bg overlapped">
     <div class="wrap">
         {% image ["src/content/", folder, "/cover.jpg"] | join, "", "Bright Rich - скриншот главной страницы",  [1376]  %}
@@ -338,12 +338,14 @@ role:
         </div>
     </div>
 </section>
-<section class="links-section" >
-    <div class="wrap">
-        <h2>Ссылки</h2>
-        <div class="buttons-group">
-            <a href="https://brightrich.ru" target="_blank" class="btn btn-outline--default btn-external"><span>brightrich.ru</span></a>
-            <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-outline--default btn-external"><span>Частичный код на GitHub</span></a>
+<div class="brs-top-outer--dark">
+    <section class="brs-top brs-bottom links-section" >
+        <div class="wrap">
+            <h2>Ссылки</h2>
+            <div class="buttons-group">
+                <a href="https://brightrich.ru" target="_blank" class="btn btn-outline--default btn-external"><span>brightrich.ru</span></a>
+                <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-outline--default btn-external"><span>Частичный код на GitHub</span></a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>

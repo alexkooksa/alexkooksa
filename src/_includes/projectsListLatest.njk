@@ -1,11 +1,12 @@
+{% import "components.njk" as components %}
 <ul class="caselist">
-    {% for project in collections.latest %}
+    {% for project in collections["latest_"+ page.lang] %}
     <li data-gsap="scale">
         <a href="{{ project.url }}" class="caselist__item is-large">
             <div class="item-content">
                 <p class="item-title title-font">{{ project.data.title }}</p>
 
-                <p class="item-desc">{{ project.data.short_desc }}{% if project.data.short_desc_add | length %} {{ project.data.short_desc_add }}{% endif %}</p>
+                <p class="item-desc">{{ project.data.short_desc }}{% if project.data.short_desc_add | length %}. {{ project.data.short_desc_add }}{% endif %}</p>
 
                 {% if project.data.role | length %}
                 <ul class="taglist">

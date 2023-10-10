@@ -1,0 +1,18 @@
+---
+title: Кейсы
+short_desc: Некоторые проекты, с моим участием в качестве разработчика и дизайнера
+meta_title: Kooksa.codes | Кейсы
+layout: base.njk
+---
+<section class="case-intro dark-bg pb-0" data-gsap-el="pageCover">
+    <div class="wrap">
+        <h1 data-gsap-el="coverTitle"><span class="gradient-text">{{ title }}</span></h1>
+        <h3 data-gsap-el="coverDesc">{{ short_desc }}</h3>
+    </div>
+</section>
+<section class="cases-section dark-bg pt-0">
+    <div class="wrap">
+        {% include 'projectsListLatest.njk' %}
+        {% include 'projectsListOlder.njk' %}
+    </div>
+</section>

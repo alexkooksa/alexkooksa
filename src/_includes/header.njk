@@ -1,22 +1,29 @@
 <header class="top-nav">
     <div class="wrap">
-        {% if page.url == '/' %}
+        {% if isHomepage %}
         <span class="logo">
             <img src="/styles/images/logo.svg" alt="kooksa.codes - logo">
         </span>
         {% else %}
-        <a href="/" class="logo">
+        <a href="/{{ page.lang }}/" class="logo">
             <img src="/styles/images/logo.svg" alt="kooksa.codes - logo">
         </a>
         {% endif %}
         <nav>
             <ul class="top-menu" data-el="nav">
-                <li class="top-menu__item"><a class="top-menu__link" href="/{% if page.url == '/' %}#{% endif %}work">Кейсы</a></li>
-                <li class="top-menu__item"><a class="top-menu__link" href="/#experience">Опыт</a></li>
-                <li class="top-menu__item"><a class="top-menu__link" href="/#contact">Связаться</a></li>
+
+                {% for item in navigation[page.lang] %}
+                <li class="top-menu__item">
+                    <a class="top-menu__link" href="{% if not isHomepage %}{{ item.url | replace("#projects", "projects") }} {% else %} {{item.url}} {% endif %}">{{ item.text }}</a>
+                </li>
+                {% endfor %}
+
                 <li class="top-menu__item lang-switcher">
-                    <span class="lang-switcher__item is-active">ru</span><span>&nbsp;/&nbsp;</span>
-                    <a class="lang-switcher__item" href="#">en</a>
+                    <span class="lang-switcher__item is-active" lang="{{ page.lang }}">{{ page.lang }}</span>
+                    <span>&nbsp;/&nbsp;</span>
+                    {% for link in page.url | locale_links %}
+                    <a class="lang-switcher__item" href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">{{ link.lang }}</a>
+                    {% endfor %}
                 </li>
             </ul>
             <button class="btn-menu-m" data-btn="open-menu">
