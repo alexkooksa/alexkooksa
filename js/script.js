@@ -5,7 +5,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 console.warn(
-  "Maybe check out https://github.com/alexkooksa/portfolio instead of console ;)"
+  "Maybe check out https://github.com/alexkooksa/kooksa.codes instead of console ;)"
 );
 
 // GSAP
@@ -134,11 +134,6 @@ if (document.querySelector('[data-gsap-el="pageCover"]')) {
     }, */
   });
 
-  coverTimeline.set('[data-gsap-el="tagList"] li', {
-    opacity: 0,
-    scale: 0.9,
-  });
-
   coverTimeline.to('[data-gsap-el="coverTitle"]', {
     autoAlpha: 1,
     delay: 0.2,
@@ -154,31 +149,40 @@ if (document.querySelector('[data-gsap-el="pageCover"]')) {
     ">-0.2"
   );
 
-  coverTimeline.set('[data-gsap-el="tagList"]', {
-    autoAlpha: 1,
-  });
+  if (document.querySelectorAll('[data-gsap-el="tagList"]').length) {
+    coverTimeline.set('[data-gsap-el="tagList"] li', {
+      opacity: 0,
+      scale: 0.9,
+    });
 
-  coverTimeline.to(
-    '[data-gsap-el="tagList"] li',
-    {
+    coverTimeline.set('[data-gsap-el="tagList"]', {
       autoAlpha: 1,
-      delay: 0.2,
-      duration: 0.2,
-      scale: 1,
-      stagger: 0.2,
-    },
-    ">-0.1"
-  );
+    });
 
-  coverTimeline.to('[data-gsap-el="coverDate"]', {
-    autoAlpha: 1,
-    duration: 0.3,
-    onComplete: function () {
-      document
-        .querySelector('[data-gsap-el="coverDate"]')
-        .classList.add("gsap-complete");
-    },
-  });
+    coverTimeline.to(
+      '[data-gsap-el="tagList"] li',
+      {
+        autoAlpha: 1,
+        delay: 0.2,
+        duration: 0.2,
+        scale: 1,
+        stagger: 0.2,
+      },
+      ">-0.1"
+    );
+  }
+
+  if (document.querySelectorAll('[data-gsap-el="coverDate"]').length) {
+    coverTimeline.to('[data-gsap-el="coverDate"]', {
+      autoAlpha: 1,
+      duration: 0.3,
+      onComplete: function () {
+        document
+          .querySelector('[data-gsap-el="coverDate"]')
+          .classList.add("gsap-complete");
+      },
+    });
+  }
 
   if (document.querySelectorAll(".case-cover picture").length) {
     coverTimeline.to(".case-cover picture", {
@@ -213,7 +217,14 @@ if (document.querySelector('[data-gsap-el="pageCover"]')) {
   },
 }); */
 
-document.addEventListener("DOMContentLoaded", function (event) {
+const documentHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty("--100vh", `${window.innerHeight}px`);
+};
+window.addEventListener("resize", documentHeight);
+documentHeight();
+
+document.addEventListener("DOMContentLoaded", function () {
   var videoPlayButtons = document.getElementsByClassName("video__play-button");
 
   for (var i = 0; i < videoPlayButtons.length; i++) {
