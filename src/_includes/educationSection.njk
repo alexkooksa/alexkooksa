@@ -1,0 +1,27 @@
+<section>
+    <div class="wrap">
+        <div class="title-group centered">
+            <h2 class="section-title" data-gsap="opacity"><span class="gradient-text">{% i18n 'Education', 'Образование' %}</span></h2>
+        </div>
+
+        <ul class="timeline">
+            {% for ed in education[page.lang] %}
+            <li class="timeline-item" data-gsap="opacity">
+                <div class="timeline-item__info">
+                    <p class="timeline-item__date">{{ed.date}}</p>
+                    <p class="timeline-item__place">{{ed.company | safe}}</p>
+                </div>
+                <div class="timeline-item__content">
+                    <h3><span class="bg-text">{{ed.title}}</span></h3>
+                    <p>{{ed.desc | safe}}</p>
+                    <ul class="responsibilities-list bulleted-list--default">
+                        {% for item in ed.disciplines %}
+                        <li>{{ item | safe }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

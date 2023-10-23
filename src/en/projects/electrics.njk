@@ -1,0 +1,186 @@
+---
+tags: ['older_en', 'projects_en']
+date: 2020-01-01
+title: Electrics stores
+short_title: Electrics
+meta_title: Case study | Schneider Electric и Jung online stores
+meta_description: Design and front-end development
+short_desc: Original Schneider Electric and Jung products
+year: '2020'
+folder: electrics
+role:
+- Design
+- Front-end development
+- CMS development
+---
+{% import "../../_includes/components.njk"  as components with context %}
+<section class="case-cover dark-bg">
+    <div class="wrap">
+        {% image ["src/content/", folder, "/intro.jpg"] | join, "", "Schneider Russia - homepage screenshot",  [1376]  %}
+    </div>
+</section>
+<div class="dark-bg--underlay" data-gsap-el="section-rounded">
+    <section class="brs-top">
+        <div class="wrap">
+            <h2>Goals</h2>
+            <div class="rows">
+                <p>Develop a CMS template for online electrical store. Original products: design series of sockets and switches, defeaters, climate control. Target audiences are interior designers, electricians, construction teams and businesses of different size.</p>
+                <p>Each brand will have its own website with its own palette. Schneider Electric and Jung were selected for the early stages.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Page types</h2>
+        <ol class="numbered-list columns-list--3">
+            <li>Homepage</li>
+            <li>Products list</li>
+            <li>Products list with configurator</li>
+            <li>Product page</li>
+            <li>Search result page</li>
+            <li>Brands list</li>
+            <li>Pick-up point map</li>
+            <li>Cart</li>
+            <li>Personal account</li>
+            <li>Favorites</li>
+            <li>Static page</li>
+            <li>Contacts</li>
+        </ol>
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Catalogue</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>The multi-level menu is fixed on the left side of the screen.</p>
+            </div>
+
+            <div class="solution-image">
+                {% image ["src/content/", folder, "/sch_menu.jpg"] | join, "bordered", "Schneider Russia - menu screenshot",  [995, 1493]  %}
+            </div>
+        </div>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>For the Jung brand, a preview of the series' appearance is also available.</p>
+            </div>
+
+            <div class="solution-image">
+                {{ components.video('jung-menu.mp4', 'jung-menu-poster.jpg', false, 'bordered') }}
+            </div>
+        </div>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>The series section is designed as a non-uniform grid.</p>
+            </div>
+
+            <div class="solution-image">
+                <div class="media-bg-layer--medium-gray">
+                    {% image ["src/content/", folder, "/series_grid.jpg"] | join, "", "Jung Russia - series page screenshot",  [995]  %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Configurator (Jung)</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>On the Jung website, you can try out different colour combinations and select the most suitable one across each device series.</p>
+            </div>
+
+            <div class="solution-image">
+                {{ components.video('jung-config.mp4', 'jung-config-poster.jpg', true, 'bordered') }}
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Product page</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>Apart from the price, the most important information for the customer is the availability of the product and its quantity. Sometimes the required goods may not be in stock, and in such cases, they need to be ordered separately from the manufacturer. However, we will promptly inform users of this. The page also includes frames for sockets and switches.</p>
+            </div>
+
+            <div class="solution-image">
+                {% image ["src/content/", folder, "/sch_product.jpg"] | join, "bordered", "Schneider Russia - product page screenshot",  [995, 1493]  %}
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Checkout</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p>At the checkout stage, you can select a pickup city, preferred delivery method and payment method. Following this, the order will be forwarded to the in-house CRM and processed by the shop team.</p>
+            </div>
+
+            <div class="solution-image">
+                <div class="media-bg-layer--dark-gray">
+
+                    {% image ["src/content/", folder, "/cart_list.jpg"] | join, "", "Schneider Russia - cart screenshot",  [995, 1493]  %}
+
+                    {% image ["src/content/", folder, "/checkout.jpg"] | join, "", "Schneider Russia - checkout",  [995]  %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top">
+    <div class="wrap">
+        <h2>Result</h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <ul class="bulleted-list--custom" data-gsap-el="bulletedList">
+                    <li>The sites were developed using an in-house CMS, including a special module to handle shop-related features. Front-end: HTML + Smarty template engine, CSS, JQuery + plugins. Back-end: PHP, CodeIgniter.</li>
+                    <li>Easy to use even on small devices.</li>
+                    <li>Clear structure and search engine optimization had a beneficial effect on organic traffic.</li>
+                    <li>Since its launch in 2020, the stores have attracted a large number of active users. Thousands of orders have been shipped to all regions of Russia. The shop team processes dozens of orders every day. In addition, we have used the template we have created to launch a number of other sites for other brands. All the websites are still maintained by Evernet.</li>
+                </ul>
+            </div>
+            <div class="solution-image">
+                <div class="media-bg-layer--medium-gray">
+                    <div class="mobile-screens">
+                        <div class="grid-item">
+                            {% image ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Schneider Russia - mobile version screenshot - 01",  ""  %}
+
+                        </div>
+                        <div class="grid-item">
+                            {% image ["src/content/", folder, "/mobile-02.jpg"] | join, "", "Jung Russia - mobile version screenshot - 02",  ""  %}
+
+                        </div>
+                        <div class="grid-item">
+                            {% image ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Schneider Russia - mobile version screenshot - 03",  ""  %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="border-top links-section">
+    <div class="wrap">
+        <h2>Links</h2>
+
+        <div class="buttons-group">
+            <a href="https://schneider-russia.com" target="_blank" class="btn btn-outline--default btn-external"><span>schneider-russia.com</span></a>
+            <a href="https://jungrussia.ru/" target="_blank" class="btn btn-outline--default btn-external"><span>jungrussia.ru</span></a>
+        </div>
+    </div>
+</section>

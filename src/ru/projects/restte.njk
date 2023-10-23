@@ -3,20 +3,21 @@ tags: ['older_ru', 'projects_ru']
 date: 2021-01-01
 title: Restte
 meta_title: Кейс | Restte — интернет-магазин мебели
+meta_description: Дизайн и посадка интернет-магазина на CMS
 short_desc: Интернет-магазин мебели для сегмента HoReCa
 year: '2021'
 folder: restte
 role:
 - Дизайн
-- Вёрстка и натяжка на CMS
+- Вёрстка и интеграция с CMS
 ---
-{% import "../../_includes/components.njk" as components %}
+{% import "../../_includes/components.njk"  as components with context %}
 <section class="case-cover dark-bg">
     <div class="wrap">
         {{ components.video('restte-menu.mp4', 'restte-menu-poster.jpg') }}
     </div>
 </section>
-<div class="brs-top-outer--dark">
+<div class="dark-bg--underlay" data-gsap-el="section-rounded">
     <section class="brs-top">
         <div class="wrap">
             <h2>Задача</h2>
@@ -28,7 +29,7 @@ role:
 <section class="border-top">
     <div class="wrap">
         <h2>Типы страниц для вёрстки</h2>
-        <ol class="numbered-list columns-list">
+        <ol class="numbered-list columns-list" data-gsap-el="bulletedList">
             <li>Главная страница</li>
             <li>Категория товаров</li>
             <li>Страница товара</li>
@@ -48,11 +49,10 @@ role:
         <h2>Главная страница</h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
-                <p>На главой разместился классический блок с баннерами, которыми клиент может управлять из админки. Ниже сделан переход в основные категории: мебель для ресторанов, офисов или гостиниц. В блоке с примерами мебели в интерьере покупатель может вдохновиться использованием товара в реальной жизни.</p>
+                <p>На главной разместился классический блок с баннерами, которыми клиент может управлять из админки. Ниже сделан переход в основные категории: мебель для ресторанов, офисов или гостиниц. В блоке с примерами мебели в интерьере покупатель может вдохновиться использованием товара в реальной жизни.</p>
             </div>
 
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/homepage.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/homepage.jpg"] | join, "bordered", "Restte.com - скриншот главной страницы",  [995]  %}
             </div>
         </div>
@@ -69,7 +69,6 @@ role:
             </div>
 
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/category.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/category.jpg"] | join, "bordered", "Restte.com - скриншот страницы категории",  [995]  %}
 
             </div>
@@ -86,9 +85,7 @@ role:
                 <p>Доступна вся основная информация о товаре, а также возможность оставить заявку на полный подбор мебели для проекта. У некоторых товаров есть ограничение в виде минимального количества для заказа, об этом сразу предупреждаем покупателя.</p>
             </div>
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/product.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/product.jpg"] | join, "bordered", "Restte.com - скриншот страницы товара",  [995]  %}
-
             </div>
         </div>
 
@@ -100,8 +97,9 @@ role:
         <h2>Результат</h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
-                <ul class="bulleted-list--custom">
-                    <li>Сайт сверстан на собственной модификации Image CMS с модулем для магазина.</li>
+                <ul class="bulleted-list--custom" data-gsap-el="bulletedList">
+                    <li>Сайт сверстан на собственной CMS с модулем для магазина.</li>
+                    <li>Front-end: HTML + шаблонизатор Smarty, CSS, JQuery + plugins. Back-end: PHP, CodeIgniter.</li>
                     <li>Продуманная иерархия каталога положительно отразилась на SEO. </li>
                     <li>Удобно пользоваться в том числе и на небольших устройствах. </li>
                     <li>Актуальность контента поддерживается модераторами клиента через админ-панель и синхронизацию.</li>

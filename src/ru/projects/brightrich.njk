@@ -3,32 +3,33 @@ tags: ['latest_ru', 'projects_ru']
 date: 2022-01-01
 title: Bright Rich
 meta_title: Кейс | Основной сайт Bright Rich
-short_desc: Полная переверстка основного сайта и улучшение UI/UX.
+meta_description: Полная переверстка основного сайта и улучшение UI/UX
+short_desc: Полная переверстка основного сайта и улучшение UI/UX
 short_desc_add: Подробный кейс.
 year: Ноябрь 2022
 folder: brightrich
 role:
-- Оптимизация UX/UI
-- Вёрстка и натяжка на CMS
+- Оптимизация UI/UX
+- Вёрстка и интеграция с CMS
 - Дизайн дополнительных страниц
 ---
 
-{% import "../../_includes/components.njk" as components %}
+{% import "../../_includes/components.njk"  as components with context %}
 <section class="case-cover dark-bg overlapped">
     <div class="wrap">
         {% image ["src/content/", folder, "/cover.jpg"] | join, "", "Bright Rich - скриншот главной страницы",  [1376]  %}
     </div>
 </section>
 
-<div class="brs-top-outer--dark" >
-    <section class="brs-top">
+<div class="dark-bg--underlay gsap-offset-next">
+    <section class="brs-top" data-gsap-el="section">
         <div class="wrap">
             <div class="readable">
                 <h2>О компании</h2>
-                <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
+                <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,9 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, Дубае и Алматы.</p>
                 <h2>Задачи</h2>
-                <p>На сайте накопилось много проблем, которые довольно медленно исправлялись штатным специалистом. Компания планировала расширяться в Казахстан и ОАЭ, поэтому нам было поручено оперативно привести сайт в порядок. Для этого планировалось:</p>
-                <ul class="bulleted-list--custom">
+                <p>На сайте накопилось много проблем, которые довольно медленно исправлялись штатным специалистом. Компания планировала расширяться в Казахстан и ОАЭ, поэтому нам было поручено привести сайт в порядок как можно скорее. Для этого планировалось:</p>
+                <ul class="bulleted-list--custom" data-gsap-el="bulletedList">
                     <li>провести ручное тестирование для обнаружения неучтенных проблем;
                     </li>
                     <li>перенести сайт на собственную CMS веб-студии Evernet, заточенную под работу с недвижимостью.</li>
@@ -38,11 +39,11 @@ role:
     </section>
 </div>
 
-<section class="border-top" >
+<section class="border-top">
     <div class="wrap">
         <h2>Типы страниц для вёрстки</h2>
         <div class="pages-type-layout">
-            <ol class="numbered-list">
+            <ol class="numbered-list" data-gsap-el="bulletedList">
                 <li>Главная страница</li>
                 <li>Список предложений (3 вида)</li>
                 <li>Объект</li>
@@ -66,7 +67,7 @@ role:
     </div>
 </section>
 
-<section class="dark-bg overlapped" >
+<section class="dark-bg brs-top" data-gsap-el="section">
     <div class="wrap">
 
         <div class="rows readable">
@@ -97,34 +98,35 @@ role:
     </div>
 </section>
 
-<section class="brs-top" >
+<section data-gsap-el="section">
     <div class="wrap">
         <h2>Нужно больше иконок</h2>
         <div class="rows">
             <p>Для блока об инфраструктуре на странице апартаментов было подобрано и приведено к единому стилю более 40 иконок</p>
-            {# <img src="/content/{{folder}}/icons.jpg" alt="Иконки для страницы апартаментов"> #}
-            {% image ["src/content/", folder, "/icons.jpg"] | join, "", "Иконки для страницы апартаментов",  [1376, 2064]  %}
+            <div data-gsap="scale">{% image ["src/content/", folder, "/icons.jpg"] | join, "", "Иконки для страницы апартаментов",  [1376, 2064]  %}</div>
         </div>
     </div>
 </section>
 
-<div class="wrap" >
-    <div class="dark-bg rounded-incut rows">
-        <h2>Глобальная проблема: <span class="wavy-underline">лишний&nbsp;код</span></h2>
-        <p>На сайте нерационально использовалась библиотека Bootstrap. Активно применялись только классы для сетки, а стили для всех остальных элементов были избыточными и часто переопределяли дефолтные стили библиотеки, из-за чего её использование теряло смысл. В HTML была излишняя вложенность в больших количествах.</p>
+<div data-gsap-el="section">
+    <div class="wrap" data-gsap="scale">
+        <div class="dark-bg rounded-incut rows">
+            <h2>Глобальная проблема: <span class="wavy-underline">лишний&nbsp;код</span></h2>
+            <p>На сайте нерационально использовалась библиотека Bootstrap. Активно применялись только классы для сетки, а стили для всех остальных элементов были избыточными и часто переопределяли дефолтные стили библиотеки, из-за чего её использование теряло смысл. В HTML была излишняя вложенность в больших количествах.</p>
 
-        <div class="callout">
-            <h3 class="colored--primary">Было решено написать с нуля разметку и стили</h3>
-            <p>Часть элементов поменяла свой внешний вид по результатам аудита поэтому для них в любом случае потребовалось бы переписать код. Также планировалось добавление новых типов страниц и элементов. Полный рефакторинг обеспечит удобную поддержку и масштабирование в будущем.</p>
+            <div class="callout">
+                <h3 class="colored--primary">Было решено написать с нуля разметку и стили</h3>
+                <p>Часть элементов поменяла свой внешний вид по результатам аудита поэтому для них в любом случае потребовалось бы переписать код. Также планировалось добавление новых типов страниц и элементов. Полная переверстка с нуля обеспечит удобную поддержку и масштабирование в будущем.</p>
+            </div>
+
+            <p>Новый сайт сверстан с использованием шаблонизатора Smarty и SCSS.</p>
+            <p>Промежуточную версию обновленного кода можно посмотреть на GitHub.</p>
+            <p><a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-white"><span class="btn-icon github-icon">Частичный код на GitHub</span></a></p>
         </div>
-
-        <p>Новый сайт сверстан с использованием шаблонизатора Smarty и SCSS.</p>
-        <p>Промежуточную версию обновленного кода можно посмотреть на GitHub.</p>
-        <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-white"><span class="btn-icon github-icon">Частичный на GitHub</span></a>
     </div>
-</div>
+</div data-gsap-el="section">
 
-<section >
+<section data-gsap-el="section">
     <div class="wrap">
         <h2>Не только код</h2>
         <div class="sided-callout-layout">
@@ -146,29 +148,27 @@ role:
     </div>
 </section>
 
-<section class="dark-bg overlapped" >
+<section class="dark-bg overlapped" data-gsap-el="section">
     <div class="wrap">
         <h2>Изменения в карточке предложения</h2>
-        <ul class="bulleted-list--custom">
+        <ul class="bulleted-list--custom" data-gsap-el="bulletedList">
             <li>Увеличено количество фото в слайдере</li>
             <li>При наведении на карточку навигация в слайдере становится видимой</li>
             <li>Класс объекта и тип предложения вынесены наверх на плашки</li>
             <li>Адрес перенесен вниз к остальной информации о локации</li>
             <li>Убрана анимация в блоке “время до метро / район“</li>
             <li>Предусмотрен вариант с несколькими станциями метро</li>
-            <li>Фиолетовая точка у названия метро заменена на универсальную иконку, так как на исходном сайте не был реализован функционал соответствия цвету линии, а фиолетовый создавал диссонанс</li>
+            <li>Фиолетовая точка у названия метро заменена на универсальную иконку, так как на исходном сайте не был реализован функционал соответствия цвету линии, а фиолетовый создавал диссонанс (потому что не все станции метро на фиолетовой ветке)</li>
         </ul>
         <hr>
         <div class="screens-grid-2">
-            <div class="item">
+            <div class="grid-item">
                 <h3>Было</h3>
-                {# <img src="/content/brightrich/card-before.png" alt=""> #}
                 {% image ["src/content/", folder, "/card-before.jpg"] | join, "brs-0", "Карточка предложения - до",  [658, 987]  %}
 
             </div>
-            <div class="item">
+            <div class="grid-item">
                 <h3>Стало</h3>
-                {# <img src="/content/brightrich/card-after.png" alt=""> #}
                 {% image ["src/content/", folder, "/card-after.jpg"] | join, "brs-0", "Карточка предложения - после",  [658, 987]  %}
 
             </div>
@@ -176,7 +176,7 @@ role:
     </div>
 </section>
 
-<section class="brs-top" >
+<section data-gsap-el="section">
     <div class="wrap">
         <h2>Примеры других проблем</h2>
         <div class="solution-layout">
@@ -187,7 +187,6 @@ role:
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/brightrich/variants-before.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/variants-before.jpg"] | join, "", "Таблица вариантов - до",  [995, 1493]  %}
 
             </div>
@@ -200,14 +199,13 @@ role:
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/brightrich/variants-after.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/variants-after.jpg"] | join, "", "Таблица вариантов - после",  [995, 1493]  %}
             </div>
         </div>
     </div>
 </section>
 
-<section class="border-top" >
+<section class="border-top">
     <div class="wrap">
         <div class="solution-layout">
             <div class="solution-desc">
@@ -217,7 +215,6 @@ role:
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/{{folder}}/features-01.jpg" class="bordered" alt=""> #}
                 {% image ["src/content/", folder, "/features-01.jpg"] | join, "bordered", "Слайдер - до",  [995, 1493]  %}
 
             </div>
@@ -230,7 +227,6 @@ role:
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/{{folder}}/features-02.jpg" class="bordered" alt=""> #}
                 {% image ["src/content/", folder, "/features-02.jpg"] | join, "bordered", "Слайдер - до",  [995, 1493]  %}
 
             </div>
@@ -238,7 +234,7 @@ role:
     </div>
 </section>
 
-<section class="border-top" >
+<section class="border-top">
     <div class="wrap">
         <div class="solution-layout">
             <div class="solution-desc">
@@ -248,7 +244,6 @@ role:
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/brightrich/services-before.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/services-before.jpg"] | join, "", "Услуги - до",  [995, 1493]  %}
 
             </div>
@@ -261,7 +256,6 @@ role:
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/brightrich/services-after.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/services-after.jpg"] | join, "", "Услуги - после",  [995, 1493]  %}
 
             </div>
@@ -269,7 +263,7 @@ role:
     </div>
 </section>
 
-<section class="dark-bg brs-top" >
+<section class="dark-bg brs-top centered gsap-offset-next" data-gsap-el="section">
     <div class="wrap rows">
 
         <h2>Пример готовой страницы</h2>
@@ -301,20 +295,21 @@ role:
                 <div class="stats-block">
                     <p class="stats-number">100+</p>
                 </div>
-                <p class="stats-desc">улучшений и исправлений было сделано </p>
+                <p class="stats-desc">улучшений и исправлений было сделано</p>
             </div>
             <div class="stats-grid__item">
                 <div class="stats-block">
                     <span class="stats-number">2</span>
                     <span class="stats-unit">недели</span>
                 </div>
-                <p class="stats-desc">заняли работы по полному переносу сайта</p>
+                <p class="stats-desc">заняли работы по полному переносу фронтенда</p>
             </div>
         </div>
 
         <ul class="bulleted-list--custom">
-            <li>полностью переписаны HTML и CSS. Тот случай, когда надежнее сделать с нуля, чем переносить и рефакторить старый избыточный код</li>
-            <li>отключены лишние скрипты, в том числе зависимости от Bootstrap, использованы кастомные функции для табов и т. п. Сторонние библиотеки: Swiper, Fancybox, Nice/Multiselect</li>
+            <li>полностью переписаны HTML, CSS и JS. Тот случай, когда надежнее сделать с нуля, чем переносить и рефакторить старый избыточный код</li>
+            <li>отключены лишние скрипты, в том числе зависимости от Bootstrap, использованы кастомные функции для табов, меню и т. п.</li>
+            <li>использованные сторонние библиотеки: JQuery, Swiper, Fancybox, Nice/Multiselect</li>
             <li>улучшена логика во внешнем виде некоторых элементов</li>
             <li>обновленная кодовая база используется также и для региональных версий (ОАЭ и Казахстан)</li>
             <li>сайт полностью адаптивен, основные брейкпойнты: 320, 768, 1024, 1280, 1600+ пикселей</li>
@@ -322,24 +317,22 @@ role:
 
         <div class="mobile-screens">
             <div class="grid-item">
-                {# <img src="/content/brightrich/mobile-01.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Скриншот мобильной версии Bright Rich - 01",  ""  %}
 
             </div>
             <div class="grid-item">
-                {# <img src="/content/brightrich/mobile-02.png" alt=""> #}
                 {% image ["src/content/", folder, "/mobile-02.png"] | join, "", "Скриншот мобильной версии Bright Rich - 02",  ""  %}
 
             </div>
             <div class="grid-item">
-                {# <img src="/content/brightrich/mobile-03.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Скриншот мобильной версии Bright Rich - 03",  ""  %}
             </div>
         </div>
     </div>
 </section>
-<div class="brs-top-outer--dark">
-    <section class="brs-top brs-bottom links-section" >
+
+<div class="dark-bg--underlay">
+    <section class="brs-top brs-bottom links-section gsap-offset-next" data-gsap-el="section">
         <div class="wrap">
             <h2>Ссылки</h2>
             <div class="buttons-group">

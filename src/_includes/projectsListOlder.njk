@@ -1,38 +1,25 @@
-{% import "components.njk" as components %}
-<ul class="caselist caselist--small" data-gsap="groupTranslateY">
+{% import "components.njk"  as components with context %}
+<ul class="caselist caselist--small">
     {% for project in collections["older_" + page.lang] | reverse  %}
     {{ components.caselistItemSmall(project) }}
-    {#    <li>
-        <a class="caselist__item is-vertical" href="{{ project.url }}">
-            <div class="item-content">
-                <p class="item-title title-font">{% if project.data.short_title | length %}{{ project.data.short_title }}{% else %}{{ project.data.title }}{% endif %}</p>
-                <p class="item-desc">{{ project.data.short_desc }}</p>
-                {% if project.data.role | length %}
-                <ul class="taglist">
-                    {% for item in project.data.role %}
-                    <li class="taglist__item">{{item}}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-                <div class="item-content__bottom rows">
-                    {% if project.data.year | length %}
-                    <p class="item-date"><span>{{ project.data.year }}</span></p>
-                    {% endif %}
-                    <p class="btn btn-white">Смотреть кейс</p>
-                </div>
-            </div>
-        </a>
-    </li>#}
     {% endfor %}
 
-    <li class="caselist__item is-vertical caselist__item--last">
+    <li class="caselist__item is-vertical caselist__item--last" data-gsap="groupTranslateY">
         <div class="item-content">
-            <p class="item-title title-font"><span class="gradient-text">И ещё</span></p>
-            <p class="stats-block"><span class="stats-number">100+</span><span class="stats-unit">проектов <br>за 7 лет</span></p>
-            <p class="item-desc">E-commerce, недвижимость, внутренние CRM, корпоративные сайты</p>
+            <p class="item-title title-font"><span class="gradient-text">{% if page.lang == 'en' %}Plus{% else %}И ещё{% endif %}</span></p>
+            <p class="stats-block">
+                {% if page.lang == 'en' %}
+                <span class="stats-number">100+</span><span class="stats-unit">projects <br>in 7 years</span>
+                {% else %}
+                <span class="stats-number">100+</span><span class="stats-unit">проектов <br>за 7 лет</span>
+                {% endif %}
+            </p>
+
+            <p class="item-desc">{% if page.lang == 'en' %}E-commerce, real estate, in-house CRM, corporate websites etc.{% else %}E-commerce, недвижимость, внутренние CRM, корпоративные сайты etc.{% endif %}</p>
+
             <div class="item-content__bottom rows">
                 <p class="item-date"><span>2016 - 2023</span></p>
-                <a href="/#experience" class="btn btn-outline--primary">Откуда столько?</a>
+                <a href="{% if not isHomepage %}/{{ page.lang }}/{% endif %}#about" class="btn btn-outline--primary">{% if page.lang == 'en' %}Oh, that's a lot!{% else %}Откуда столько?{% endif %}</a>
             </div>
         </div>
     </li>

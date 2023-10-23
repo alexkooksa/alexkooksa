@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:eleventy": "eleventy --serve",
-    "build:eleventy": "ELEVENTY_ENV=development eleventy",
+    "build:eleventy": "cross-env ELEVENTY_ENV=development eleventy",
     "start": "npm run watch:eleventy",
     "build": "npm run build:eleventy",
-    "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
+    "build:eleventy:prod": "cross-env ELEVENTY_ENV=production eleventy",
     "build:prod": "npm run build:eleventy:prod"
   },
   "keywords": [],
@@ -21,9 +21,30 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.15",
-    "eleventy-plugin-rev": "^1.1.1",
+    "clean-css": "^5.3.2",
+    "cross-env": "^7.0.3",
+    "cssutil": "^0.5.2",
     "eleventy-sass": "^2.2.3",
-    "postcss": "^8.4.30",
-    "sass": "^1.68.0"
-  }
+    "fs-extra": "^11.1.1",
+    "postcss": "^8.4.31",
+    "postcss-critical-css": "^3.0.7"
+  },
+  "browserslist": [
+    "Edge >= 12",
+    "Firefox >= 28",
+    "Chrome >= 57",
+    "Last 30 Android versions",
+    "Baidu >= 7.12",
+    "BlackBerry >= 10",
+    "last 30 ChromeAndroid versions",
+    "ExplorerMobile >= 11",
+    "last 30 FirefoxAndroid versions",
+    "iOS >= 8",
+    "Opera >= 44",
+    "last 10 OperaMini versions",
+    "OperaMobile >= 44",
+    "QQAndroid >= 1.2",
+    "Safari >= 8",
+    "Samsung >= 4"
+  ]
 }

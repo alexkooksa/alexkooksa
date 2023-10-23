@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="ltr">
+<!-- portfolio source code is available at -->
+<!-- https://github.com/alexkooksa/kooksa.codes -->
+
+{% set isHomepage = ((page.url == '/en/') or (page.url == '/ru/')) %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="noindex, nofollow" />
+    <title>{{ meta_title }} | Kooksa.codes</title>
+    <link rel="preload" as="font" href="/_styles/fonts/Unbounded-VF.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/_styles/fonts/JetBrainsMono-VF.woff2" type="font/woff2" crossorigin="anonymous">
+
+    {% if isHomepage %}
+    <link rel="preload" as="style" href="/_styles/critical/critical.css?{{ globals.buildTime }}" />
+    <link rel="stylesheet" href="/_styles/critical/critical.css?{{ globals.buildTime }}" />
+    {% else %}
+    <link rel="preload" as="style" href="/_styles/critical/criticalCase.css?{{ globals.buildTime }}" />
+    <link rel="stylesheet" href="/_styles/critical/criticalCase.css?{{ globals.buildTime }}" />
+    {% endif %}
+
+    {% if meta.env == 'production' %}
+    <link rel="stylesheet" href="/_styles/bundle.css?{{ globals.buildTime }}" />
+    {% else %}
+    <link rel="stylesheet" href="/_styles/base.css?{{ globals.buildTime }}" />
+    <link rel="stylesheet" href="/_styles/style.css?{{ globals.buildTime }}" />
+    {% endif %}
+
+    <meta property="og:image" content="/content/images/og-{% if isHomepage %}homepage{% else %}{{folder}}{% endif %}-{{page.lang}}.jpg" />
+    <meta property="og:title" content="{{ meta_title }} | Kooksa.codes" />
+    <meta property="og:description" content="{{ meta_description }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/_styles/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/_styles/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/_styles/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/_styles/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/_styles/favicon/safari-pinned-tab.svg" color="#1a1c21">
+    <link rel="shortcut icon" href="/_styles/favicon/favicon.ico" type="image/x-icon">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/_styles/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#1b1c21">
+</head>
+
+<body {% if isHomepage %} class="homepage" {% endif %}>
+
+    {% include 'header.njk' %}
+    {{ content | safe}}
+
+    <div class="lightbox">
+        <div class="wrap">
+            <button class="btn-close"></button>
+        </div>
+    </div>
+
+    {% include 'footer.njk' %}
+
+    <script src="/_js/gsap.min.js"></script>
+    <script src="/_js/ScrollTrigger.min.js"></script>
+    {% if isHomepage %}
+    <script src="/_js/TextPlugin.min.js"></script>
+    <script src="/_js/intro.js?{{ globals.buildTime }}"></script>
+    {% endif %}
+    <script src="/_js/gsapCustom.js?{{ globals.buildTime }}"></script>
+    <script src="/_js/script.js?{{ globals.buildTime }}"></script>
+</body>
+
+</html>

@@ -2,11 +2,11 @@
 module.exports = {
   en: [
     {
-      text: "Projects",
+      text: "Case studies",
       url: "#projects",
     },
     {
-      text: "About me",
+      text: "CV",
       url: "#about",
     },
     {
@@ -20,7 +20,7 @@ module.exports = {
       url: "#projects",
     },
     {
-      text: "Обо мне",
+      text: "Опыт",
       url: "#about",
     },
     {

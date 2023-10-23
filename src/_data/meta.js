@@ -1,4 +1,5 @@
 module.exports = {
+  env: process.env.ELEVENTY_ENV || "development",
   url: process.env.URL || "http://localhost:8080",
   siteName: "kooksa.codes",
   siteDescription: "",

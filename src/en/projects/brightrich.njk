@@ -3,36 +3,38 @@
 tags: ['latest_en', 'projects_en']
 date: 2022-01-01
 title: Bright Rich
-meta_title: Кейс | Основной сайт Bright Rich
-short_desc: Layout and styles refactoring and UI/UX improvements
+meta_title: Case study | Bright Rich primary website
+meta_description: Markup and styles refactoring + UI/UX improvements at Bright Rich website
+short_desc: Markup and styles refactoring + UI/UX improvements
 short_desc_add: Detailed case.
 year: November 2022
 folder: brightrich
 role:
-- Оптимизация UX/UI
-- Вёрстка и натяжка на CMS
-- Дизайн дополнительных страниц
+- UI/UX improvements
+- Front-end development
+- CMS development
+- Additional pages design
 ---
 
-{% import "../../_includes/components.njk" as components %}
+{% import "../../_includes/components.njk"  as components with context %}
 <section class="case-cover dark-bg overlapped">
     <div class="wrap">
-        {% image ["src/content/", folder, "/cover.jpg"] | join, "", "Bright Rich - скриншот главной страницы",  [1376]  %}
+        {% image ["src/content/", folder, "/cover.jpg"] | join, "", "Bright Rich - homepage screenshot",  [1376]  %}
     </div>
 </section>
 
-<div class="brs-top-outer--dark">
-    <section class="brs-top">
+<div class="dark-bg--underlay gsap-offset-next">
+    <section class="brs-top" data-gsap-el="section">
         <div class="wrap">
             <div class="readable">
-                <h2>О компании</h2>
-                <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
-                <h2>Задачи</h2>
-                <p>На сайте накопилось много проблем, которые довольно медленно исправлялись штатным специалистом. Компания планировала расширяться в Казахстан и ОАЭ, поэтому нам было поручено оперативно привести сайт в порядок. Для этого планировалось:</p>
+                <h2>The company</h2>
+                <p>Bright Rich is a member of CORFAC International, an international association of professional brokerage companies. As of today, their portfolio of transactions is higher than 1.9 million sq. m. The branches are located in Dubai and Almaty, Moscow and St. Petersburg.</p>
+                <h2>The goals</h2>
+                <p>The site had accumulated a lot of problems, which were slowly fixed by an in-house specialist. The company was planning to expand into Kazakhstan and the United Arab Emirates, so we were tasked with getting the site up and running as quickly as possible. For this purpose we planned to:</p>
                 <ul class="bulleted-list--custom">
-                    <li>провести ручное тестирование для обнаружения неучтенных проблем;
+                    <li>manually test the existing website to detect unrecorded issues;
                     </li>
-                    <li>перенести сайт на собственную CMS веб-студии Evernet, заточенную под работу с недвижимостью.</li>
+                    <li>migrate the website to Evernet's in-house CMS developed for the real estate industry</li>
                 </ul>
             </div>
         </div>
@@ -41,168 +43,164 @@ role:
 
 <section class="border-top">
     <div class="wrap">
-        <h2>Типы страниц для вёрстки</h2>
+        <h2>Page types</h2>
         <div class="pages-type-layout">
             <ol class="numbered-list">
-                <li>Главная страница</li>
-                <li>Список предложений (3 вида)</li>
-                <li>Объект</li>
-                <li>Предложение в объекте</li>
-                <li>О компании</li>
-                <li>Журнал</li>
-                <li>Список новостей</li>
-                <li>Страница новости</li>
-                <li>Все услуги</li>
-                <li>Страница направления услуг</li>
-                <li>Страница услуги</li>
-                <li>Список вакансий</li>
-                <li>Страница вакансии</li>
-                <li>Контакты</li>
-                <li>Ошибка 404</li>
+                <li>Homepage</li>
+                <li>Offers list (3 views)</li>
+                <li>Property page</li>
+                <li>Particular offer page</li>
+                <li>About page</li>
+                <li>Blog</li>
+                <li>News list</li>
+                <li>News page</li>
+                <li>Services list</li>
+                <li>Services by type</li>
+                <li>Service page</li>
+                <li>Vacancy list</li>
+                <li>Vacancy page</li>
+                <li>Contacts</li>
+                <li>Error 404</li>
             </ol>
             <div class="block-image">
-                {% image ["src/content/", folder, "/types-1.jpg"] | join, "brs-0", "Типы страниц для верстки",  [750, 1127]  %}
+                {% image ["src/content/", folder, "/types-1.jpg"] | join, "brs-0", "Page types",  [750, 1127]  %}
             </div>
         </div>
     </div>
 </section>
 
-<section class="dark-bg overlapped">
+<section class="dark-bg brs-top" data-gsap-el="section">
     <div class="wrap">
 
         <div class="rows readable">
-            <h2>Нужно больше страниц</h2>
-            <p>В ходе переноса добавились еще два типа страниц, для которых нужно было разработать дизайн в фирменном стиле с использованием уже имеющихся компонентов:</p>
+            <h2>So... we need more pages!</h2>
+            <p>Two additional page types were added during the migration. They required branding using existing design tokens and components.</p>
 
             <ol class="numbered-list">
-                <li>Объект типа «апартаменты»</li>
-                <li>Страница аналитики по району</li>
+                <li>Residence page</li>
+                <li>Analytics by district</li>
             </ol>
         </div>
 
         <div class="screens-grid-2">
             <div class="grid-item">
                 <div class="long-image-crop" data-lightbox>
-                    {% image ["src/content/", folder, "/apartments-preview.jpg"] | join, "", "Страница апартаментов - превью",  [658]  %}
-                    <div data-full-image>{% image ["src/content/", folder, "/apartments.jpg"] | join, "", "Страница апартаментов",  [1376]  %}</div>
+                    {% image ["src/content/", folder, "/apartments-preview.jpg"] | join, "", "Residence page - preview",  [658]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/apartments.jpg"] | join, "", "Residence page",  [1376]  %}</div>
                 </div>
             </div>
 
             <div class="grid-item">
                 <div class="long-image-crop" data-lightbox>
-                    {% image ["src/content/", folder, "/analytics-preview.jpg"] | join, "", "Страница аналитики - превью",  [658]  %}
-                    <div data-full-image>{% image ["src/content/", folder, "/analytics.jpg"] | join, "", "Страница аналитики",  [1376]  %}</div>
+                    {% image ["src/content/", folder, "/analytics-preview.jpg"] | join, "", "Analytics page - preview",  [658]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/analytics.jpg"] | join, "", "Analytics page",  [1376]  %}</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="brs-top">
+<section data-gsap-el="section">
     <div class="wrap">
-        <h2>Нужно больше иконок</h2>
+        <h2>So...we need more icons!</h2>
         <div class="rows">
-            <p>Для блока об инфраструктуре на странице апартаментов было подобрано и приведено к единому стилю более 40 иконок</p>
-            {# <img src="/content/{{folder}}/icons.jpg" alt="Иконки для страницы апартаментов"> #}
-            {% image ["src/content/", folder, "/icons.jpg"] | join, "", "Иконки для страницы апартаментов",  [1376, 2064]  %}
+            <p>Over 40 icons related to the infrastructure were selected and given a consistent style.</p>
+            {% image ["src/content/", folder, "/icons.jpg"] | join, "", "Icons for the residence page",  [1376, 2064]  %}
         </div>
     </div>
 </section>
 
-<div class="wrap">
-    <div class="dark-bg rounded-incut rows">
-        <h2>Глобальная проблема: <span class="wavy-underline">лишний&nbsp;код</span></h2>
-        <p>На сайте нерационально использовалась библиотека Bootstrap. Активно применялись только классы для сетки, а стили для всех остальных элементов были избыточными и часто переопределяли дефолтные стили библиотеки, из-за чего её использование теряло смысл. В HTML была излишняя вложенность в больших количествах.</p>
+<div data-gsap-el="section">
+    <div class="wrap" data-gsap="scale">
+        <div class="dark-bg rounded-incut rows">
+            <h2>Global issue: <span class="wavy-underline">unnecessary&nbsp;code</span></h2>
+            <p>The site's use of the Bootstrap library was excessive and unproductive. Only grid-related classes were used consistently, while styles for other elements were often redundant and overriding the library's default styles. The HTML code contained excessive nesting.</p>
 
-        <div class="callout">
-            <h3 class="colored--primary">Было решено написать с нуля разметку и стили</h3>
-            <p>Часть элементов поменяла свой внешний вид по результатам аудита поэтому для них в любом случае потребовалось бы переписать код. Также планировалось добавление новых типов страниц и элементов. Полный рефакторинг обеспечит удобную поддержку и масштабирование в будущем.</p>
+            <div class="callout">
+                <h3 class="colored--primary">Solution: write the markup and styles from scratch</h3>
+                <p>Some elements changed as a result of the audit, requiring code refactoring in any case. It was also planned to introduce new page types and elements. Rewriting the code from scratch will ensure future scalability and easy maintenance.</p>
+            </div>
+
+            <p>The new website was developed with Smarty Templates and SCSS.</p>
+            <p>An interim version of the rewritten code is available on GitHub.</p>
+            <p><a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-white"><span class="btn-icon github-icon">Partial code on GitHub</span></a></p>
         </div>
-
-        <p>Новый сайт сверстан с использованием шаблонизатора Smarty и SCSS.</p>
-        <p>Промежуточную версию обновленного кода можно посмотреть на GitHub.</p>
-        <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-white"><span class="btn-icon github-icon">Частичный на GitHub</span></a>
     </div>
 </div>
 
-<section>
+<section data-gsap-el="section">
     <div class="wrap">
-        <h2>Не только код</h2>
+        <h2>Not only the code</h2>
         <div class="sided-callout-layout">
             <div class="text-block">
-                <p>Остальные проблемы касались юзабилити:</p>
+                <p>Other issues were usability related</p>
                 <ul class="bulleted-list--custom">
-                    <li>неочевидная или неудобная навигация в некоторых блоках</li>
-                    <li>нарушения производительности</li>
-                    <li>некорректная работа скриптов (например, была путаница в применении слайдера на больших и маленьких экранах)</li>
+                    <li>unclear or inconvenient navigation in some sections</li>
+                    <li>performance issues</li>
+                    <li>incorrect work of scripts (for example, there was confusion in applying the slider on large and small screens)</li>
                 </ul>
             </div>
             <aside>
                 <div class="callout">
-                    <p class="stats-block"><span class="stats-number">50+</span><span class="stats-unit">страниц <br>в гуглодоке</span></p>
-                    <p class="stats-desc">Столько багов и неудобств было зафиксировано на текущем сайте перед началом работ</p>
+                    <p class="stats-block"><span class="stats-number">50+</span><span class="stats-unit">pages <br>in googledoc</span></p>
+                    <p class="stats-desc">The number of bugs and inconveniences which were listed on the existing website</p>
                 </div>
             </aside>
         </div>
     </div>
 </section>
 
-<section class="dark-bg overlapped">
+<section class="dark-bg overlapped" data-gsap-el="section">
     <div class="wrap">
-        <h2>Изменения в карточке предложения</h2>
-        <ul class="bulleted-list--custom">
-            <li>Увеличено количество фото в слайдере</li>
-            <li>При наведении на карточку навигация в слайдере становится видимой</li>
-            <li>Класс объекта и тип предложения вынесены наверх на плашки</li>
-            <li>Адрес перенесен вниз к остальной информации о локации</li>
-            <li>Убрана анимация в блоке “время до метро / район“</li>
-            <li>Предусмотрен вариант с несколькими станциями метро</li>
-            <li>Фиолетовая точка у названия метро заменена на универсальную иконку, так как на исходном сайте не был реализован функционал соответствия цвету линии, а фиолетовый создавал диссонанс</li>
+        <h2>Offer card changes</h2>
+        <ul class="bulleted-list--custom" data-gsap-el="bulletedList">
+            <li>Increased the number of photos in the slider</li>
+            <li>The slider navigation becomes visible on card hover</li>
+            <li>Property class and offer type were noted at the top</li>
+            <li>The address has been moved down to the location info</li>
+            <li>Removed transition animation between the district and the subway journey time</li>
+            <li>Changed the layout to have multiple subway stations</li>
+            <li>The purple dot at the name of the metro was replaced by a universal icon, because the existing site did not implement the functionality of matching the colour of the line, so purple created dissonance (because not all metro stations are on the purple line)</li>
         </ul>
         <hr>
         <div class="screens-grid-2">
-            <div class="item">
-                <h3>Было</h3>
-                {# <img src="/content/brightrich/card-before.png" alt=""> #}
-                {% image ["src/content/", folder, "/card-before.jpg"] | join, "brs-0", "Карточка предложения - до",  [658, 987]  %}
-
+            <div class="grid-item">
+                <h3>Before</h3>
+                {% image ["src/content/", folder, "/card-before.jpg"] | join, "brs-0", "Offer card - before",  [658, 987]  %}
             </div>
-            <div class="item">
-                <h3>Стало</h3>
-                {# <img src="/content/brightrich/card-after.png" alt=""> #}
-                {% image ["src/content/", folder, "/card-after.jpg"] | join, "brs-0", "Карточка предложения - после",  [658, 987]  %}
-
+            <div class="grid-item">
+                <h3>After</h3>
+                {% image ["src/content/", folder, "/card-after.jpg"] | join, "brs-0", "Offer card - after",  [658, 987]  %}
             </div>
         </div>
     </div>
 </section>
 
-<section class="brs-top">
+<section data-gsap-el="section">
     <div class="wrap">
-        <h2>Примеры других проблем</h2>
+        <h2>Other issues examples</h2>
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-red">Проблема</h3>
-                    <p>Кнопка для отрытия превью фото появлялась только при наведении. Сложно было понять, что ниже есть еще варианты, потому что прокрутка так же появлялась только при наведении.</p>
+                    <h3 class="underline-red">Problem</h3>
+                    <p>The image preview button appeared only on hover. It was difficult to understand that there are move offers below because the scroll appeared only on hover as well.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/brightrich/variants-before.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/variants-before.jpg"] | join, "", "Таблица вариантов - до",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/variants-before.jpg"] | join, "", "Offers table - before",  [995, 1493]  %}
 
             </div>
         </div>
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-green">Решение</h3>
-                    <p>Вместо иконки вывели реальное фото. Полный список вариантов больше не прячется под скроллом. Если вариантов много, появляется кнопка «показать ещё» для просмотра полного списка.</p>
+                    <h3 class="underline-green">Solution</h3>
+                    <p>The icon was replaced with the real photo. Offers list is no longer truncated. If the list is too long, you can view the full list using the "view more" button.
+                    </p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/brightrich/variants-after.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/variants-after.jpg"] | join, "", "Таблица вариантов - после",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/variants-after.jpg"] | join, "", "Offers table - after",  [995, 1493]  %}
             </div>
         </div>
     </div>
@@ -213,27 +211,24 @@ role:
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-red">Проблема</h3>
-                    <p>Вертикальный слайдер, листающий элементы при прокрутке, с плохой реализацией и низкой произодительностью. Неизвестно количество слайдов, невзрачная кнопка для принудительной прокрутки.</p>
+                    <h3 class="underline-red">Problem</h3>
+                    <p>Vertical slider depending on scroll had a very bad performance. The number of items was unpredictable for user and the button for skipping this functionality was unnoticeable.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/{{folder}}/features-01.jpg" class="bordered" alt=""> #}
-                {% image ["src/content/", folder, "/features-01.jpg"] | join, "bordered", "Слайдер - до",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/features-01.jpg"] | join, "bordered", "Slider - before",  [995, 1493]  %}
 
             </div>
         </div>
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-green">Решение</h3>
-                    <p>Классический слайдер с автозапуском и дальнейшей прокруткой по желанию пользователя</p>
+                    <h3 class="underline-green">Solution</h3>
+                    <p>A classical slider with an autoplay and manual scrolling options.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/{{folder}}/features-02.jpg" class="bordered" alt=""> #}
-                {% image ["src/content/", folder, "/features-02.jpg"] | join, "bordered", "Слайдер - до",  [995, 1493]  %}
-
+                {% image ["src/content/", folder, "/features-02.jpg"] | join, "bordered", "Slider - after",  [995, 1493]  %}
             </div>
         </div>
     </div>
@@ -244,37 +239,33 @@ role:
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-red">Проблема</h3>
-                    <p>Заголовок-селект. Не слишком заметная стрелка, сложно догадаться, какие опции под ней скрываются</p>
+                    <h3 class="underline-red">Problem</h3>
+                    <p>A title with the functionality of the select. A very subtle dropdown arrow. It's impossible to predict which options you might find. </p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/brightrich/services-before.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/services-before.jpg"] | join, "", "Услуги - до",  [995, 1493]  %}
-
+                {% image ["src/content/", folder, "/services-before.jpg"] | join, "", "Services - before",  [995, 1493]  %}
             </div>
         </div>
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-green">Решение</h3>
-                    <p>Показаны сразу все возможные варианты за счёт табов</p>
+                    <h3 class="underline-green">Solution</h3>
+                    <p>All possible options are shown at once through tabs.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/brightrich/services-after.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/services-after.jpg"] | join, "", "Услуги - после",  [995, 1493]  %}
-
+                {% image ["src/content/", folder, "/services-after.jpg"] | join, "", "Services - after",  [995, 1493]  %}
             </div>
         </div>
     </div>
 </section>
 
-<section class="dark-bg brs-top">
+<section class="dark-bg brs-top centered gsap-offset-next" data-gsap-el="section">
     <div class="wrap rows">
 
-        <h2>Пример готовой страницы</h2>
-        <p>Главная страница содержит большое количество слайдеров, табов и других интерактивных элементов.</p>
+        <h2>Example of a ready-made page</h2>
+        <p>Contains lots of sliders, tabs and other interactive elements </p>
 
         {{ components.video('brightrich-video.webm', 'brightrich-video-poster.jpg', true) }}
 
@@ -284,68 +275,65 @@ role:
 <section class="dark-bg border-top--light">
     <div class="wrap">
 
-        <h2><span class="gradient-text">Итоги</span></h2>
+        <h2><span class="gradient-text">Result</span></h2>
         <div class="stats-grid">
             <div class="stats-grid__item">
                 <div class="stats-block">
                     <p class="stats-number">-50%</p>
                 </div>
-                <p class="stats-desc">На столько сократился объем файлов стилей</p>
+                <p class="stats-desc">the style files have been reduced</p>
             </div>
             <div class="stats-grid__item">
                 <div class="stats-block">
                     <p class="stats-number">+12%</p>
                 </div>
-                <p class="stats-desc">На столько увеличилась производительность</p>
+                <p class="stats-desc">the performance increased</p>
             </div>
             <div class="stats-grid__item">
                 <div class="stats-block">
                     <p class="stats-number">100+</p>
                 </div>
-                <p class="stats-desc">улучшений и исправлений было сделано </p>
+                <p class="stats-desc">fixes and improvements</p>
             </div>
             <div class="stats-grid__item">
                 <div class="stats-block">
                     <span class="stats-number">2</span>
-                    <span class="stats-unit">недели</span>
+                    <span class="stats-unit">weeks</span>
                 </div>
-                <p class="stats-desc">заняли работы по полному переносу сайта</p>
+                <p class="stats-desc">working on front-end has taken</p>
             </div>
         </div>
 
-        <ul class="bulleted-list--custom">
-            <li>полностью переписаны HTML и CSS. Тот случай, когда надежнее сделать с нуля, чем переносить и рефакторить старый избыточный код</li>
-            <li>отключены лишние скрипты, в том числе зависимости от Bootstrap, использованы кастомные функции для табов и т. п. Сторонние библиотеки: Swiper, Fancybox, Nice/Multiselect</li>
-            <li>улучшена логика во внешнем виде некоторых элементов</li>
-            <li>обновленная кодовая база используется также и для региональных версий (ОАЭ и Казахстан)</li>
-            <li>сайт полностью адаптивен, основные брейкпойнты: 320, 768, 1024, 1280, 1600+ пикселей</li>
+        <ul class="bulleted-list--custom" data-gsap-el="bulletedList">
+            <li>completely rewritten HTML, CSS and JS. It was more reliable to write code from scratch than to port and refactor old redundant code</li>
+            <li>disabled unnecessary scripts, including Bootstrap dependencies, used custom functions for tabs, menus etc.</li>
+            <li>third-party libraries used: JQuery, Swiper, Fancybox, Nice/Multiselect</li>
+            <li>improved logic in the appearance of some components</li>
+            <li>updated code base is also used for regional versions (UAE and Kazakhstan)</li>
+            <li>fully responsive website with the breakpoint at 320, 768, 1024, 1280, 1600+ pixels</li>
         </ul>
 
         <div class="mobile-screens">
             <div class="grid-item">
-                {# <img src="/content/brightrich/mobile-01.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Скриншот мобильной версии Bright Rich - 01",  ""  %}
+                {% image ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Bright Rich mobile version screenshot  - 01",  ""  %}
+            </div>
+            <div class="grid-item">
+                {% image ["src/content/", folder, "/mobile-02.png"] | join, "", "Bright Rich mobile version screenshot - 02",  ""  %}
 
             </div>
             <div class="grid-item">
-                {# <img src="/content/brightrich/mobile-02.png" alt=""> #}
-                {% image ["src/content/", folder, "/mobile-02.png"] | join, "", "Скриншот мобильной версии Bright Rich - 02",  ""  %}
-
-            </div>
-            <div class="grid-item">
-                {# <img src="/content/brightrich/mobile-03.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Скриншот мобильной версии Bright Rich - 03",  ""  %}
+                {% image ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Bright Rich mobile version screenshot - 03",  ""  %}
             </div>
         </div>
     </div>
 </section>
-<div class="brs-top-outer--dark">
-    <section class="brs-top brs-bottom links-section">
+<div class="dark-bg--underlay">
+    <section class="brs-top brs-bottom links-section gsap-offset-next" data-gsap-el="section">
         <div class="wrap">
-            <h2>Ссылки</h2>
+            <h2>Links</h2>
             <div class="buttons-group">
                 <a href="https://brightrich.ru" target="_blank" class="btn btn-outline--default btn-external"><span>brightrich.ru</span></a>
-                <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-outline--default btn-external"><span>Частичный код на GitHub</span></a>
+                <a href="https://github.com/alexkooksa/br_partial" target="_blank" class="btn btn-outline--default btn-external"><span>Partial code on GitHub</span></a>
             </div>
         </div>
     </section>

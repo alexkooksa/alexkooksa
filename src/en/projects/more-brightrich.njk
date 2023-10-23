@@ -1,56 +1,58 @@
 ---
 tags: ['latest_en', 'projects_en']
 date: 2023-01-01
-title: Больше для Bright Rich
-meta_title: Кейс | Другие проекты для Bright Rich
+title: More for Bright Rich
+meta_title: Case study | More projects for Bright Rich
+meta_description: BR Home, CREMAP (UAE / RU), BR Cash, BR CRM etc.
 short_desc: BR Home, CREMAP (UAE / RU), BR Cash, BR CRM etc.
 year: 2022–2023
 folder: more-brightrich
 role:
-- Дизайн / редизайн
-- Аудит
-- Вёрстка и натяжка на CMS
+- Design / Redesign
+- UX audit
+- Front-end development
+- CMS development
 no_intro_block: true
 
 ---
-{% import "../../_includes/components.njk" as components %}
+{% import "../../_includes/components.njk"  as components with context %}
 
-<div class="brs-top-outer--dark" >
+<div class="dark-bg--underlay">
     <section class="brs-top">
         <div class="wrap">
             <div class="readable">
-                <h2>О компании</h2>
-                <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,7 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, ОАЭ и Казахстане.</p>
-                <h2>Задачи</h2>
-                <p>Помимо переноса основного сайта (о котором можно прочитать в <a href="/work/brightrich" class="link">этом кейсе</a>) для компании был выполнено множество других проектов. Вот некоторые из них.</p>
+                <h2>The company</h2>
+                <p>Bright Rich is a member of CORFAC International, an international association of professional brokerage companies. As of today, their portfolio of transactions is higher than 1.9 million sq. m. The branches are located in Dubai and Almaty, Moscow and St. Petersburg.</p>
+                <h2>The goals</h2>
+                <p>Besides the main website migration (which you can read about in <a href="/ru/projects/brightrich" class="link">this case study</a>), many other projects were completed. Here are some of them.</p>
             </div>
         </div>
     </section>
 </div>
 
-<section class="border-top" >
+<section class="border-top">
     <div class="wrap">
         <h2><span class="gradient-text">BR Home</span></h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
                 <ul class="taglist taglist--small">
-                    <li class="taglist__item">Вёрстка</li>
+                    <li class="taglist__item">Front-end development</li>
                 </ul>
                 <div>
-                    <h3>Задача</h3>
-                    <p>Компания Bright Rich запустила новое направление &mdash; сегмент элитного жилья. Нужно разработать имиджевый сайт в кратчайшие сроки.</p>
+                    <h3>Goals</h3>
+                    <p>Bright Rich has started a new line of business - the luxury housing segment. We are here to develop a landing page as soon as possible.</p>
                 </div>
 
                 <div>
-                    <h3>Процесс</h3>
-                    <p>Работа велась совместно с дизайнером клиента. По макетам из Фигмы был свёрстан минималистичный одностраничник с небольшим количеством анимаций.</p>
+                    <h3>Process</h3>
+                    <p>The work was done in collaboration with the client's designer. The result was a minimalist one-page with subtle animations.</p>
                 </div>
 
                 <div>
-                    <h3>Результат</h3>
-                    <p>Проект был запущен за 3 дня, что очень порадовало клиента. В&nbsp;дальнейшем планируется расширение структуры. Верстка успешно прошла авторский надзор дизайнера. Сайт адаптивен и отлично отображается на небольших экранах. </p>
+                    <h3>Result</h3>
+                    <p>The project was completed in 3 days, to the customer's great delight. Further development of the structure is planned. The result successfully passed the designer's review. The site is fully responsive and displays perfectly on small screens.</p>
                 </div>
-                <a href="https://brhome.ru" target="_blank" class="btn btn-outline--default btn-external"><span>brhome.ru</span></a>
+                <p><a href="https://brhome.ru" target="_blank" class="btn btn-outline--default btn-external"><span>brhome.ru</span></a></p>
             </div>
 
             <div class="solution-image">
@@ -58,17 +60,17 @@ no_intro_block: true
                     {{ components.video('brhome-video.webm', 'brhome-video-poster.jpg', true) }}
                 </div>
                 <div class="media-bg-layer--gray">
-                    <div class="mobile-screens" data-gsap="groupTranslateY">
-                        <div class="grid-item">
-                            {% image ["src/content/", folder, "/brhome-mobile-01.jpg"] | join, "", "BR Home - скриншот мобильной версии - 01",  ""  %}
+                    <div class="mobile-screens">
+                        <div class="grid-item" data-gsap="groupTranslateY">
+                            {% image ["src/content/", folder, "/brhome-mobile-01.jpg"] | join, "", "BR Home - mobile version screenshot - 01",  ""  %}
 
                         </div>
-                        <div class="grid-item">
-                            {% image ["src/content/", folder, "/brhome-mobile-02.jpg"] | join, "", "BR Home - скриншот мобильной версии - 02",  ""  %}
+                        <div class="grid-item" data-gsap="groupTranslateY">
+                            {% image ["src/content/", folder, "/brhome-mobile-02.jpg"] | join, "", "BR Home - mobile version screenshot - 02",  ""  %}
 
                         </div>
-                        <div class="grid-item">
-                            {% image ["src/content/", folder, "/brhome-mobile-03.jpg"] | join, "", "BR Home - скриншот мобильной версии - 03",  ""  %}
+                        <div class="grid-item" data-gsap="groupTranslateY">
+                            {% image ["src/content/", folder, "/brhome-mobile-03.jpg"] | join, "", "BR Home - mobile version screenshot - 03",  ""  %}
                         </div>
                     </div>
                 </div>
@@ -78,59 +80,59 @@ no_intro_block: true
     </div>
 </section>
 
-<section class="border-top" >
+<section class="border-top">
     <div class="wrap">
         <h2><span class="gradient-text">CREMAP (UAE / RU)</span></h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
                 <ul class="taglist taglist--small">
-                    <li class="taglist__item">Редизайн</li>
-                    <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+                    <li class="taglist__item">Redesign</li>
+                    <li class="taglist__item">Coding and CMS integration</li>
                 </ul>
                 <div>
-                    <h3>Задача</h3>
-                    <p>Освежить дизайн портала CREMAP.pro и разработать региональный портал для ОАЭ. Сверстать на собственной CMS Evernet, заточенной под работу с недвижимостью</p>
+                    <h3>Goals</h3>
+                    <p>To refresh the CREMAP.pro design and develop a regional version for the United Arab Emirates. Build with Evernet's own property-specific CMS (PHP + Smarty templates)</p>
                 </div>
                 <div>
-                    <h3>Процесс</h3>
-                    <p>Сделали прототипы основных страниц и согласовали с клиентом. Остальные страницы верстались с использованием уже согласованного стиля, что значительно сократило сроки запуска.</p>
+                    <h3>Process</h3>
+                    <p>We prototyped the main pages and got them approved. The rest of the pages were designed and developed using the existing style, which was a huge time-saver for the launch of the site.</p>
                 </div>
                 <div>
-                    <h3>Результат</h3>
-                    <p>Сайт запущен и успешно функционирует. Позднее исходный сайт (cremap.pro) тоже получил обновленную вёрстку.</p>
+                    <h3>Result</h3>
+                    <p>The website has been launched and is operating smoothly. The original site (cremap.pro) was then updated with a new layout later.</p>
                 </div>
-                <p class="footnote">Все данные на скриншотах вымышлены</p>
-                <a href="https://cremap.ae" target="_blank" class="btn btn-outline--default btn-external"><span>cremap.ae</span></a>
+                <p class="footnote">All data in the screenshots is fictional.</p>
+                <p><a href="https://cremap.ae" target="_blank" class="btn btn-outline--default btn-external"><span>cremap.ae</span></a></p>
             </div>
             <div class="solution-image media-bg-layer--dark-green">
                 <div class="long-image-crop" data-lightbox>
-                    {% image ["src/content/", folder, "/cremap-01-preview.jpg"] | join, "", "Cremap.ae - скриншот главной страницы - превью",  [995]  %}
-                    <div data-full-image>{% image ["src/content/", folder, "/cremap-01.jpg"] | join, "", "Cremap.ae - скриншот главной страницы",  [1376]  %}</div>
+                    {% image ["src/content/", folder, "/cremap-01-preview.jpg"] | join, "", "Cremap.ae - homepage screenshot - preview",  [995]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/cremap-01.jpg"] | join, "", "Cremap.ae - homepage screenshot",  [1376]  %}</div>
                 </div>
                 {# <img src="/content/{{folder}}/cremap-02.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/cremap-02.jpg"] | join, "", "Cremap.ae - скриншот списка предложений",  [1376]  %}
+                {% image ["src/content/", folder, "/cremap-02.jpg"] | join, "", "Cremap.ae - offers list screenshot",  [1376]  %}
             </div>
         </div>
     </div>
 </section>
 
-<section class="border-top" >
+<section class="border-top">
     <div class="wrap">
         <h2><span class="gradient-text">Moscow City Broker</span></h2>
 
         <div class="rows readable">
             <ul class="taglist taglist--small">
-                <li class="taglist__item">Аудит</li>
-                <li class="taglist__item">Редизайн</li>
-                <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+                <li class="taglist__item">UI/UX audit</li>
+                <li class="taglist__item">Redesign</li>
+                <li class="taglist__item">Coding and CMS integration</li>
             </ul>
             <div>
-                <h3>Задача</h3>
-                <p>Сделать небольшой редизайн и улучшить UX на имеющемся сайте. Перевестать с нуля на собственной CMS Evernet, заточенной под работу с недвижимостью.</p>
+                <h3>Goals</h3>
+                <p>Make a slight redesign and enhance the user experience of the current website. Rebuild the website from scratch using Evernet's CMS designed for the property industry.</p>
             </div>
             <div>
-                <h3>Процесс</h3>
-                <p>Провели аудит и составили список багов и неудобств (примеры далее). Нарисовали макеты и согласовали их с клиентом. Провели ряд работ по SEO для поднятия сайта в органической выдаче.</p>
+                <h3>Process</h3>
+                <p>We identified and documented the issues found during the audit. Then the design layouts were approved by the client and brought to life. The tech stack was classical (HTML, CSS, JQuery + plugins, Smarty templates). We also implemented specific SEO techniques to enhance the website's organic rankings.</p>
             </div>
         </div>
     </div>
@@ -141,28 +143,24 @@ no_intro_block: true
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-red">Проблема</h3>
-                    <p>Неаккуратная вёрстка в фильтре, плохо считываются элементы в шапке, отсутствует заголовок</p>
+                    <h3 class="underline-red">Problem</h3>
+                    <p>Sloppy layout in the filter, poorly read elements in the header, missing title</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/{{folder}}/bcmoscowcity/01-1.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/bcmoscowcity/01-1.jpg"] | join, "", "bcmoscowcity.com - 01-01",  [995, 1493]  %}
-
             </div>
 
         </div>
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-green">Решение</h3>
-                    <p>Цвет шапки заменен на белый, добавлен заголовок H1, улучшена вёрстка в фильтре</p>
+                    <h3 class="underline-green">Solution</h3>
+                    <p>The colour of the header has been changed to white, an H1 header has been added and the layout of the filter has been improved.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/bcmoscowcity/01-2.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/bcmoscowcity/01-2.jpg"] | join, "bordered", "bcmoscowcity.com - 01-02",  [995, 1493]  %}
-
             </div>
         </div>
     </div>
@@ -173,27 +171,23 @@ no_intro_block: true
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-red">Проблема</h3>
-                    <p>Недостаточно заметные кнопки для прокрутки, отсутствие функционала кроме перехода в выбранную башню</p>
+                    <h3 class="underline-red">Problem</h3>
+                    <p>Inadequate scrolling buttons. The block was lacking any features other than switching to the chosen tower.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/bcmoscowcity/03-1.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/bcmoscowcity/03-1.jpg"] | join, "bordered", "bcmoscowcity.com - 03-01",  [995, 1493]  %}
-
             </div>
         </div>
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-green">Решение</h3>
-                    <p>Добавлен информативный блок под слайдер. Теперь при прокрутке сразу видна информация об активной башне</p>
+                    <h3 class="underline-green">Solution</h3>
+                    <p>An information area is added below this slider. This section provides quick access to information about the currently selected tower while scrolling.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/bcmoscowcity/03-2.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/bcmoscowcity/03-2.jpg"] | join, "bordered", "bcmoscowcity.com - 03-02",  [995, 1493]  %}
-
             </div>
         </div>
     </div>
@@ -204,12 +198,11 @@ no_intro_block: true
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-red">Проблема</h3>
-                    <p>Форма для связи никак не зонирована</p>
+                    <h3 class="underline-red">Problem</h3>
+                    <p>The contact form is not distinguishable from the rest of the content.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/bcmoscowcity/04-1.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/bcmoscowcity/04-1.jpg"] | join, "bordered", "bcmoscowcity.com - 04-01",  [995, 1493]  %}
 
             </div>
@@ -217,12 +210,11 @@ no_intro_block: true
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-green">Решение</h3>
-                    <p>Добавлен призыв к действию и поля для конкретизации запроса</p>
+                    <h3 class="underline-green">Solution</h3>
+                    <p>Added call to action and fields to specify the request.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img src="/content/{{folder}}/bcmoscowcity/04-2.jpg" alt=""> #}
                 {% image ["src/content/", folder, "/bcmoscowcity/04-2.jpg"] | join, "", "bcmoscowcity.com - 04-02",  [995, 1493]  %}
             </div>
         </div>
@@ -234,8 +226,8 @@ no_intro_block: true
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-red">Проблема</h3>
-                    <p>Отсутствовала страница с листингом башен</p>
+                    <h3 class="underline-red">Problem</h3>
+                    <p>The towers list page was missing.</p>
                 </div>
             </div>
             <div class="solution-image">&#128549;</div>
@@ -243,12 +235,13 @@ no_intro_block: true
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-green">Решение</h3>
-                    <p>Сверстана страница со всеми башнями делового комплекса</p>
+                    <h3 class="underline-green">Solution</h3>
+                    <p></p>
+                    <p>The page displaying all the business complex towers has been developed.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {% image ["src/content/", folder, "/bcmoscowcity/catalog-02.jpg"] | join, "bordered", "bcmoscowcity.com - каталог башен",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/bcmoscowcity/catalog-02.jpg"] | join, "bordered", "bcmoscowcity.com - towers list",  [995, 1493]  %}
             </div>
         </div>
     </div>
@@ -259,22 +252,22 @@ no_intro_block: true
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-red">Проблема</h3>
-                    <p>Не был предусмотрен слайдер для показа фото, вместо реальных фото помещений отображалось фото БЦ</p>
+                    <h3 class="underline-red">Problem</h3>
+                    <p>There was no slider to show photos, instead of actual photos of the premises, a photo of the business centre was displayed</p>
                 </div>
             </div>
             <div class="solution-image media-bg-layer--dark-gray">
                 <div class="long-image-crop" data-lightbox>
-                    {% image ["src/content/", folder, "/bcmoscowcity/product-01-preview.jpg"] | join, "", "bcmoscowcity.com - страница БЦ - превью",  [995]  %}
-                    <div data-full-image>{% image ["src/content/", folder, "/bcmoscowcity/product-01.jpg"] | join, "", "bcmoscowcity.com - страница БЦ",  [1376]  %}</div>
+                    {% image ["src/content/", folder, "/bcmoscowcity/product-01-preview.jpg"] | join, "", "bcmoscowcity.com - business complex page - preview",  [995]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/bcmoscowcity/product-01.jpg"] | join, "", "bcmoscowcity.com - business complex page",  [1376]  %}</div>
                 </div>
             </div>
         </div>
         <div class="solution-layout">
             <div class="solution-desc">
                 <div class="solution-desc__inner">
-                    <h3 class="underline-green">Решение</h3>
-                    <p>Добавлен слайдер, форма запроса закреплена справа, страница предложения приведена к общему стилю.</p>
+                    <h3 class="underline-green">Solution</h3>
+                    <p>Slider added. Enquiry form pinned to the right. Offer page was brought to the consistent style.</p>
                 </div>
             </div>
             <div class="solution-image media-bg-layer--dark-gray">
@@ -287,24 +280,23 @@ no_intro_block: true
     <div class="wrap">
         <div class="solution-layout">
             <div class="solution-desc rows">
-                <h3>Итоговый результат</h3>
-                <p>Получился SEO-friendly сайт, отлично отображающийся на всех размерах экранов.</p>
-                <a href="https://bc-moscow-city.com" target="_blank" class="btn btn-outline--default btn-external"><span>bc-moscow-city.com</span></a>
+                <h3>Final result</h3>
+                <p>A SEO-friendly site with many improvements compared to the previous version. It ranks well and displays correctly on all screen sizes in different browsers.</p>
+                <p><a href="https://bc-moscow-city.com" target="_blank" class="btn btn-outline--default btn-external"><span>bc-moscow-city.com</span></a></p>
             </div>
             <div class="solution-image">
 
                 <div class="media-bg-layer--dark-gray">
                     <div class="mobile-screens">
                         <div class="grid-item">
-                            {% image ["src/content/", folder, "/bcmoscowcity/mobile-01.jpg"] | join, "", "Скриншот мобильной версии bcmoscowcity.com - 01",  ""  %}
+                            {% image ["src/content/", folder, "/bcmoscowcity/mobile-01.jpg"] | join, "", "mobile version screenshot of bcmoscowcity.com - 01",  ""  %}
+                        </div>
+                        <div class="grid-item">
+                            {% image ["src/content/", folder, "/bcmoscowcity/mobile-02.jpg"] | join, "", "mobile version screenshot of bcmoscowcity.com - 02",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image ["src/content/", folder, "/bcmoscowcity/mobile-02.jpg"] | join, "", "Скриншот мобильной версии bcmoscowcity.com - 02",  ""  %}
-
-                        </div>
-                        <div class="grid-item">
-                            {% image ["src/content/", folder, "/bcmoscowcity/mobile-03.jpg"] | join, "", "Скриншот мобильной версии bcmoscowcity.com - 03",  ""  %}
+                            {% image ["src/content/", folder, "/bcmoscowcity/mobile-03.jpg"] | join, "", "mobile version screenshot of bcmoscowcity.com - 03",  ""  %}
                         </div>
                     </div>
                 </div>
@@ -314,70 +306,65 @@ no_intro_block: true
     </div>
 </section>
 
-<section class="border-top" >
+<section class="border-top">
     <div class="wrap">
         <h2><span class="gradient-text">BR Cash</span></h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
                 <ul class="taglist taglist--small">
-                    <li class="taglist__item">Дизайн</li>
-                    <li class="taglist__item">Вёрстка</li>
+                    <li class="taglist__item">Design</li>
+                    <li class="taglist__item">Front-end development</li>
                 </ul>
                 <div>
-                    <h3>Задача</h3>
-                    <p>Разработать личный кабинет партнерской программы Bright Rich для частных агентов и брокеров</p>
+                    <h3>Goals</h3>
+                    <p>Develop a personal account for the Bright Rich affiliate programme for private agents and brokers.</p>
                 </div>
                 <div>
-                    <h3>Результат</h3>
-                    <p>Сделки представлены в виде блоков со шкалой прогресса. Каждый тип недвижимости помечается определенным цветом. Есть возможность связаться с менеджером по каждой сделке. После закрытия сделки появляется возможность скачать документы. Сайдбар с воронкой продаж всегда в зоне видимости с возможностью свернуть.</p>
-                    <p class="footnote">Все данные на скриншотах вымышлены</p>
+                    <h3>Result</h3>
+                    <p>The deals are displayed in blocks with a progress bar and are categorised by property type using specific colours. It is possible to contact a manager for each deal. After closure, relevant documents can be downloaded. The sales funnel sidebar remains visible at all times and can be collapsed if necessary. The project has been launched and is actively used by brokers.</p>
+                    <p class="footnote">All data in the screenshots is fictional.</p>
                 </div>
-                <a href="https://brcash.pro" target="_blank" class="btn btn-outline--default btn-external"><span>brcash.pro</span></a>
+               <p><a href="https://brcash.pro" target="_blank" class="btn btn-outline--default btn-external"><span>brcash.pro</span></a></p>
             </div>
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/brcash-01.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/brcash-01.jpg"] | join, "bordered", "BR Cash - скриншот 02",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcash-01.jpg"] | join, "bordered", "BR Cash - screenshot 02",  [995, 1493]  %}
 
-                {# <img class="bordered" src="/content/{{folder}}/brcash-02.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/brcash-02.jpg"] | join, "bordered", "BR Cash - скриншот 01",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcash-02.jpg"] | join, "bordered", "BR Cash - screenshot 01",  [995, 1493]  %}
 
             </div>
         </div>
     </div>
 </section>
 
-<section class="border-top" >
+<section class="border-top">
     <div class="wrap">
         <h2><span class="gradient-text">BR CRM</span></h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
                 <ul class="taglist taglist--small">
-                    <li class="taglist__item">Дизайн</li>
-                    <li class="taglist__item">Вёрстка</li>
+                    <li class="taglist__item">Design</li>
+                    <li class="taglist__item">Front-end development</li>
                 </ul>
                 <div>
-                    <h3>Задача</h3>
-                    <p>Разработать систему для внутреннего использования брокерами.</p>
+                    <h3>Goals</h3>
+                    <p>Develop a system (CRM) for the internal usage of Bright Rich brokers.</p>
                 </div>
                 <div>
-                    <h3>Процесс</h3>
-                    <p>За основу взят классический вид CRM с боковым меню. Дизайн элементов интерфейса в привычной стилистике Bright Rich. Основной раздел — листинг предложений с фильтрами. Брокеры могут создавать подборки, а модераторы добавлять и редактировать объекты.</p>
+                    <h3>Process</h3>
+                    <p>The standard CRM layout with sidebar was used as the basis. The interface design follows the typical Bright Rich style.The primary section displays a list of offers, which can be filtered. Brokers are allowed to create selections, while moderators can add and modify items.</p>
                 </div>
                 <div>
-                    <h3>Результат</h3>
-                    <p>Система запущена и развивается командой Evernet.</p>
-                    <p class="footnote">Все данные на скриншотах вымышлены</p>
+                    <h3>Result</h3>
+                    <p>The Evernet team runs and maintains the system, which is built with the classic stack featuring HTML, SCSS, jQuery and Smarty templates for component reuse. PHP is used on the backend for efficient functionality.</p>
+                    <p class="footnote">All data in the screenshots is fictional.</p>
                 </div>
             </div>
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/brcrm-grid.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/brcrm-grid.jpg"] | join, "bordered", "BR CRM - скриншот 01",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcrm-grid.jpg"] | join, "bordered", "BR CRM - screenshot 01",  [995, 1493]  %}
 
-                {# <img class="bordered" src="/content/{{folder}}/brcrm-list.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/brcrm-list.jpg"] | join, "bordered", "BR CRM - скриншот 02",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcrm-list.jpg"] | join, "bordered", "BR CRM - screenshot 02",  [995, 1493]  %}
 
-                {# <img class="bordered" src="/content/{{folder}}/brcrm-popup.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/brcrm-popup.jpg"] | join, "bordered", "BR CRM - скриншот 03",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcrm-popup.jpg"] | join, "bordered", "BR CRM - screenshot 03",  [995, 1493]  %}
 
             </div>
         </div>

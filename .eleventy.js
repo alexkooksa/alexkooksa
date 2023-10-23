@@ -1,12 +1,36 @@
 const eleventySass = require("eleventy-sass");
+const postcss = require("postcss");
+const autoprefixer = require("autoprefixer");
+const postcssCriticalCSS = require("postcss-critical-css");
 const Image = require("@11ty/eleventy-img");
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
-const path = require("path");
-const fs = require('fs');
+const fs = require("fs");
+const fsExtra = require("fs-extra");
+const cssutil = require("cssutil");
+
+// const path = require("path");
+
 module.exports = function (eleventyConfig) {
+  console.log(`ENV:${process.env.ELEVENTY_ENV}`);
+
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "en",
   });
+
+  eleventyConfig.addShortcode("i18n", async function (en, ru) {
+    if (this.page.lang == "en") {
+      return en;
+    } else {
+      return ru;
+    }
+  });
+
+  eleventyConfig.on("eleventy.beforeWatch", async ({}) => {
+    // fsExtra.emptyDirSync("./src/_includes/critical_css");
+    // fix for duplicating critical code in the same file
+  });
+
+  //images processing
 
   eleventyConfig.addShortcode(
     "image",
@@ -20,8 +44,8 @@ module.exports = function (eleventyConfig) {
       let metadata = await Image(src, {
         widths: [...widths, null], // keep original resolution
         formats: ["avif", "webp", null], // keep original format
-        urlPath: "/content/img",
-        outputDir: "./public/content/img",
+        urlPath: "/content/images",
+        outputDir: "./public/content/images",
         sharpPngOptions: {
           progressive: true,
           quality: 85,
@@ -73,29 +97,43 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  eleventyConfig.addPlugin(eleventySass, {
-    compileOptions: {
-      permalink: function (contents, inputPath) {
-        return (data) =>
-          data.page.filePathStem.replace(/^\/scss\//, "/css/") + ".css";
+  // eleventyConfig.watchIgnores.add("./src/_includes/critical/");
+
+  eleventyConfig.addPlugin(eleventySass, [
+    {
+      /*       compileOptions: {
+        permalink: function(permalinkString, inputPath) {
+          return (data) => {
+            return data.page.filePathStem.replace(/^\/scss\//, "/css/") + ".css";
+          };
+        }
+      }, */
+      sass: {
+        style: "compressed",
+        sourceMap: true,
       },
     },
-    sass: {
-      style: "compressed",
-      sourceMap: true,
+    {
+      postcss: postcss([
+        autoprefixer,
+        // postcssCriticalCSS({
+        // outputPath: "./public",
+        // preserve: false,
+        // }),
+      ]),
+      when: { ELEVENTY_ENV: "production" },
     },
-  });
+  ]);
 
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addPassthroughCopy("./CNAME");
-  eleventyConfig.addPassthroughCopy("./_redirects");
 
-  eleventyConfig.addPassthroughCopy("./src/styles");
-  eleventyConfig.addWatchTarget("./src/styles/");
+  eleventyConfig.addPassthroughCopy("./src/_styles");
+  eleventyConfig.addWatchTarget("./src/_styles/");
 
-  eleventyConfig.addPassthroughCopy("./src/js");
-  eleventyConfig.addWatchTarget("./src/js/");
+  eleventyConfig.addPassthroughCopy("./src/_js");
+  eleventyConfig.addWatchTarget("./src/_js/");
 
   eleventyConfig.addWatchTarget("./src/content/");
 
@@ -107,26 +145,40 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
-  eleventyConfig.on(
-    "eleventy.after",
-    async ({  }) => {
-      const filePath = './public/en/index.html'
-      const copy = './public/index.html'
+  eleventyConfig.on("eleventy.after", async ({}) => {
+    // concat styles on production
+    if (process.env.ELEVENTY_ENV == "production") {
+      cssutil.build(
+        ["./public/_styles/base.css", "./public/_styles/style.css"],
+        function (e, css) {
+          if (e) {
+            throw e;
+          }
 
-      fs.copyFile(filePath, copy, (error) => {
-        if (error) {
-          throw error
-        } else {
-          console.log('File has been moved to another folder.')
+          fs.writeFile("./public/_styles/bundle.css", css, function (e) {
+            // Continue building
+          });
         }
-      })
+      );
     }
-  );
+
+    // copy index.html to the root to avoid template duplicating (because there are no redirects at github pages)
+    fsExtra.copy(
+      "./public/en/index.html",
+      "./public/index.html",
+      { overwrite: true },
+      (err) => {
+        if (err) return console.error(err);
+        console.log("index.html has been copied to the root");
+      }
+    );
+  });
 
   return {
     dir: {
       input: "src",
       output: "public",
+      layouts: "_layouts",
     },
   };
 };

@@ -1,15 +1,37 @@
 <section class="homepage-intro">
-    <img src="/content/images/bg1.jpg" alt="" data-gsap-el="bg1">
-    <img src="/content/images/bg2.jpg" alt="" data-gsap-el="bg2">
-    <img src="/content/images/bg3.jpg" alt="" data-gsap-el="bg3">
     <div class="wrap">
-        <p class="greeting accent-font" data-gsap-el="greeting">{{languages[page.lang].homepageIntro.greeting }}</p>
-        <h1>
-            <span class="text-underlay" data-gsap-el="mainline-1"><span class="gradient-text">{{languages[page.lang].homepageIntro.mainLine1}}</span>
-            </span>
-            <span class="text-underlay" data-gsap-el="mainline-2"><span class="gradient-text">{{languages[page.lang].homepageIntro.mainLine2}}</span></span>
-            <span class="tagline accent-font" data-gsap-el="tagline"><span>// {{languages[page.lang].homepageIntro.tagline}}</span></span>
-        </h1>
-        <a href="#projects" class="btn btn-white" data-gsap-el="buttonNext">{{languages[page.lang].homepageIntro.buttonNext}}</a>
+        <p class="greeting accent-font">{% i18n 'Hi, I am Alexandra ', 'Привет, я Александра ' %}<span class="wavy-underline no-scroll">{% i18n 'Kuksa', 'Кукса' %}</span>, </p>
+
+        <h1 class="visually-hidden">{% i18n 'Front-end developer with experience in UI/UX design', 'frontend-разработчик с опытом в UI/UX' %}</h1>
+        <p class="intro-h1 title-font initial">
+            {% if page.lang == 'en'%}
+            <span class="h1-pt1 gradient-text" data-gsap-text="front"></span><span class="h1-pt2 gradient-text--reversed" data-gsap-text="-end" data-gsap-duration=".5"></span><span class="nbsp">&nbsp;</span><span class="h1-pt3">dev</span>
+            {%else%}
+            <span class="h1-pt1 gradient-text" data-gsap-text="фронт"></span><span class="h1-pt2" data-gsap-duration=".75" data-gsap-text="ендер"></span>
+            {%endif%}
+        </p>
+
+        {# // TODO optimize #}
+        {% if page.lang == 'en'%}
+
+        {% for i in range(1, 4) -%}
+        <p class="intro-h1 title-font cloned cl{{ i }}">
+            <span><span class="gradient-text">front-end</span>&nbsp;dev</span>
+        </p>
+        {%- endfor %}
+
+        {%else%}
+
+        {% for i in range(1, 4) -%}
+        <p class="intro-h1 title-font cloned cl1">
+            <span><span class="gradient-text">фронт</span>ендер</span>
+        </p>
+        {%- endfor %}
+
+        {%endif%}
+
+        <p class="tagline accent-font"><span>// {% i18n 'with experience in UI/UX design', 'с опытом в UI/UX' %}</span></p>
+
     </div>
+    <span class="scroll-arrow">&downarrow;</span>
 </section>

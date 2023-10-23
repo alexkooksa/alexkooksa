@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import "../variables";
+@import "../mixins";
+
+@import "reset.scss";
+@import "critical.scss";
+
+@media screen and (orientation: landscape) {
+    .case-intro [data-gsap-el],
+    .case-cover picture,
+    .case-cover video {
+        visibility: hidden;
+    }
+    [data-gsap-el="coverTitle"] {
+        font-weight: 200;
+    }
+    .case-intro__date {
+        visibility: hidden;
+        &::before,
+        &::after {
+            visibility: hidden;
+            flex-grow: 0;
+        }
+    }
+}
+.case-intro {
+    &.no-intro-block {
+        min-height: 85vh;
+        min-height: calc((var(--vh, 1vh) * 85));
+        display: flex;
+    }
+    text-align: center;
+    img {
+        background-color: $black;
+    }
+    h3 {
+        font-weight: 300;
+        margin: 40px 0;
+        @include mq(1280, max) {
+            font-size: 24px;
+            margin: 40px 0;
+        }
+        @include mq(1024, max) {
+            font-size: 20px;
+        }
+        @include mq(768, max) {
+            font-size: 16px;
+        }
+    }
+    .taglist {
+        display: inline-flex;
+        font-size: 12px;
+        justify-content: center;
+        @include mq(768) {
+            font-size: 14px;
+        }
+        @include mq(1280) {
+            font-size: 16px;
+        }
+    }
+    .case-intro__date {
+        @include accent-font;
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.9);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px auto 0;
+        max-width: 360px;
+        &::before,
+        &::after {
+            content: "";
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: 0.5s all ease-in-out;
+        }
+        &.gsap-complete::before,
+        &.gsap-complete::after {
+            visibility: visible;
+            flex-grow: 1;
+        }
+        span {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        @include mq(768, max) {
+            max-width: none;
+            margin: 24px 0 0;
+        }
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .case-intro__date {
+        &::before,
+        &::after {
+            flex-grow: 1;
+        }
+    }
+}

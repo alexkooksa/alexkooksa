@@ -2,58 +2,59 @@
 tags: ['older_en', 'projects_en']
 date: 2021-01-01
 title: Restte
-meta_title: Кейс | Restte — интернет-магазин мебели
-short_desc: Интернет-магазин мебели для сегмента HoReCa
+meta_title: Case study | Restte — online furniture store
+meta_description: Design and front-end development
+short_desc: Online furniture store in HoReCa segment
 year: '2021'
 folder: restte
 role:
-- Дизайн
-- Вёрстка и натяжка на CMS
+- Design
+- Front-end development
+- CMS development
 ---
-{% import "../../_includes/components.njk" as components %}
+{% import "../../_includes/components.njk"  as components with context %}
 <section class="case-cover dark-bg">
     <div class="wrap">
         {{ components.video('restte-menu.mp4', 'restte-menu-poster.jpg') }}
     </div>
 </section>
-<div class="brs-top-outer--dark">
+<div class="dark-bg--underlay" data-gsap-el="section-rounded">
     <section class="brs-top">
         <div class="wrap">
-            <h2>Задача</h2>
-            <p>Разработать отдельный сайт по направлению HoReCa для постоянного клиента, владеющего интернет-магазином мебели и декора. Сайт должен быть стильным и лаконичным и иметь стандартный функционал.</p>
+            <h2>Goals</h2>
+            <p>Develop a standalone website for HoReCa segment for a regular client who owns an online furniture and decor shop. The website should have an elegant design, clean layout, and standard features.</p>
         </div>
     </section>
 </div>
 
 <section class="border-top">
     <div class="wrap">
-        <h2>Типы страниц для вёрстки</h2>
+        <h2>Page types</h2>
         <ol class="numbered-list columns-list">
-            <li>Главная страница</li>
-            <li>Категория товаров</li>
-            <li>Страница товара</li>
-            <li>Результаты поиска</li>
-            <li>Избранное</li>
-            <li>Корзина</li>
-            <li>Блог</li>
-            <li>Статичная страница</li>
-            <li>Личный кабинет</li>
-            <li>Контакты</li>
+            <li>Homepage</li>
+            <li>Products list</li>
+            <li>Product page</li>
+            <li>Search results</li>
+            <li>Favorites</li>
+            <li>Cart and checkout</li>
+            <li>Blog</li>
+            <li>Static page</li>
+            <li>Personal account</li>
+            <li>Contacts</li>
         </ol>
     </div>
 </section>
 
 <section class="border-top">
     <div class="wrap">
-        <h2>Главная страница</h2>
+        <h2>Homepage</h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
-                <p>На главой разместился классический блок с баннерами, которыми клиент может управлять из админки. Ниже сделан переход в основные категории: мебель для ресторанов, офисов или гостиниц. В блоке с примерами мебели в интерьере покупатель может вдохновиться использованием товара в реальной жизни.</p>
+                <p>The main page has a classic block of banners that the client can manage from the admin area. Below this, there is a navigation to the main categories: furniture for restaurants, furniture for offices and furniture for hotels. The section of interior examples allows the customer to be inspired by how the product is used in practice.</p>
             </div>
 
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/homepage.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/homepage.jpg"] | join, "bordered", "Restte.com - скриншот главной страницы",  [995]  %}
+                {% image ["src/content/", folder, "/homepage.jpg"] | join, "bordered", "Restte.com - homepage screenshot",  [995]  %}
             </div>
         </div>
 
@@ -62,16 +63,14 @@ role:
 
 <section class="border-top">
     <div class="wrap">
-        <h2>Категория товаров</h2>
+        <h2>Products list</h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
-                <p>В верхней части экрана сделан типовой блок-обложка: заголовок H1, состоящий из названия основной категории и подкатегории, короткого описания и стильной картинки. В самом каталоге доступно множество фильтров для подбора товара.</p>
+                <p>At the top of the screen there is a typical cover block: H1 title consisting of the name of the main category and subcategory, a short description and a stylish image. Inside the catalogue itself, there are a number of filters available for product selection.</p>
             </div>
 
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/category.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/category.jpg"] | join, "bordered", "Restte.com - скриншот страницы категории",  [995]  %}
-
+                {% image ["src/content/", folder, "/category.jpg"] | join, "bordered", "Restte.com - products list screenshot",  [995]  %}
             </div>
         </div>
 
@@ -80,15 +79,13 @@ role:
 
 <section class="border-top">
     <div class="wrap">
-        <h2>Страница товара</h2>
+        <h2>Product page</h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
-                <p>Доступна вся основная информация о товаре, а также возможность оставить заявку на полный подбор мебели для проекта. У некоторых товаров есть ограничение в виде минимального количества для заказа, об этом сразу предупреждаем покупателя.</p>
+                <p>All basic information about the product is available, as well as the opportunity to submit a request for a complete selection of furniture for the project. Some products have a restriction in the form of a minimum quantity for ordering, we immediately warn the customer about it.</p>
             </div>
             <div class="solution-image">
-                {# <img class="bordered" src="/content/{{folder}}/product.jpg" alt=""> #}
-                {% image ["src/content/", folder, "/product.jpg"] | join, "bordered", "Restte.com - скриншот страницы товара",  [995]  %}
-
+                {% image ["src/content/", folder, "/product.jpg"] | join, "bordered", "Restte.com - product page screenshot",  [995]  %}
             </div>
         </div>
 
@@ -97,29 +94,29 @@ role:
 
 <section class="border-top">
     <div class="wrap">
-        <h2>Результат</h2>
+        <h2>Result</h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
-                <ul class="bulleted-list--custom">
-                    <li>Сайт сверстан на собственной модификации Image CMS с модулем для магазина.</li>
-                    <li>Продуманная иерархия каталога положительно отразилась на SEO. </li>
-                    <li>Удобно пользоваться в том числе и на небольших устройствах. </li>
-                    <li>Актуальность контента поддерживается модераторами клиента через админ-панель и синхронизацию.</li>
+                <ul class="bulleted-list--custom" data-gsap-el="bulletedList">
+                    <li>The site was developed using an in-house CMS, including a special module to handle shop-related features. Front-end: HTML + Smarty template engine, CSS, JQuery + plugins. Back-end: PHP, CodeIgniter.</li>
+                    <li>The well-designed catalogue hierarchy had a positive effect on SEO.</li>
+                    <li>Easy to use even on small devices.</li>
+                    <li>Content relevance is maintained by client moderators through the use of an administrative panel and synchronization.</li>
                 </ul>
             </div>
             <div class="solution-image">
                 <div class="media-bg-layer--dark-gray">
                     <div class="mobile-screens">
                         <div class="grid-item">
-                            {% image ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Restte - скриншот мобильной версии - 01",  ""  %}
+                            {% image ["src/content/", folder, "/mobile-01.jpg"] | join, "", "Restte - mobile version screenshot - 01",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image ["src/content/", folder, "/mobile-02.jpg"] | join, "", "Restte - скриншот мобильной версии - 02",  ""  %}
+                            {% image ["src/content/", folder, "/mobile-02.jpg"] | join, "", "Restte - mobile version screenshot - 02",  ""  %}
 
                         </div>
                         <div class="grid-item">
-                            {% image ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Restte - скриншот мобильной версии - 03",  ""  %}
+                            {% image ["src/content/", folder, "/mobile-03.jpg"] | join, "", "Restte - mobile version screenshot - 03",  ""  %}
                         </div>
                     </div>
                 </div>
@@ -132,7 +129,7 @@ role:
 
 <section class="border-top links-section">
     <div class="wrap">
-        <h2>Ссылки</h2>
+        <h2>Links</h2>
         <a href="https://restte.com" target="_blank" class="btn btn-outline--default btn-external"><span>restte.com</span></a>
     </div>
 </section>

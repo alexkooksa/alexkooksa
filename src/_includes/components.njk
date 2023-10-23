@@ -21,10 +21,10 @@
 {% endmacro %}
 
 {% macro caselistItemSmall(project) %}
-<li>
-    <a class="caselist__item is-vertical" href="{{ project.url}}"> {#  | locale_url #}
+<li data-gsap="groupTranslateY">
+    <a class="caselist__item is-vertical" href="{{ project.url}}">
         <div class="item-content">
-            <p class="item-title title-font">{% if project.data.short_title | length %}{{ project.data.short_title }}{% else %}{{ project.data.title }}{% endif %}</p>
+            <p class="item-title title-font">{% if project.data.short_title | length %}{{ project.data.short_title }}{% else %}{{ project.data.title | replace("Bright Rich", "Bright&nbsp;Rich") | safe}}{% endif %}</p>
             <p class="item-desc">{{ project.data.short_desc }}</p>
             {% if project.data.role | length %}
             <ul class="taglist">
@@ -37,7 +37,8 @@
                 {% if project.data.year | length %}
                 <p class="item-date"><span>{{ project.data.year }}</span></p>
                 {% endif %}
-                <p class="btn btn-white">Смотреть кейс</p>
+                <p class="btn btn-white">{% if page.lang == 'en'%}View project{%else%}Смотреть кейс{%endif%}</p>
+
             </div>
         </div>
     </a>

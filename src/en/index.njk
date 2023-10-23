@@ -1,20 +1,18 @@
 ---
-meta_title: Александра Кукса — Frontend-разработчик с опытом в UI/UX
+meta_title: Alexandra Kuksa, a front-end developer with UI/UX design experience
+meta_description: This portfolio features some projects I have worked on as a designer and front-end developer
 layout: base.njk
 templateEngineOverride: njk
 ---
 
-{# TODO critical css for intro #}
-
-
 {% include 'homepageIntro.njk' %}
 
-<div class="brs-top-outer--dark" data-gsap-el="section-rounded">
+<div class="dark-bg--underlay">
 	<section class="cases-section dark-bg" id="projects">
 		<div class="wrap">
 			<div class="title-group centered">
-				<h2><span class="gradient-text" data-gsap="opacity">Recent projects</span></h2>
-				<p data-gsap="opacity">These sites are successfully launched and maintained</p>
+				<h2><span class="gradient-text" data-gsap="opacity">Recent case studies</span></h2>
+				<p data-gsap="opacity">These websites have been successfully launched and are being maintained</p>
 			</div>
 			{% include 'projectsListLatest.njk' %}
 		</div>
@@ -24,226 +22,17 @@ templateEngineOverride: njk
 <section class="older-section dark-bg">
 	<div class="wrap">
 		<div class="centered title-group">
-			<h2><span class="gradient-text" data-gsap="opacity">Older projects</span></h2>
-			<p data-gsap="opacity">There were other sites besides Bright Rich. For instance:</p>
+			<h2><span class="gradient-text" data-gsap="opacity">Older websites</span></h2>
+			<p data-gsap="opacity">There were other projects besides Bright Rich. For instance:</p>
 		</div>
 		{% include 'projectsListOlder.njk' %}
 	</div>
 </section>
 
-<div class="brs-top-outer--dark" data-gsap-el="section-rounded">
-	<section class="brs-top" id="about">
-		<div class="wrap">
-			<div class="centered title-group">
-				<h2 class="section-title" data-gsap="opacity"><span class="gradient-text">Experience</span></h2>
-			</div>
-			<ul class="timeline">
-				<li class="timeline-item" data-gsap="opacity">
-					<div class="timeline-item__info">
-						<p class="timeline-item__date">апрель 2017 - март 2023</p>
-						<p class="timeline-item__place">Evernet</p>
-					</div>
-					<div class="timeline-item__content">
-						<h3><span class="bg-text">Frontend-разработчик + UI/UX-дизайнер</span></h3>
-						<ul class="responsibilities-list bulleted-list--default">
-							<li>с 2022 года участвовала преимущественно в проектах для клиента Bright&nbsp;Rich: <a href="/projects/brightrich" class="link">основной кейс</a>, <a href="/projects/more-brightrich" class="link">еще кейсы</a></li>
-							<li>расширенная область ответственности внутри компании</li>
-							<li>участие во всех этапах разработки проекта: дизайн, создание шаблонов с версткой для CMS (CodeIgniter + Smarty), наполнение контентом, настройка модулей для вывода клиентского контента в админке, сопровождение и внедрение новых функций после запуска</li>
-							<li>внесение небольших правок на бэкенде (PHP)</li>
-							<li>взаимодействие с командой клиента (дизайнеры, маркетологи)</li>
-							<li>проведение юзабилити-аудитов</li>
-						</ul>
-					</div>
-				</li>
-				<li class="timeline-item" data-gsap="opacity">
-					<div class="timeline-item__info">
-						<p class="timeline-item__date">октябрь 2016 - март 2017</p>
-						<p class="timeline-item__place">Evernet</p>
-					</div>
-					<div class="timeline-item__content">
-						<h3><span class="bg-text">Верстальщик + UI/UX-дизайнер</span></h3>
-						<ul class="responsibilities-list bulleted-list--default">
-							<li>расширенная область ответственности внутри компании</li>
-							<li>адаптивная верстка по собственным и клиентским макетам</li>
-							<li>работа в команде с backend-разработчиком</li>
-							<li>поддержка проектов: дизайн и верстка новых компонентов, оптимизация существующих компонентов, устранение багов</li>
-						</ul>
-					</div>
-				</li>
-				<li class="timeline-item" data-gsap="opacity">
-					<div class="timeline-item__info">
-						<p class="timeline-item__date">март 2016 - сентябрь 2016</p>
-						<p class="timeline-item__place">Evernet</p>
-					</div>
-					<div class="timeline-item__content">
-						<h3><span class="bg-text">UI/UX-дизайнер</span></h3>
-						<ul class="responsibilities-list bulleted-list--default">
-							<li>разработка дизайн-макетов для новых сайтов</li>
-							<li>редизайн существующих сайтов клиентов</li>
-							<li>поддержка готовых проектов (работа с контентом, внесение правок)</li>
-						</ul>
-					</div>
-				</li>
-				<li class="timeline-item" data-gsap="opacity" hidden>
-					<div class="timeline-item__info">
-						<p class="timeline-item__date">сентябрь 2015 - февраль 2016</p>
-						<p class="timeline-item__place">Home, sweet home</p>
-					</div>
-					<div class="timeline-item__content">
-						<h3><span class="bg-text">Фрилансер</span></h3>
-						<ul class="responsibilities-list bulleted-list--default">
-							<li>разработка дизайн-макетов</li>
-							<li>тренировка насмотренности, изучение материалов для перехода из полиграфии в веб-дизайн</li>
-						</ul>
-					</div>
-				</li>
-				<li class="timeline-item" data-gsap="opacity" hidden>
-					<div class="timeline-item__info">
-						<p class="timeline-item__date">сентябрь 2013 - август 2015</p>
-						<p class="timeline-item__place">Маркетинговое агентство <br>«Открытый мир»</p>
-					</div>
-					<div class="timeline-item__content">
-						<h3><span class="bg-text">Дизайнер + фотограф</span></h3>
-						<ul class="responsibilities-list bulleted-list--default">
-							<li>создание дизайн-макетов и презентаций</li>
-							<li>работа с типографиями</li>
-							<li>съемка спортивных мероприятий локального и международного уровня</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
+{% include 'experienceSection.njk' %}
 
-			<button class="btn btn-default" data-btn="show-jobs">+ 2 места работы</button>
-		</div>
-	</section>
-</div>
-<div class="wrap skills-wrap dark-bg" data-gsap="translateY">
-	<h2 data-gsap="opacity"><span class="gradient-text">Навыки</span></h2>
-	<div class="skills-grid">
-		<div class="grid-item">
-			<h3>Hard skills</h3>
-			<ul class="bulleted-list--custom">
-				<li><b>Языки и инструменты:</b> HTML, CSS / SASS, JavaScript, Smarty, Eleventy, Git (basics)</li>
+{% include 'skillsSection.njk' %}
 
-				<li><b>Библиотеки:</b> JQuery + плагины, Swiper, Fancybox, AOS, GSAP</li>
+{% include 'educationSection.njk' %}
 
-				<li><b>Дизайн:</b> проектирование интерфейсов, типографика, оптимизация UI/UX</li>
-
-				<li><b>Софт: </b>Figma, Adobe XD, Photoshop, Illustrator</li>
-
-				<li><b>Иностранные языки:</b> английский (разговорный, чтение документации), французский (начальный)</li>
-			</ul>
-		</div>
-		<div class="grid-item">
-			<h3>Soft skills</h3>
-			<ol class="numbered-list">
-				<li>Умею расставлять приоритеты</li>
-				<li>Всегда могу обосновать свои решения</li>
-				<li>Хорошо принимаю критику и уважаю альтернативную точку зрения</li>
-				<li>Признаю ошибки и извлекаю из них урок</li>
-				<li>Не стесняюсь задавать вопросы, но и с гуглом дружу</li>
-			</ol>
-		</div>
-		<div class="grid-item">
-			<h3 class="has-wavy"><span class="wavy-underline">В процессе</span></h3>
-			<ul class="bulleted-list--custom">
-				<li>Курс «Фундаментальный JavaScript»</li>
-				<li>Курс «React для современных веб-приложений»</li>
-			</ul>
-		</div>
-		<div class="grid-item skills-callout">
-			<div class="callout">
-				<span class="callout-inner">Открыта для новых знаний&nbsp;&#129299;</span>
-			</div>
-		</div>
-	</div>
-</div>
-
-<section>
-	<div class="wrap">
-		<div class="title-group centered">
-			<h2 data-gsap="opacity"><span class="gradient-text">Образование</span></h2>
-		</div>
-		<ul class="timeline">
-			<li class="timeline-item" data-gsap="opacity">
-				<div class="timeline-item__info">
-					<p class="timeline-item__date">сентябрь 2008 - июнь 2013</p>
-					<p class="timeline-item__place">Санкт-Петербургский политехнический университет Петра Великого</p>
-				</div>
-				<div class="timeline-item__content">
-					<h3><span class="bg-text">Обучение по специальности «Информатик-дизайнер»</span></h3>
-					<p>Получен диплом специалиста. Основные изученные дисциплины:</p>
-					<ul class="responsibilities-list bulleted-list--default">
-						<li>высокоуровневые методы информатики и программирования</li>
-						<li>базы данных, теория вероятностей и математическая статистика</li>
-						<li>основы композиции, шрифты и визуальные коммуникации, допечатная подготовка</li>
-						<li>компьютерная графика, технологии трехмерного моделирования и анимации, графический дизайн</li>
-						<li>начертательная геометрия, рисунок и спецграфика, дизайн пространственной среды</li>
-						<li>художественная и креативная фотография</li>
-					</ul>
-				</div>
-			</li>
-			<li class="timeline-item" data-gsap="opacity">
-				<div class="timeline-item__info">
-					<p class="timeline-item__date">февраль 2012 - июнь 2012</p>
-					<p class="timeline-item__place">L'Ecole de Design Nantes Atlantique (Нант,&nbsp;Франция)</p>
-				</div>
-				<div class="timeline-item__content">
-					<h3><span class="bg-text">Обучение по программе обмена студентами</span></h3>
-					<p>Дисциплины и проекты в рамках направления «Connected environments»:</p>
-					<ul class="responsibilities-list bulleted-list--default">
-						<li>компьютерная графика (2D), 3Ds Max, Processing</li>
-						<li>визуальные коммуникации и рисунок</li>
-						<li>соревнования в сфере дизайна</li>
-						<li>концепт для магазина Chlorophylle Bio Coop</li>
-						<li>французский язык и культура</li>
-						{#
-							<li>Visual arts</li>
-						<li>Colour drawing</li>
-						<li>Computer graphic 2D, 3Ds Max, Processing</li>
-						<li>Design competition</li>
-						<li>Chlorophylle Bio Coop Concept Store Project</li>
-						<li>French language and culture</li>
-						#}
-					</ul>
-				</div>
-			</li>
-		</ul>
-	</div>
-</section>
-
-<section class="dark-bg" data-gsap-el="section">
-	<div class="wrap">
-		<div class="about-group">
-			<div class="about-info">
-				<h2 data-gsap="opacity"><span class="gradient-text">Обо мне</span></h2>
-				<div class="text-block" data-gsap="opacity">
-
-					<p>В веб-разработке более 7 лет. За это время участвовала в более 100 проектах различного масштаба, от начала и до конца в роли дизайнера и фронтендера. Для меня важна визуальная составляющая, мне нравится создавать и реализовывать минималистичные и логичные дизайны и уделять внимание деталям. При верстке всегда стараюсь найти наиболее рациональное решение и писать код, который будет удобно поддерживать и масштабировать. Ценю чётко налаженные процессы и честную обратную связь.</p>
-
-					<p>Мне нравится: красивая архитектура и ландшафты, активный отдых, однодневные горные походы, паназиатская кухня и римская пицца, инди-рок и инди-игры, мебель из Икеи, кастомные механические клавиатуры.</p>
-
-					<h3>О сайте</h3>
-					<p>В исходном коде Nunjucks, SCSS, Vanilla JS, GSAP. Статичные страницы генерируются с помощью Eleventy и деплоятся на GitHub Pages.</p>
-					<p><a href="https://github.com/alexkooksa/kooksa.codes" target="_blank" class="link"><span class="btn-icon github-icon-w">Код на GitHub</span></a></p>
-
-				</div>
-				<div class="contacts-block" id="contact" data-gsap="opacity">
-					<h2><span class="gradient-text">Связаться</span></h2>
-					<div class="buttons-group">
-						<a href="tg://resolve?domain=alexkooksa" class="btn btn-white"><span class="btn-icon telegram-icon">Telegram</span></a>
-						<a href="https://www.linkedin.com/in/alexkooksa/" target="_blank" class="btn btn-white"><span class="btn-icon linkedin-icon">LinkedIn</span></a>
-						<a href="mailto:alex.kooksa@gmail.com" class="btn btn-white"><span class="btn-icon email-icon">E-mail</span></a>
-					</div>
-				</div>
-			</div>
-			<div class="about-pic" data-gsap="translateY">
-				<div class="about-pic__inner">
-					<img loading="lazy" decoding="async" src="/content/images/avatar.jpg" alt="Аватарка">
-					<p class="about-pic__commment">Это я играю с модными градиентами</p>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</section>
+{% include 'aboutSection.njk' %}

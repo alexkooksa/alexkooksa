@@ -1,10 +1,10 @@
-{% import "components.njk" as components %}
+{% import "components.njk"  as components with context %}
 <ul class="caselist">
     {% for project in collections["latest_"+ page.lang] %}
     <li data-gsap="scale">
         <a href="{{ project.url }}" class="caselist__item is-large">
             <div class="item-content">
-                <p class="item-title title-font">{{ project.data.title }}</p>
+                <p class="item-title title-font">{{ project.data.title | replace("Bright Rich", "Bright&nbsp;Rich") | safe}}</p>
 
                 <p class="item-desc">{{ project.data.short_desc }}{% if project.data.short_desc_add | length %}. {{ project.data.short_desc_add }}{% endif %}</p>
 
@@ -19,11 +19,14 @@
                 {% if project.data.year | length %}
                 <p class="item-date"><span>{{ project.data.year }}</span></p>
                 {% endif %}
-                <p class="btn btn-white">Смотреть кейс</p>
+                <p class="btn btn-white">{% i18n 'View project', 'Смотреть кейс' %}</p>
             </div>
             <div class="item-image">
+                {% if page.lang == 'en' %}
                 {% image ["src/content/", project.data.folder, "/case-preview.png"] | join, "", "Превью кейса",  [690, 1380]  %}
-
+                {%else%}
+                {% image ["src/content/", project.data.folder, "/case-preview.png"] | join, "", "Case preview",  [690, 1380]  %}
+                {%endif%}
             </div>
         </a>
     </li>

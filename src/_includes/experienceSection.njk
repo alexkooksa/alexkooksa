@@ -1,0 +1,30 @@
+<div class="dark-bg--underlay" data-gsap-el="section-rounded">
+    <section class="brs-top" id="about">
+        <div class="wrap">
+            <div class="centered title-group">
+                <h2 class="section-title" data-gsap="opacity"><span class="gradient-text">{% i18n 'Experience', 'Опыт работы' %}</span></h2>
+            </div>
+            <ul class="timeline">
+                {% for exp in experience[page.lang] %}
+                <li class="timeline-item" data-gsap="opacity" {% if exp.hidden %} hidden {% endif %}>
+                    <div class="timeline-item__info">
+                        <p class="timeline-item__date">{{exp.date}}</p>
+                        <p class="timeline-item__place">{{exp.company | safe}}</p>
+                    </div>
+                    <div class="timeline-item__content">
+                        <h3><span class="bg-text">{{exp.role}}</span></h3>
+                        <ul class="responsibilities-list bulleted-list--default">
+                            {% for item in exp.responsibilities %}
+                            <li>{{ item | safe }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <button class="btn btn-default" data-btn="show-jobs">{% i18n 'Show 2 more', '+ 2 места работы' %}</button>
+
+        </div>
+    </section>
+</div>

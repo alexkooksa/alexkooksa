@@ -3,8 +3,15 @@
         <div class="footer-footnote">
             <p><span class="asterisk">*</span> Kooksa <i>['kuk-sa]</i></p>
             <p>
+                {% if page.lang == 'en'%}
+                <span>1)&nbsp;based on "kook" — totally&nbsp;cool;</span>
+                <span>2)&nbsp;misspelled "kuksa" — finnish&nbsp;carved&nbsp;cup;</span>
+                <span>3)&nbsp;unknown word for any spell checker</span>
+                {%else%}
                 <span>1)&nbsp;от англ. «kook» — totally&nbsp;cool;</span>
-                <span>2)&nbsp;искаж. «kuksa» — финская&nbsp;кружка</span>
+                <span>2)&nbsp;искаж. «kuksa» — финская&nbsp;кружка;</span>
+                <span>3)&nbsp;неизвестное слово для спеллчекера</span>
+                {%endif%}
             </p>
         </div>
         <p class="copyright">&copy; 2023 kooksa.codes | Made&nbsp;with&nbsp;<a href="https://github.com/11ty/eleventy/" target="_blank">11ty</a> | Hosted&nbsp;on&nbsp;<a href="https://github.com/alexkooksa/kooksa.codes" target="_blank">GitHub&nbsp;Pages</a></p>

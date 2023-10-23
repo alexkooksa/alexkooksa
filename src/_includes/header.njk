@@ -2,11 +2,11 @@
     <div class="wrap">
         {% if isHomepage %}
         <span class="logo">
-            <img src="/styles/images/logo.svg" alt="kooksa.codes - logo">
+            <img src="/content/images/logo.svg" alt="kooksa.codes - logo">
         </span>
         {% else %}
         <a href="/{{ page.lang }}/" class="logo">
-            <img src="/styles/images/logo.svg" alt="kooksa.codes - logo">
+            <img src="/content/images/logo.svg" alt="kooksa.codes - logo">
         </a>
         {% endif %}
         <nav>
@@ -14,7 +14,7 @@
 
                 {% for item in navigation[page.lang] %}
                 <li class="top-menu__item">
-                    <a class="top-menu__link" href="{% if not isHomepage %}{{ item.url | replace("#projects", "projects") }} {% else %} {{item.url}} {% endif %}">{{ item.text }}</a>
+                    <a class="top-menu__link" href="{% if not isHomepage %}/{{ page.lang }}/{% endif %}{% if not isHomepage %}{{ item.url | replace("#projects", "projects") }}{% else %}{{item.url}}{% endif %}">{{ item.text }}</a>
                 </li>
                 {% endfor %}
 
