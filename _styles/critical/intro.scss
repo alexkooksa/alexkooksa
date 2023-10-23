@@ -1,0 +1,222 @@
+@charset "utf-8";
+@import "../variables";
+@import "../mixins";
+
+.homepage {
+    header .wrap {
+        opacity: 0;
+    }
+}
+
+.homepage-intro {
+    [data-gsap-el] {
+        opacity: 0;
+    }
+    box-sizing: content-box;
+    overflow: hidden;
+    position: relative;
+    background-color: $black;
+    padding: 0;
+    position: relative;
+    min-height: calc(100vh - 52px);
+    min-height: calc((var(--vh, 1vh) * 100) - 52px);
+    @include mq(768) {
+        min-height: calc(100vh - 80px);
+        min-height: calc((var(--vh, 1vh) * 100) - 80px);
+    }
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+
+    .wrap {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .accent-font {
+        color: #fff;
+        font-size: 18px;
+        min-height: 1em;
+        @include mq(768) {
+            font-size: 24px;
+        }
+        @include mq(1024) {
+            font-size: 26px;
+        }
+        @include mq(1280) {
+            font-size: 32px;
+        }
+        @include mq(1366) {
+            font-size: 36px;
+        }
+        @include mq(1440) {
+            font-size: 40px;
+        }
+    }
+
+    .intro-h1 {
+        line-height: 1;
+        @include mq(576) {
+        }
+        @include mq(768) {
+        }
+        @include mq(1024) {
+        }
+        @include mq(1200) {
+        }
+        @include mq(1440) {
+        }
+        @include mq(1600) {
+        }
+        .accent-font {
+            padding-top: 0.2em;
+            margin-top: 0.2em;
+        }
+    }
+    .btn {
+        margin-top: 64px;
+    }
+
+    .tagline {
+        font-style: italic;
+        color: #d5d5d5;
+        margin-top: 0.8em;
+        span {
+            font-size: 0.8em;
+            min-height: 0.8em;
+            display: inline-block;
+        }
+    }
+}
+@include mq(576, max) {
+    .intro-h1 {
+        &.initial {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+[lang="en"] .intro-h1 {
+    font-size: 26vw;
+    margin: 0.5em 0;
+    @include mq(576) {
+        font-size: 56px;
+        margin: 0.2em 0 0;
+    }
+    @include mq(768) {
+        font-size: 76px;
+    }
+    @include mq(1024) {
+        font-size: 100px;
+    }
+    @include mq(1280) {
+        font-size: 125px;
+    }
+    @include mq(1366) {
+        font-size: 140px;
+    }
+}
+[lang="ru"] .intro-h1 {
+    font-size: 20vw;
+    margin: 0.3em 0;
+    @include mq(576) {
+        font-size: 56px;
+        margin: 0.2em 0 0;
+    }
+    @include mq(768) {
+        font-size: 76px;
+    }
+    @include mq(1024) {
+        font-size: 100px;
+    }
+    @include mq(1366) {
+        font-size: 140px;
+    }
+    @include mq(1600) {
+        font-size: 160px;
+    }
+}
+
+.intro-h1 {
+    min-height: 1em;
+    color: #fff;
+    display: flex;
+    .h1-pt2 {
+        position: relative;
+        z-index: 1;
+    }
+    .h1-pt3 {
+        clip-path: polygon(0 0, 1% 0, 1% 100%, 0% 100%);
+    }
+}
+.tagline {
+    opacity: 0;
+}
+
+.scroll-arrow {
+    display: inline-flex;
+    opacity: 0;
+    @include accent-font;
+    animation: pulse 1.25s alternate-reverse infinite;
+    color: $secondary-color;
+    font-size: 36px;
+    display: inline-block;
+    margin: 16px auto;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.intro-h1.cloned {
+    @include mq(576, max) {
+        display: none !important;
+    }
+    overflow: hidden;
+    min-height: 0;
+    margin-top: 0;
+    padding-top: 0;
+    height: 0;
+    &.cl1 {
+        max-height: 0.45em;
+        span {
+            transform: translateY(-0.55em);
+        }
+    }
+    &.cl2 {
+        max-height: 0.42em;
+        span {
+            transform: translateY(-0.58em);
+        }
+    }
+    &.cl3 {
+        max-height: 0.25em;
+        span {
+            transform: translateY(-0.75em);
+        }
+    }
+}
+.intro-h1.cloned > span {
+    transform-origin: bottom center;
+}
+
+@include mq(576, max) {
+    .homepage-intro .wrap {
+        align-items: flex-start;
+    }
+    .homepage-intro .nbsp {display: none;}
+}

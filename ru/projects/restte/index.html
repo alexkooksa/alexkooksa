@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
-<!-- Fact 1: portfolio source code is available at -->
+<!-- portfolio source code is available at -->
 <!-- https://github.com/alexkooksa/kooksa.codes -->
-<!-- | -->
-<!-- Fact 2: mechanical keebs are awesome -->
-
 
 
 
@@ -15,26 +12,34 @@
     <meta name="robots" content="noindex">
     <meta name="yandex" content="noindex, nofollow" />
     <title>Кейс | Restte — интернет-магазин мебели | Kooksa.codes</title>
-    <link rel="preload" as="font" href="/styles/fonts/Unbounded-VF.woff2" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" as="font" href="/styles/fonts/JetBrainsMono-VF.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/_styles/fonts/Unbounded-VF.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/_styles/fonts/JetBrainsMono-VF.woff2" type="font/woff2" crossorigin="anonymous">
 
     
+    <link rel="preload" as="style" href="/_styles/critical/criticalCase.css?1698082578" />
+    <link rel="stylesheet" href="/_styles/critical/criticalCase.css?1698082578" />
     
 
-    <link rel="stylesheet" href="/styles/style.css?1696926083" />
+    
+    <link rel="stylesheet" href="/_styles/bundle.css?1698082578" />
+    
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/styles/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/styles/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/styles/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/styles/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/styles/favicon/safari-pinned-tab.svg" color="#1a1c21">
-    <link rel="shortcut icon" href="/styles/favicon/favicon.ico" type="image/x-icon">
+    <meta property="og:image" content="/content/images/og-restte-ru.jpg" />
+    <meta property="og:title" content="Кейс | Restte — интернет-магазин мебели | Kooksa.codes" />
+    <meta property="og:description" content="Дизайн и посадка интернет-магазина на CMS" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/_styles/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/_styles/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/_styles/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/_styles/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/_styles/favicon/safari-pinned-tab.svg" color="#1a1c21">
+    <link rel="shortcut icon" href="/_styles/favicon/favicon.ico" type="image/x-icon">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="/styles/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#1a1c21">
+    <meta name="msapplication-config" content="/_styles/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#1b1c21">
 </head>
-
-
 
 <body >
 
@@ -42,7 +47,7 @@
     <div class="wrap">
         
         <a href="/ru/" class="logo">
-            <img src="/styles/images/logo.svg" alt="kooksa.codes - logo">
+            <img src="/content/images/logo.svg" alt="kooksa.codes - logo">
         </a>
         
         <nav>
@@ -50,15 +55,15 @@
 
                 
                 <li class="top-menu__item">
-                    <a class="top-menu__link" href="projects ">Кейсы</a>
+                    <a class="top-menu__link" href="/ru/projects">Кейсы</a>
                 </li>
                 
                 <li class="top-menu__item">
-                    <a class="top-menu__link" href="#about ">Обо мне</a>
+                    <a class="top-menu__link" href="/ru/#about">Опыт</a>
                 </li>
                 
                 <li class="top-menu__item">
-                    <a class="top-menu__link" href="#contact ">Связаться</a>
+                    <a class="top-menu__link" href="/ru/#contact">Связаться</a>
                 </li>
                 
 
@@ -89,7 +94,7 @@
             
             <li class="taglist__item">Дизайн</li>
             
-            <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+            <li class="taglist__item">Вёрстка и интеграция с CMS</li>
             
         </ul>
         <div class="case-intro__date" data-gsap-el="coverDate"><span>2021</span></div>
@@ -110,7 +115,7 @@
 
     </div>
 </section>
-<div class="brs-top-outer--dark">
+<div class="dark-bg--underlay" data-gsap-el="section-rounded">
     <section class="brs-top">
         <div class="wrap">
             <h2>Задача</h2>
@@ -122,7 +127,7 @@
 <section class="border-top">
     <div class="wrap">
         <h2>Типы страниц для вёрстки</h2>
-        <ol class="numbered-list columns-list">
+        <ol class="numbered-list columns-list" data-gsap-el="bulletedList">
             <li>Главная страница</li>
             <li>Категория товаров</li>
             <li>Страница товара</li>
@@ -142,17 +147,16 @@
         <h2>Главная страница</h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
-                <p>На главой разместился классический блок с баннерами, которыми клиент может управлять из админки. Ниже сделан переход в основные категории: мебель для ресторанов, офисов или гостиниц. В блоке с примерами мебели в интерьере покупатель может вдохновиться использованием товара в реальной жизни.</p>
+                <p>На главной разместился классический блок с баннерами, которыми клиент может управлять из админки. Ниже сделан переход в основные категории: мебель для ресторанов, офисов или гостиниц. В блоке с примерами мебели в интерьере покупатель может вдохновиться использованием товара в реальной жизни.</p>
             </div>
 
             <div class="solution-image">
-                
                 <picture style="aspect-ratio: 995/2935">
-			  <source type="image/avif" srcset="/content/img/vEAt60dqCq-995.avif 995w, /content/img/vEAt60dqCq-1990.avif 1990w" sizes="100vw">
-  <source type="image/webp" srcset="/content/img/vEAt60dqCq-995.webp 995w, /content/img/vEAt60dqCq-1990.webp 1990w" sizes="100vw">
-  <source type="image/jpeg" srcset="/content/img/vEAt60dqCq-995.jpeg 995w, /content/img/vEAt60dqCq-1990.jpeg 1990w" sizes="100vw">
+			  <source type="image/avif" srcset="/content/images/vEAt60dqCq-995.avif 995w, /content/images/vEAt60dqCq-1990.avif 1990w" sizes="100vw">
+  <source type="image/webp" srcset="/content/images/vEAt60dqCq-995.webp 995w, /content/images/vEAt60dqCq-1990.webp 1990w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/images/vEAt60dqCq-995.jpeg 995w, /content/images/vEAt60dqCq-1990.jpeg 1990w" sizes="100vw">
 				<img
-					src="/content/img/vEAt60dqCq-1990.jpeg"
+					src="/content/images/vEAt60dqCq-1990.jpeg"
           class="bordered"
           alt="Restte.com - скриншот главной страницы"
 
@@ -174,13 +178,12 @@
             </div>
 
             <div class="solution-image">
-                
                 <picture style="aspect-ratio: 995/1205">
-			  <source type="image/avif" srcset="/content/img/ZPRy87RttR-995.avif 995w, /content/img/ZPRy87RttR-1990.avif 1990w" sizes="100vw">
-  <source type="image/webp" srcset="/content/img/ZPRy87RttR-995.webp 995w, /content/img/ZPRy87RttR-1990.webp 1990w" sizes="100vw">
-  <source type="image/jpeg" srcset="/content/img/ZPRy87RttR-995.jpeg 995w, /content/img/ZPRy87RttR-1990.jpeg 1990w" sizes="100vw">
+			  <source type="image/avif" srcset="/content/images/ZPRy87RttR-995.avif 995w, /content/images/ZPRy87RttR-1990.avif 1990w" sizes="100vw">
+  <source type="image/webp" srcset="/content/images/ZPRy87RttR-995.webp 995w, /content/images/ZPRy87RttR-1990.webp 1990w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/images/ZPRy87RttR-995.jpeg 995w, /content/images/ZPRy87RttR-1990.jpeg 1990w" sizes="100vw">
 				<img
-					src="/content/img/ZPRy87RttR-1990.jpeg"
+					src="/content/images/ZPRy87RttR-1990.jpeg"
           class="bordered"
           alt="Restte.com - скриншот страницы категории"
 
@@ -202,20 +205,18 @@
                 <p>Доступна вся основная информация о товаре, а также возможность оставить заявку на полный подбор мебели для проекта. У некоторых товаров есть ограничение в виде минимального количества для заказа, об этом сразу предупреждаем покупателя.</p>
             </div>
             <div class="solution-image">
-                
                 <picture style="aspect-ratio: 995/1304">
-			  <source type="image/avif" srcset="/content/img/Frd4bkLZ4B-995.avif 995w, /content/img/Frd4bkLZ4B-1990.avif 1990w" sizes="100vw">
-  <source type="image/webp" srcset="/content/img/Frd4bkLZ4B-995.webp 995w, /content/img/Frd4bkLZ4B-1990.webp 1990w" sizes="100vw">
-  <source type="image/jpeg" srcset="/content/img/Frd4bkLZ4B-995.jpeg 995w, /content/img/Frd4bkLZ4B-1990.jpeg 1990w" sizes="100vw">
+			  <source type="image/avif" srcset="/content/images/Frd4bkLZ4B-995.avif 995w, /content/images/Frd4bkLZ4B-1990.avif 1990w" sizes="100vw">
+  <source type="image/webp" srcset="/content/images/Frd4bkLZ4B-995.webp 995w, /content/images/Frd4bkLZ4B-1990.webp 1990w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/images/Frd4bkLZ4B-995.jpeg 995w, /content/images/Frd4bkLZ4B-1990.jpeg 1990w" sizes="100vw">
 				<img
-					src="/content/img/Frd4bkLZ4B-1990.jpeg"
+					src="/content/images/Frd4bkLZ4B-1990.jpeg"
           class="bordered"
           alt="Restte.com - скриншот страницы товара"
 
 					loading="lazy"
 					decoding="async">
 			</picture>
-
             </div>
         </div>
 
@@ -227,8 +228,9 @@
         <h2>Результат</h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
-                <ul class="bulleted-list--custom">
-                    <li>Сайт сверстан на собственной модификации Image CMS с модулем для магазина.</li>
+                <ul class="bulleted-list--custom" data-gsap-el="bulletedList">
+                    <li>Сайт сверстан на собственной CMS с модулем для магазина.</li>
+                    <li>Front-end: HTML + шаблонизатор Smarty, CSS, JQuery + plugins. Back-end: PHP, CodeIgniter.</li>
                     <li>Продуманная иерархия каталога положительно отразилась на SEO. </li>
                     <li>Удобно пользоваться в том числе и на небольших устройствах. </li>
                     <li>Актуальность контента поддерживается модераторами клиента через админ-панель и синхронизацию.</li>
@@ -239,11 +241,11 @@
                     <div class="mobile-screens">
                         <div class="grid-item">
                             <picture style="aspect-ratio: 600/1478">
-			  <source type="image/avif" srcset="/content/img/nUiB354Yi2-600.avif 600w" sizes="100vw">
-  <source type="image/webp" srcset="/content/img/nUiB354Yi2-600.webp 600w" sizes="100vw">
-  <source type="image/jpeg" srcset="/content/img/nUiB354Yi2-600.jpeg 600w" sizes="100vw">
+			  <source type="image/avif" srcset="/content/images/nUiB354Yi2-600.avif 600w" sizes="100vw">
+  <source type="image/webp" srcset="/content/images/nUiB354Yi2-600.webp 600w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/images/nUiB354Yi2-600.jpeg 600w" sizes="100vw">
 				<img
-					src="/content/img/nUiB354Yi2-600.jpeg"
+					src="/content/images/nUiB354Yi2-600.jpeg"
           class=""
           alt="Restte - скриншот мобильной версии - 01"
 
@@ -254,11 +256,11 @@
                         </div>
                         <div class="grid-item">
                             <picture style="aspect-ratio: 600/1478">
-			  <source type="image/avif" srcset="/content/img/8PUPt8YqPn-600.avif 600w" sizes="100vw">
-  <source type="image/webp" srcset="/content/img/8PUPt8YqPn-600.webp 600w" sizes="100vw">
-  <source type="image/jpeg" srcset="/content/img/8PUPt8YqPn-600.jpeg 600w" sizes="100vw">
+			  <source type="image/avif" srcset="/content/images/8PUPt8YqPn-600.avif 600w" sizes="100vw">
+  <source type="image/webp" srcset="/content/images/8PUPt8YqPn-600.webp 600w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/images/8PUPt8YqPn-600.jpeg 600w" sizes="100vw">
 				<img
-					src="/content/img/8PUPt8YqPn-600.jpeg"
+					src="/content/images/8PUPt8YqPn-600.jpeg"
           class=""
           alt="Restte - скриншот мобильной версии - 02"
 
@@ -269,11 +271,11 @@
                         </div>
                         <div class="grid-item">
                             <picture style="aspect-ratio: 600/1478">
-			  <source type="image/avif" srcset="/content/img/yHCGirYh8--600.avif 600w" sizes="100vw">
-  <source type="image/webp" srcset="/content/img/yHCGirYh8--600.webp 600w" sizes="100vw">
-  <source type="image/jpeg" srcset="/content/img/yHCGirYh8--600.jpeg 600w" sizes="100vw">
+			  <source type="image/avif" srcset="/content/images/yHCGirYh8--600.avif 600w" sizes="100vw">
+  <source type="image/webp" srcset="/content/images/yHCGirYh8--600.webp 600w" sizes="100vw">
+  <source type="image/jpeg" srcset="/content/images/yHCGirYh8--600.jpeg 600w" sizes="100vw">
 				<img
-					src="/content/img/yHCGirYh8--600.jpeg"
+					src="/content/images/yHCGirYh8--600.jpeg"
           class=""
           alt="Restte - скриншот мобильной версии - 03"
 
@@ -299,17 +301,17 @@
 
 <section class="dark-bg more-cases-section">
     <div class="wrap">
-        <h2><span class="gradient-text">Другие кейсы</span></h2>
-        <ul class="caselist caselist--small" data-gsap="groupTranslateY">
+        <h2 class="centered"><span class="gradient-text">Другие кейсы</span></h2>
+        <ul class="caselist caselist--small">
 
             
             
 
             
-<li>
-    <a class="caselist__item is-vertical" href="/ru/projects/more-brightrich/"> 
+<li data-gsap="groupTranslateY">
+    <a class="caselist__item is-vertical" href="/ru/projects/more-brightrich/">
         <div class="item-content">
-            <p class="item-title title-font">Больше для Bright Rich</p>
+            <p class="item-title title-font">Больше для Bright&nbsp;Rich</p>
             <p class="item-desc">BR Home, CREMAP (UAE / RU), BR Cash, BR CRM etc.</p>
             
             <ul class="taglist">
@@ -318,7 +320,7 @@
                 
                 <li class="taglist__item">Аудит</li>
                 
-                <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+                <li class="taglist__item">Вёрстка и интеграция с CMS</li>
                 
             </ul>
             
@@ -327,6 +329,7 @@
                 <p class="item-date"><span>2022–2023</span></p>
                 
                 <p class="btn btn-white">Смотреть кейс</p>
+
             </div>
         </div>
     </a>
@@ -338,17 +341,17 @@
             
 
             
-<li>
-    <a class="caselist__item is-vertical" href="/ru/projects/brightrich/"> 
+<li data-gsap="groupTranslateY">
+    <a class="caselist__item is-vertical" href="/ru/projects/brightrich/">
         <div class="item-content">
-            <p class="item-title title-font">Bright Rich</p>
-            <p class="item-desc">Полная переверстка основного сайта и улучшение UI/UX.</p>
+            <p class="item-title title-font">Bright&nbsp;Rich</p>
+            <p class="item-desc">Полная переверстка основного сайта и улучшение UI/UX</p>
             
             <ul class="taglist">
                 
-                <li class="taglist__item">Оптимизация UX/UI</li>
+                <li class="taglist__item">Оптимизация UI/UX</li>
                 
-                <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+                <li class="taglist__item">Вёрстка и интеграция с CMS</li>
                 
                 <li class="taglist__item">Дизайн дополнительных страниц</li>
                 
@@ -359,6 +362,7 @@
                 <p class="item-date"><span>Ноябрь 2022</span></p>
                 
                 <p class="btn btn-white">Смотреть кейс</p>
+
             </div>
         </div>
     </a>
@@ -372,8 +376,8 @@
             
 
             
-<li>
-    <a class="caselist__item is-vertical" href="/ru/projects/electric/"> 
+<li data-gsap="groupTranslateY">
+    <a class="caselist__item is-vertical" href="/ru/projects/electrics/">
         <div class="item-content">
             <p class="item-title title-font">Электрика</p>
             <p class="item-desc">Оригинальная продукция Schneider Electric и Jung</p>
@@ -382,7 +386,7 @@
                 
                 <li class="taglist__item">Дизайн</li>
                 
-                <li class="taglist__item">Вёрстка и натяжка на CMS</li>
+                <li class="taglist__item">Вёрстка и интеграция с CMS</li>
                 
             </ul>
             
@@ -391,6 +395,7 @@
                 <p class="item-date"><span>2020</span></p>
                 
                 <p class="btn btn-white">Смотреть кейс</p>
+
             </div>
         </div>
     </a>
@@ -403,7 +408,6 @@
     </div>
 </section>
 
-
     <div class="lightbox">
         <div class="wrap">
             <button class="btn-close"></button>
@@ -415,18 +419,22 @@
         <div class="footer-footnote">
             <p><span class="asterisk">*</span> Kooksa <i>['kuk-sa]</i></p>
             <p>
+                
                 <span>1)&nbsp;от англ. «kook» — totally&nbsp;cool;</span>
-                <span>2)&nbsp;искаж. «kuksa» — финская&nbsp;кружка</span>
+                <span>2)&nbsp;искаж. «kuksa» — финская&nbsp;кружка;</span>
+                <span>3)&nbsp;неизвестное слово для спеллчекера</span>
+                
             </p>
         </div>
         <p class="copyright">&copy; 2023 kooksa.codes | Made&nbsp;with&nbsp;<a href="https://github.com/11ty/eleventy/" target="_blank">11ty</a> | Hosted&nbsp;on&nbsp;<a href="https://github.com/alexkooksa/kooksa.codes" target="_blank">GitHub&nbsp;Pages</a></p>
     </div>
 </footer>
 
-    <script src="/js/gsap.min.js"></script>
-    <script src="/js/ScrollTrigger.min.js"></script>
+    <script src="/_js/gsap.min.js"></script>
+    <script src="/_js/ScrollTrigger.min.js"></script>
     
-    <script src="/js/script.js?1696926083"></script>
+    <script src="/_js/gsapCustom.js?1698082578"></script>
+    <script src="/_js/script.js?1698082578"></script>
 </body>
 
 </html>
