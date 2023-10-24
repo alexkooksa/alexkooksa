@@ -4,9 +4,7 @@ var introTimeline = gsap.timeline({
   onStart: function () {
     // introTimeline.progress(1);
   },
-  onComplete: function () {
-    animateH1();
-  },
+
   /*   onStart: function () {
     if (window.scrollY > window.innerHeight) {
       introTimeline.progress(1);
@@ -101,9 +99,11 @@ introTimeline.from(
 
 introTimeline.to("header .wrap", { opacity: 1, duration: 0.5 }, ">-0.5");
 
+introTimeline.to(".cases-section", { opacity: 1, duration: 0.5 }, ">-0.5");
+
 introTimeline.set(".scroll-arrow", {
   opacity: 1,
-  onComplete: function () {
+/*   onComplete: function () {
     gsap.from(".scroll-arrow", {
       opacity: 1,
     });
@@ -118,7 +118,7 @@ introTimeline.set(".scroll-arrow", {
         end: "+=50",
       },
     });
-  },
+  }, */
 });
 
 gsap.to(".homepage-intro .wrap", {
@@ -128,6 +128,10 @@ gsap.to(".homepage-intro .wrap", {
     scrub: 0.5,
     start: "top top",
     end: "bottom top",
+  },
+  onStart: function () {
+    // console.log('started')
+    animateH1();
   },
 });
 
@@ -154,35 +158,3 @@ let animateH1 = () => {
   });
 };
 
-/*
-gsap.to(".intro-h1.cloned.cl1", {
-  marginTop: 8,
-  height: "0.45em",
-  scrollTrigger: {
-    trigger: ".intro-h1.initial",
-    scrub: 0.75,
-    start: "bottom center",
-    end: "+=2em",
-  },
-});
-
-  gsap.to(".intro-h1.cloned.cl2", {
-    marginTop: 8,
-    height: "0.42em",
-    scrollTrigger: {
-      trigger: ".intro-h1.cloned.cl1",
-      scrub: 0.75,
-      start: "bottom center",
-      end: "+=2em",
-    },
-  });
-  gsap.to(".intro-h1.cloned.cl3", {
-    marginTop: 8,
-    height: "0.25em",
-    scrollTrigger: {
-      trigger: ".intro-h1.cloned.cl2",
-      scrub: 0.75,
-      start: "bottom center",
-      end: "+=2em",
-    },
-  }); */

@@ -66,6 +66,7 @@ if (gsapScale.length) {
         scrub: 1,
         start: "top 90%",
         end: "top 80%",
+        once: true
       },
     });
   });

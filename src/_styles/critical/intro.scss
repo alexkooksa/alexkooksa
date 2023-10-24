@@ -18,8 +18,9 @@
     background-color: $black;
     padding: 0;
     position: relative;
-    min-height: calc(100vh - 52px);
-    min-height: calc((var(--vh, 1vh) * 100) - 52px);
+    min-height: 50vh;
+    /*     min-height: calc(100vh - 52px);
+    min-height: calc((var(--vh, 1vh) * 100) - 52px); */
     @include mq(768) {
         min-height: calc(100vh - 80px);
         min-height: calc((var(--vh, 1vh) * 100) - 80px);
@@ -107,7 +108,7 @@
 }
 [lang="en"] .intro-h1 {
     font-size: 26vw;
-    margin: 0.5em 0;
+    margin: 0.2em 0;
     @include mq(576) {
         font-size: 56px;
         margin: 0.2em 0 0;
@@ -127,7 +128,7 @@
 }
 [lang="ru"] .intro-h1 {
     font-size: 20vw;
-    margin: 0.3em 0;
+    margin: 0.2em 0;
     @include mq(576) {
         font-size: 56px;
         margin: 0.2em 0 0;
@@ -218,5 +219,7 @@
     .homepage-intro .wrap {
         align-items: flex-start;
     }
-    .homepage-intro .nbsp {display: none;}
+    .homepage-intro .nbsp {
+        display: none;
+    }
 }

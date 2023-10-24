@@ -136,6 +136,7 @@
     overflow: hidden;
     position: relative;
     margin-top: 0;
+    opacity: 0;
     &::before {
         content: "";
         position: absolute;
@@ -183,6 +184,7 @@
     .item-content {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         height: 100%;
         flex-grow: 1;
         &__bottom {
@@ -269,15 +271,15 @@
             color: $primary-color;
         }
         @include mq(1280) {
-            font-size: 40px;
+            font-size: 44px;
         }
         @include mq(1366) {
-            font-size: 50px;
+            font-size: 52px;
         }
-        line-height: 1;
+        line-height: 1.1;
         text-decoration: none;
         color: #fff;
-        // max-width: 12ch;
+        max-width: 12ch;
         display: inline-block;
     }
     .taglist__item {
@@ -788,6 +790,9 @@ video,
             padding-right: 16px;
         }
     }
+/*     .title-group {
+        margin-top: 24px;
+    } */
 }
 
 .sided-callout-layout {
