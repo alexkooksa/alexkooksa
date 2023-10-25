@@ -408,7 +408,6 @@
     .timeline-item__info {
         flex-basis: 0;
         text-align: center;
-        // background-color: red;
     }
     &__info {
         font-size: 0.9em;
@@ -419,7 +418,6 @@
         outline: 3px solid #fff;
         box-shadow: 0 0px 0 5px #1b1c21;
         border-radius: 16px;
-        // @include gradient-border;
         padding: 24px;
         position: relative;
 
