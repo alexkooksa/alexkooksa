@@ -2,9 +2,15 @@ console.warn(
   "Maybe check out https://github.com/alexkooksa/kooksa.codes instead of console ;)"
 );
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+window.addEventListener("resize", () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
+
 document.addEventListener("DOMContentLoaded", function () {
-
-
   var videoPlayButtons = document.getElementsByClassName("video__play-button");
 
   for (var i = 0; i < videoPlayButtons.length; i++) {
@@ -66,15 +72,14 @@ let firstSectionHeight =
 let headerHeight = header.offsetHeight;
 
 function fixHeader() {
-  if (window.pageYOffset > firstSectionHeight / 2) {
-    // so there's no annoying shift caused by the font size changing
+  if (window.pageYOffset > headerHeight * 1.5) {
     body.style.paddingTop = `${headerHeight}px`;
     header.classList.add("fixed");
   } else {
     body.removeAttribute("style");
     header.classList.remove("fixed");
   }
-  if (window.pageYOffset > firstSectionHeight + headerHeight) {
+  if (window.pageYOffset > headerHeight * 2) {
     header.classList.add("is-visible");
   } else {
     header.classList.remove("is-visible");
@@ -115,7 +120,7 @@ lightboxImages.forEach((item) => {
     let clonedPicture = data.cloneNode(true);
     modalPopup.querySelector(".wrap").append(clonedPicture);
   });
-});
+}); // lightbox end
 
 let hiddenJobs = document.querySelectorAll(".timeline-item[hidden]");
 if (hiddenJobs.length) {

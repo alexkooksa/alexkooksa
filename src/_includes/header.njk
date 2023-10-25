@@ -21,9 +21,13 @@
                 <li class="top-menu__item lang-switcher">
                     <span class="lang-switcher__item is-active" lang="{{ page.lang }}">{{ page.lang }}</span>
                     <span>&nbsp;/&nbsp;</span>
+                    {% if not is404 is defined %}
                     {% for link in page.url | locale_links %}
                     <a class="lang-switcher__item" href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">{{ link.lang }}</a>
                     {% endfor %}
+                    {% else %}
+                    <a class="lang-switcher__item" href="/ru/" lang="ru" hreflang="ru">ru</a>
+                    {% endif %}
                 </li>
             </ul>
             <button class="btn-menu-m" data-btn="open-menu">

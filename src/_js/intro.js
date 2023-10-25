@@ -1,33 +1,84 @@
 gsap.registerPlugin(TextPlugin);
+let mm = gsap.matchMedia();
+
+const h1Cloned = gsap.utils.toArray(".intro-h1.cloned");
 
 var introTimeline = gsap.timeline({
   onStart: function () {
     // introTimeline.progress(1);
   },
+});
 
-  /*   onStart: function () {
-    if (window.scrollY > window.innerHeight) {
-      introTimeline.progress(1);
-    }
-  }, */
+let h1Timeline = gsap.timeline({
+  onComplete: function () {
+    let pinEnd =
+      document.querySelector(".intro-h1.initial").offsetTop +
+      document.querySelector(".intro-h1.initial").offsetHeight;
+  },
+});
+
+mm.add("(min-width: 576px)", () => {
+  h1Cloned.forEach((el, i) => {
+    const compStyles = window.getComputedStyle(el);
+
+    h1Timeline.to(el, {
+      marginTop: i == 0 ? "16" : 0,
+      marginBottom: 12,
+      height: compStyles.getPropertyValue("max-height"),
+      ease: "power4.in",
+      scrollTrigger: {
+        trigger: el.previousElementSibling,
+        scrub: 0.75,
+        start: "bottom 55%",
+        end: "+=2em",
+      },
+    });
+  });
 });
 
 ScrollTrigger.create({
-  trigger: ".homepage-intro",
+  trigger: "greeting",
   start: "top top",
-  end: "bottom 40%",
+  end: () => `+=${document.querySelector(".greeting").offsetHeight}`,
   onLeave: ({}) => introTimeline.timeScale(5),
+  // markers: true,
 });
+
+ScrollTrigger.create({
+  trigger: ".homepage-intro .wrap",
+  pin: true,
+  // scrub: 1,
+  start: "top top",
+  endTrigger: "#projects",
+  end: () =>
+    `top ${
+      document.querySelector(".intro-h1.initial").offsetTop +
+      document.querySelector(".intro-h1.initial").offsetHeight - document.querySelector("header").offsetHeight - 16
+    }`,
+  animation: h1Timeline,
+  // toggleActions: "play reverse none none",
+  markers: true,
+});
+
+/* ScrollTrigger.create({
+  trigger: ".greeting",
+  start: () =>
+    `top ${document.querySelector(".greeting").offsetTop} + ${
+      document.querySelector(".greeting").offsetHeight
+    }`,
+  end: "bottom 30%",
+  animation: h1Timeline,
+}); */
 
 const h1Pt1 = document.querySelector(".h1-pt1");
 const h1Pt2 = document.querySelector(".h1-pt2");
 const h1Pt3 = document.querySelector(".h1-pt3");
 
-const clonedH1 = document.querySelector(".intro-h1").cloneNode(true);
-
+introTimeline.set(".greeting", {
+  scale: 5,
+});
 introTimeline.set(".greeting", {
   opacity: 1,
-  scale: 5,
 });
 introTimeline.set(h1Pt2, {
   rotate: 330,
@@ -56,11 +107,10 @@ introTimeline.to(h1Pt2, {
 introTimeline.to(
   h1Pt2,
   {
-    // ease: "bounce.out",
     duration: 0.25,
     rotate: 360,
     y: 0,
-    // webkitTextFillColor: '#edfb55'
+    ease: "elastic.out(1,0.3)",
   },
   ">.1"
 );
@@ -75,7 +125,6 @@ if (h1Pt3 !== null) {
     delay: 0.2,
     x: 0,
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    onComplete: function () {},
   });
 }
 
@@ -103,58 +152,19 @@ introTimeline.to(".cases-section", { opacity: 1, duration: 0.5 }, ">-0.5");
 
 introTimeline.set(".scroll-arrow", {
   opacity: 1,
-/*   onComplete: function () {
+  onComplete: function () {
     gsap.from(".scroll-arrow", {
       opacity: 1,
     });
     gsap.to(".scroll-arrow", {
-      opacity: 0.2,
+      opacity: 0,
       animation: "none",
-      color: "#aaa",
       scrollTrigger: {
-        trigger: "#projects",
+        trigger: ".tagline",
         scrub: 0.5,
-        start: "top center",
-        end: "+=50",
+        start: () => `top ${document.querySelector(".tagline").offsetTop}`,
+        end: "+=10",
       },
     });
-  }, */
-});
-
-gsap.to(".homepage-intro .wrap", {
-  scrollTrigger: {
-    pin: true,
-    trigger: ".homepage-intro",
-    scrub: 0.5,
-    start: "top top",
-    end: "bottom top",
-  },
-  onStart: function () {
-    // console.log('started')
-    animateH1();
   },
 });
-
-// TODO optimize
-
-const h1Cloned = gsap.utils.toArray(".intro-h1.cloned");
-
-let animateH1 = () => {
-
-  h1Cloned.forEach((el, i) => {
-    const compStyles = window.getComputedStyle(el);
-
-    gsap.to(el, {
-      marginTop: i == 0 ? '16' : 0,
-      marginBottom: 12,
-      height: compStyles.getPropertyValue("max-height"),
-      scrollTrigger: {
-        trigger: el.previousElementSibling,
-        scrub: 0.75,
-        start: "bottom center",
-        end: "+=2em",
-      },
-    });
-  });
-};
-

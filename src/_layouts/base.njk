@@ -45,16 +45,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="/_styles/favicon/browserconfig.xml">
     <meta name="theme-color" content="#1b1c21">
-
-    <script>
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty("--vh", `${vh}px`);
-
-        window.addEventListener("resize", () => {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty("--vh", `${vh}px`);
-        });
-    </script>
 </head>
 
 <body {% if isHomepage %} class="homepage" {% endif %}>

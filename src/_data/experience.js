@@ -4,7 +4,7 @@ module.exports = {
       hidden: false,
       date: "апрель 2017 - март 2023",
       company: "Evernet",
-      role: "Frontend-разработчик + UI/UX-дизайнер",
+      role: "Middle frontend-разработчик + UI/UX-дизайнер",
       responsibilities: [
         'с 2022 года участвовала преимущественно в проектах для компании Bright&nbsp;Rich: <a href="/projects/brightrich" class="link">основной кейс</a>, <a href="/projects/more-brightrich" class="link">еще кейсы</a>',
         "расширенная область ответственности внутри компании",
@@ -18,7 +18,7 @@ module.exports = {
       hidden: false,
       date: "октябрь 2016 - март 2017",
       company: "Evernet",
-      role: "Верстальщик + UI/UX-дизайнер",
+      role: "Junior frontend-разработчик + UI/UX-дизайнер",
       responsibilities: [
         "расширенная область ответственности внутри компании",
         "адаптивная верстка по собственным и клиентским макетам",

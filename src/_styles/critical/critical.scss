@@ -46,6 +46,8 @@ section {
 
 .dark-bg--underlay {
     background-color: $black;
+    position: relative;
+    z-index: 1;
 }
 
 .pb-0 {
@@ -120,11 +122,11 @@ h1 {
         padding-bottom: 8px;
         border-bottom: 1px solid #8d8e90;
         @include mq(768) {
+            // transform: translateY(-10px);
+            opacity: 0;
             .top-menu__item {
                 font-size: 16px;
             }
-            transform: translateY(-10px);
-            opacity: 0;
         }
         @include mq(768, max) {
             border-bottom: 0;
@@ -149,7 +151,7 @@ h1 {
         }
         &.is-visible {
             opacity: 1;
-            transform: translateY(0);
+            // transform: translateY(0);
             transition: 0.2s all ease-in-out;
         }
     }
