@@ -336,7 +336,7 @@
         padding: 48px;
     }
     .item-title {
-/*         @include mq(1600, max) {
+        /*         @include mq(1600, max) {
             font-size: 40px;
         } */
         @include mq(1024, max) {
@@ -603,6 +603,11 @@ footer {
 .skills-grid {
     display: grid;
     grid-template-columns: none;
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
     @include mq(1024) {
         grid-template-columns: 1fr 1fr;
     }
@@ -788,7 +793,7 @@ video,
             padding-right: 16px;
         }
     }
-/*     .title-group {
+    /*     .title-group {
         margin-top: 24px;
     } */
 }

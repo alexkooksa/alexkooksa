@@ -88,7 +88,7 @@ if (gsapCallout.length) {
       scrollTrigger: {
         trigger: el,
         start: "top 90%",
-        end: "+=200",
+        end: "+=150",
       },
     });
   });
