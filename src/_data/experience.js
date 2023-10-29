@@ -2,13 +2,24 @@ module.exports = {
   ru: [
     {
       hidden: false,
-      date: "апрель 2017 - март 2023",
+      date: "сентябрь 2022 - н.в.",
+      company: "Фриланс",
+      role: "Frontend-разработчик (фрилансер)",
+      responsibilities: [
+        "разработка сайтов и приложений",
+        "верстка, посадка на CMS",
+        "UI/UX-дизайн",
+      ],
+    },
+    {
+      hidden: false,
+      date: "апрель 2017 - сентябрь 2022",
       company: "Evernet",
-      role: "Middle frontend-разработчик + UI/UX-дизайнер",
+      role: "Middle frontend-разработчик",
       responsibilities: [
         'с 2022 года участвовала преимущественно в проектах для компании Bright&nbsp;Rich: <a href="/projects/brightrich" class="link">основной кейс</a>, <a href="/projects/more-brightrich" class="link">еще кейсы</a>',
         "расширенная область ответственности внутри компании",
-        "участие во всех этапах разработки проекта: дизайн, создание шаблонов с версткой для CMS (CodeIgniter + Smarty), наполнение контентом, настройка модулей для вывода клиентского контента в админке, сопровождение и внедрение новых функций после запуска",
+        "участие во всех этапах разработки проекта: <ul><li>дизайн,</li><li>создание шаблонов с версткой для CMS,</li><li>наполнение контентом,</li><li>настройка модулей для вывода клиентского контента в админке,</li><li>сопровождение и внедрение новых функций после запуска</li></ul>",
         "внесение небольших правок на бэкенде (PHP)",
         "взаимодействие с командой клиента (дизайнеры, маркетологи)",
         "проведение юзабилити-аудитов",
@@ -16,14 +27,14 @@ module.exports = {
     },
     {
       hidden: false,
-      date: "октябрь 2016 - март 2017",
+      date: "октябрь 2016 - октябрь 2017",
       company: "Evernet",
       role: "Junior frontend-разработчик + UI/UX-дизайнер",
       responsibilities: [
         "расширенная область ответственности внутри компании",
         "адаптивная верстка по собственным и клиентским макетам",
         "работа в команде с backend-разработчиком",
-        "поддержка проектов: дизайн и верстка новых компонентов, оптимизация существующих компонентов, устранение багов",
+        "поддержка проектов: <ul><li>дизайн и верстка новых компонентов,</li><li>оптимизация существующих компонентов,</li><li>устранение багов.</li></ul>",
       ],
     },
     {
@@ -40,11 +51,12 @@ module.exports = {
     {
       hidden: true,
       date: "сентябрь 2015 - февраль 2016",
-      company: "Home, sweet home",
+      company: "Фриланс",
       role: "Фрилансер",
       responsibilities: [
         "разработка дизайн-макетов",
-        "тренировка насмотренности, изучение материалов для перехода из полиграфии в веб-дизайн",
+        "тренировка насмотренности",
+        "изучение материалов, получение навыков для перехода из полиграфии в веб-дизайн",
       ],
     },
     {
@@ -63,28 +75,39 @@ module.exports = {
   en: [
     {
       hidden: false,
-      date: "April 2017 - March 2023",
-      company: "Evernet",
-      role: "Middle front-end developer + UI/UX-designer",
+      date: "September 2022 - Present",
+      company: "Self-employment",
+      role: "Front-end developer (freelance)",
       responsibilities: [
-        'Since 2022 I\'ve been working mainly on projects for Bright&nbsp;Rich: <a href="/projects/brightrich" class="link">main case study</a>, <a href="/projects/more-brightrich" class="link">more case studies</a>',
-        "extended scope of responsibility within the company",
-        "participation in all stages of project development: design, creation of templates and layout for CMS (CodeIgniter + Smarty), content management, customisation of modules for output of client content in the admin panel, maintenance and implementation of new features after launch.",
-        "making simple changes on back-end (PHP)",
-        "collaborating with client's team (designers, marketing specialists)",
-        "usability audits",
+        "websites and apps development",
+        "coding, CMS development",
+        "UI/UX-design",
       ],
     },
     {
       hidden: false,
-      date: "October 2016 - March 2017",
+      date: "October 2017 - September 2022",
+      company: "Evernet",
+      role: "Middle front-end developer",
+      responsibilities: [
+        'Since 2022 I\'ve been working mainly on projects for Bright&nbsp;Rich: <a href="/projects/brightrich" class="link">main case study</a>, <a href="/projects/more-brightrich" class="link">more case studies</a>',
+        "extended scope of responsibility within the company",
+        "participation in all stages of project development: <ul><li>design,</li> <li>creation of templates and layout for CMS,</li><li>content management,</li><li>customization of modules for output of client content in the admin panel,</li><li>maintenance and implementation of new features after launch.</li></ul>",
+        "making simple changes on back-end (PHP)",
+        "collaborating with client's team (designers, marketing specialists)",
+        "making usability audits",
+      ],
+    },
+    {
+      hidden: false,
+      date: "October 2016 - September 2017",
       company: "Evernet",
       role: "Junior front-end developer + UI/UX designer",
       responsibilities: [
         "extended scope of responsibility within the company",
         "development of the responsive layouts based on my own and client's designs",
         "teamwork with a back-end developer",
-        "project maintenance: design and coding of new components, optimization of existing components, bug fixing",
+        "projects maintenance: <ul><li>design and coding of new components,</li> <li>optimization of existing components,</li> <li>bug fixing.</li></ul>",
       ],
     },
     {
@@ -101,11 +124,12 @@ module.exports = {
     {
       hidden: true,
       date: "September 2015 - February 2016",
-      company: "Home, sweet home",
+      company: "Self-employment",
       role: "Freelancer",
       responsibilities: [
         "creating design layouts",
-        "practicing watchfulness, learning materials to move from print to web design",
+        "practicing watchfulness",
+        "learning materials to move from print to web design",
       ],
     },
     {

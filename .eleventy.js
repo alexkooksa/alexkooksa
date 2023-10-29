@@ -25,11 +25,6 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.on("eleventy.beforeWatch", async ({}) => {
-    // fsExtra.emptyDirSync("./src/_includes/critical_css");
-    // fix for duplicating critical code in the same file
-  });
-
   //images processing
 
   eleventyConfig.addShortcode(
@@ -96,8 +91,6 @@ module.exports = function (eleventyConfig) {
           height="${highsrc.height}" */
     }
   );
-
-  // eleventyConfig.watchIgnores.add("./src/_includes/critical/");
 
   eleventyConfig.addPlugin(eleventySass, [
     {

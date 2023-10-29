@@ -1,32 +1,57 @@
 <div class="wrap skills-wrap dark-bg" data-gsap="translateY">
 	<h2 data-gsap="opacity"><span class="gradient-text">{% i18n 'Skills', 'Навыки' %}</span></h2>
 	<div class="skills-grid">
-		<div class="grid-item" data-gsap="groupTranslateY">
-			<h3>Hard skills</h3>
-			<ul class="bulleted-list--custom">
-				{% if page.lang == 'en'%}
+		<div class="grid-item rows">
+			<div data-gsap="groupTranslateY">
+				<h3>Hard skills</h3>
+				<ul class="bulleted-list--custom">
+					{% if page.lang == 'en'%}
 
-				<li><b>Programming languages and tools:</b> HTML, CSS / SASS, JavaScript, Smarty, Eleventy, Git</li>
-				<li><b>Libraries:</b> JQuery + plugins, Swiper, Fancybox, AOS, GSAP</li>
-				<li><b>Design:</b> interface prototyping, typography, UI/UX optimization</li>
-				<li><b>Software: </b>Figma, Adobe XD, Photoshop, Illustrator</li>
-				<li><b>Languages:</b> English (B1), French (A1)</li>
+					<li><b>Programming languages and tools:</b> HTML, CSS / SASS, JavaScript, Smarty, Eleventy, Git</li>
+					<li><b>Libraries:</b> JQuery + plugins (Swiper, Fancybox etc.), AOS, GSAP</li>
+					<li><b>Design:</b> interface prototyping, typography, UI/UX optimization</li>
+					<li><b>Software: </b>Figma, Adobe XD, Photoshop, Illustrator</li>
 
-				{%else%}
+					{%else%}
 
-				<li><b>Языки и инструменты:</b> HTML, CSS / SASS, JavaScript, Smarty, Eleventy, Git</li>
-				<li><b>Библиотеки:</b> JQuery + плагины, Swiper, Fancybox, AOS, GSAP</li>
-				<li><b>Дизайн:</b> проектирование интерфейсов, типографика, оптимизация UI/UX</li>
-				<li><b>Софт: </b>Figma, Adobe XD, Photoshop, Illustrator</li>
-				<li><b>Иностранные языки:</b> английский (разговорный, чтение документации), французский (начальный)</li>
+					<li><b>Языки и инструменты:</b> HTML, CSS / SASS, JavaScript, Smarty, Eleventy, Git</li>
+					<li><b>Библиотеки:</b> JQuery + плагины (Swiper, Fancybox etc.), AOS, GSAP</li>
+					<li><b>Дизайн:</b> проектирование интерфейсов, типографика, оптимизация UI/UX</li>
+					<li><b>Софт: </b>Figma, Adobe XD, Photoshop, Illustrator</li>
 
-				{%endif%}
-			</ul>
+					{%endif%}
+				</ul>
+			</div>
+
+			<div data-gsap="groupTranslateY">
+				<h3 class="has-wavy"><span class="wavy-underline">{% i18n 'In progress', 'В процессе' %}</span></h3>
+				<ul class="bulleted-list--custom">
+					{% if page.lang == 'en'%}
+
+					<li>"JavaScript fundamentals" (online course)</li>
+					<li>"React for modern web applications" (online course)</li>
+
+					{%else%}
+
+					<li>Курс «Фундаментальный JavaScript»</li>
+					<li>Курс «React для современных веб-приложений»</li>
+
+					{%endif%}
+
+				</ul>
+			</div>
+
+			<div class="skills-callout" data-gsap="groupTranslateY">
+				<div class="callout">
+					<span class="callout-inner">{% i18n 'Eager to learn and grow', 'Открыта для новых знаний' %}&nbsp;&#129299;</span>
+				</div>
+			</div>
 		</div>
-		<div class="grid-item" data-gsap="groupTranslateY">
-			<h3>Soft skills</h3>
-			<ol class="numbered-list">
-				{% if page.lang == 'en'%}
+
+		<div class="grid-item rows">
+			<h3 data-gsap="groupTranslateY">Soft skills</h3>
+			{% if page.lang == 'en'%}
+			<ol class="numbered-list" data-gsap="groupTranslateY">
 
 				<li>I am organized and always prioritize tasks</li>
 				<li>I admit mistakes and learn from feedback</li>
@@ -34,41 +59,33 @@
 				<li>I am also responsible and am able to make decisions on my own</li>
 				<li>When making a decision, I am weighing different options and am able to communicate my reasoning clearly</li>
 				<li>Empathy is my second name (while positive attitude is the third one)</li>
+			</ol>
 
-				{%else%}
+			<div data-gsap="groupTranslateY">
+				<h3>Languages</h3>
+				<ul class="bulleted-list--custom">
+					<li>Limited Working English</li>
+					<li>Elementary French</li>
+				</ul>
+			</div>
 
+			{%else%}
+			<ol class="numbered-list" data-gsap="groupTranslateY">
 				<li>Умею расставлять приоритеты</li>
 				<li>Признаю ошибки и извлекаю из них урок</li>
 				<li>Уважаю альтернативную точку зрения</li>
 				<li>Мне нравится работать в команде и находить оптимальное решение сообща</li>
 				<li>При этом я вполне могу принимать серьезные решения самостоятельно и всегда могу их обосновать</li>
 				<li>Эмпатия — моё второе имя (а позитивный настрой — третье)</li>
-
-				{%endif%}
-
 			</ol>
-		</div>
-		<div class="grid-item" data-gsap="groupTranslateY">
-			<h3 class="has-wavy"><span class="wavy-underline">{% i18n 'In progress', 'В процессе' %}</span></h3>
-			<ul class="bulleted-list--custom">
-				{% if page.lang == 'en'%}
-
-				<li>"JavaScript fundamentals" (online course)</li>
-				<li>"React for modern web applications" (online course)</li>
-
-				{%else%}
-
-				<li>Курс «Фундаментальный JavaScript»</li>
-				<li>Курс «React для современных веб-приложений»</li>
-
-				{%endif%}
-
-			</ul>
-		</div>
-		<div class="grid-item skills-callout" data-gsap="groupTranslateY">
-			<div class="callout">
-				<span class="callout-inner">{% i18n 'Eager to learn and grow', 'Открыта для новых знаний' %}&nbsp;&#129299;</span>
+			<div data-gsap="groupTranslateY">
+				<h3>Иностранные языки</h3>
+				<ul class="bulleted-list--custom">
+					<li>Английский (разговорный, чтение документации)</li>
+					<li>Французский (начальный)</li>
+				</ul>
 			</div>
+			{%endif%}
 		</div>
 	</div>
 </div>

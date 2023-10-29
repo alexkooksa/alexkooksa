@@ -454,10 +454,19 @@ button {
 
 .bulleted-list--default {
     list-style: disc inside;
-    li::marker {
+    > li::marker {
         font-size: 20px;
         line-height: 1em;
         color: $black;
+    }
+    ul {
+        margin-top: 4px;
+    }
+    ul li {
+        padding-left: 1.5em;
+    }
+    ul li::before {
+        content: "- ";
     }
 }
 
@@ -465,22 +474,23 @@ button {
 [class*="numbered-list"]:not(:first-child) {
     margin-top: 16px;
 }
-[class*="bulleted-list"] li + li,
-[class*="numbered-list"] li + li {
+[class*="bulleted-list"] > li + li,
+[class*="numbered-list"] > li + li {
     margin-top: 16px;
 }
 .bulleted-list--custom {
-    li {
-        padding-left: 32px;
-        background: url("images/marker.svg") no-repeat left top 4px / 24px auto;
+    > li {
+        padding-left: 2em;
+        background: url("images/marker.svg") no-repeat left top / 1.5em auto;
+        min-height: 1.5em;
     }
 }
-.numbered-list li {
+.numbered-list > li {
     padding-left: 3ch;
     position: relative;
 }
 
-.numbered-list li::before {
+.numbered-list > li::before {
     content: counter(list-item);
     position: absolute;
     left: 0;
@@ -496,7 +506,7 @@ button {
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
     text-fill-color: rgba(0, 0, 0, 0);
 }
-.numbered-list li:nth-child(-n + 9)::before {
+.numbered-list > li:nth-child(-n + 9)::before {
     content: "0" counter(list-item);
 }
 
