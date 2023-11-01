@@ -10,11 +10,11 @@ var introTimeline = gsap.timeline({
 });
 
 let h1Timeline = gsap.timeline({
-  onComplete: function () {
+  /*   onComplete: function () {
     let pinEnd =
       document.querySelector(".intro-h1.initial").offsetTop +
       document.querySelector(".intro-h1.initial").offsetHeight;
-  },
+  }, */
 });
 
 mm.add("(min-width: 576px)", () => {
@@ -53,11 +53,13 @@ ScrollTrigger.create({
   end: () =>
     `top ${
       document.querySelector(".intro-h1.initial").offsetTop +
-      document.querySelector(".intro-h1.initial").offsetHeight - document.querySelector("header").offsetHeight - 16
+      document.querySelector(".intro-h1.initial").offsetHeight -
+      document.querySelector("header").offsetHeight -
+      16
     }`,
   animation: h1Timeline,
   // toggleActions: "play reverse none none",
-  // markers: true,
+  markers: true,
 });
 
 /* ScrollTrigger.create({
