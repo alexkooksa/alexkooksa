@@ -16,7 +16,7 @@ module.exports = {
     },
     {
       date: "февраль 2012 - июнь 2012",
-      company: "L'Eecole de Design Nantes Atlantique (Нант,&nbsp;Франция)",
+      company: "L'Ecole de Design Nantes Atlantique (Нант,&nbsp;Франция)",
       title: "Обучение по программе обмена студентами",
       desc: "Дисциплины и проекты в рамках направления «Connected environments»",
       disciplines: [
@@ -33,7 +33,7 @@ module.exports = {
       date: "September 2008 - June 2013",
       company: "Peter the Great St. Petersburg Polytechnic University",
       title: '"Information technology in design" program',
-      desc: "A specialist degree has been obtained. Major disciplines attended:",
+      desc: "Bachelor's degree has been obtained. Major disciplines attended:",
       disciplines: [
         "high-level computer science and programming methods",
         "databases, probability theory and mathematical statistics",
