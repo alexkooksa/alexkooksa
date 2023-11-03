@@ -81,7 +81,7 @@ module.exports = {
       responsibilities: [
         "websites and apps development",
         "coding, CMS development",
-        "UI/UX-design",
+        "UI/UX design",
       ],
     },
     {
