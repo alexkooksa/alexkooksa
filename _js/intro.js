@@ -59,7 +59,7 @@ ScrollTrigger.create({
     }`,
   animation: h1Timeline,
   // toggleActions: "play reverse none none",
-  markers: true,
+  // markers: true,
 });
 
 /* ScrollTrigger.create({
