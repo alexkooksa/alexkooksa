@@ -26,12 +26,18 @@
 body {
     @include default-font;
     line-height: 1.4;
-    font-size: 17px;
+    font-size: 19px;
+    @include mq(768) {
+        font-size: 17px;
+        --bodyFontSize: 17;
+    }
     @include mq(1024) {
         font-size: 19px;
+        --bodyFontSize: 19;
     }
     @include mq(1600) {
         font-size: 22px;
+        --bodyFontSize: 22;
     }
     &.blocked {
         overflow: hidden !important;
@@ -93,7 +99,7 @@ picture {
     border: 1px solid #8a8b94;
 }
 
-.shadowed {
+.s1adowed {
     box-shadow: 0 10px 50px 0px rgb(81 106 147 / 20%);
 }
 
@@ -213,6 +219,7 @@ h1,
 h2 {
     @include title-font;
     line-height: 1.2;
+    // word-break: break-all;
 }
 
 h3 {
@@ -234,8 +241,11 @@ h3 {
     }
 }
 h2 {
-    font-size: 44px;
+    font-size: 36px;
     font-weight: 500;
+    @include mq(576) {
+        font-size: 44px;
+    }
     @include mq(1024) {
         font-size: 48px;
     }
@@ -243,7 +253,7 @@ h2 {
         font-size: 64px;
     }
     @include mq(1600) {
-        font-size: 80px;
+        font-size: 72px;
     }
     margin-bottom: 0.6em;
     &:not(:first-child) {
@@ -429,6 +439,9 @@ button {
 .btn-external {
     display: inline-flex;
     align-items: center;
+    @include mq(480, max) {
+        width: 100%;
+    }
 }
 .btn-external::after {
     content: "";

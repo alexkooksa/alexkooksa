@@ -3,7 +3,7 @@ let mm = gsap.matchMedia();
 
 const h1Cloned = gsap.utils.toArray(".intro-h1.cloned");
 
-var introTimeline = gsap.timeline({
+let introTimeline = gsap.timeline({
   onStart: function () {
     // introTimeline.progress(1);
   },

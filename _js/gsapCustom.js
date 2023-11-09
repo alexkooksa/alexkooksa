@@ -227,7 +227,7 @@ if (gsapTextBlock.length) {
 // coverTimeline start
 
 if (isLandscape && document.querySelector('[data-gsap-el="pageCover"]')) {
-  var coverTimeline = gsap.timeline({
+  let coverTimeline = gsap.timeline({
     /*     onComplete: () => {}, */
   });
 
