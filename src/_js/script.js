@@ -2,6 +2,7 @@ console.warn(
   "Maybe check out https://github.com/alexkooksa/kooksa.codes instead of console ;)"
 );
 
+
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
@@ -11,9 +12,26 @@ window.addEventListener("resize", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var videoPlayButtons = document.getElementsByClassName("video__play-button");
+  const titles = document.querySelectorAll("h1 > span, h2 > span");
+  for (const element of titles) {
+    var fontSize = parseInt(
+      getComputedStyle(element).getPropertyValue("font-size")
+    );
+    const parent_width = parseInt(
+      getComputedStyle(element.parentElement).getPropertyValue("width")
+    );
+    while (element.offsetWidth > parent_width) {
+      element.style.fontSize = fontSize + "px";
+      fontSize -= 1;
+      console.log("the upscaled font-size has been fixed");
+    }
+    /*     element.style.opacity = "1";
+    element.parentElement.style.overflow = "visible"; */
+  }
 
-  for (var i = 0; i < videoPlayButtons.length; i++) {
+  let videoPlayButtons = document.getElementsByClassName("video__play-button");
+
+  for (let i = 0; i < videoPlayButtons.length; i++) {
     videoPlayButtons[i].onclick = function () {
       video = this.nextElementSibling;
       video_wrapper = this.parentElement;
