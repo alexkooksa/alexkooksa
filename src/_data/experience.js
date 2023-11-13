@@ -4,7 +4,7 @@ module.exports = {
       hidden: false,
       date: "сентябрь 2022 - н.в.",
       company: "Фриланс",
-      role: "Frontend-разработчик (фрилансер)",
+      role: "Web-разработчик (фрилансер)",
       responsibilities: [
         "разработка сайтов и приложений",
         "верстка, посадка на CMS",
@@ -33,7 +33,7 @@ module.exports = {
       responsibilities: [
         "расширенная область ответственности внутри компании",
         "адаптивная верстка по собственным и клиентским макетам",
-        "работа в команде с backend-разработчиком",
+        "работа в команде с fullstack-разработчиком",
         "поддержка проектов: <ul><li>дизайн и верстка новых компонентов,</li><li>оптимизация существующих компонентов,</li><li>устранение багов.</li></ul>",
       ],
     },
@@ -77,7 +77,7 @@ module.exports = {
       hidden: false,
       date: "September 2022 - Present",
       company: "Self-employment",
-      role: "Front-end developer (freelance)",
+      role: "Web Developer (freelance)",
       responsibilities: [
         "websites and apps development",
         "coding, CMS development",
@@ -88,7 +88,7 @@ module.exports = {
       hidden: false,
       date: "October 2017 - September 2022",
       company: "Evernet",
-      role: "Middle front-end developer",
+      role: "Middle Front-end Developer",
       responsibilities: [
         'Since 2022 I\'ve been working mainly on projects for Bright&nbsp;Rich: <a href="/projects/brightrich" class="link">main case study</a>, <a href="/projects/more-brightrich" class="link">more case studies</a>',
         "extended scope of responsibility within the company",
@@ -102,11 +102,11 @@ module.exports = {
       hidden: false,
       date: "October 2016 - September 2017",
       company: "Evernet",
-      role: "Junior front-end developer + UI/UX designer",
+      role: "Junior Front-end Developer + UI/UX Designer",
       responsibilities: [
         "extended scope of responsibility within the company",
         "development of the responsive layouts based on my own and client's designs",
-        "teamwork with a back-end developer",
+        "teamwork with a full-stack developer",
         "projects maintenance: <ul><li>design and coding of new components,</li> <li>optimization of existing components,</li> <li>bug fixing.</li></ul>",
       ],
     },
@@ -114,7 +114,7 @@ module.exports = {
       hidden: false,
       date: "March 2016 - September 2016",
       company: "Evernet",
-      role: "UI/UX designer",
+      role: "UI/UX Designer",
       responsibilities: [
         "creating design layouts for new websites",
         "redesign of existing client websites",
@@ -136,7 +136,7 @@ module.exports = {
       hidden: true,
       date: "September 2013 - August 2015",
       company: '"Open world",<br> marketing agency',
-      role: "Designer + photographer",
+      role: "Designer + Photographer",
       responsibilities: [
         "creating design layouts and presentations",
         "working with printing houses",

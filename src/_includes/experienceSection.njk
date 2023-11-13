@@ -4,6 +4,7 @@
             <div class="centered title-group">
                 <h2 class="section-title" data-gsap="opacity"><span class="gradient-text">{% i18n 'Experience', 'Опыт работы' %}</span></h2>
             </div>
+            <div class="centered"><a href="/content/files/Alexandra_Kuksa_CV_{{page.lang}}.pdf" target="_blank" class="btn btn-default">{% i18n 'Download CV (PDF, 134 kb)', 'Скачать резюме (PDF, 134 кб)' %}</a></div>
             <ul class="timeline">
                 {% for exp in experience[page.lang] %}
                 <li class="timeline-item" data-gsap="opacity" {% if exp.hidden %} hidden {% endif %}>
@@ -27,4 +28,4 @@
 
         </div>
     </section>
-</div>
+</div>`

@@ -130,6 +130,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src/content/");
 
+  eleventyConfig.addPassthroughCopy("./src/content/files");
   eleventyConfig.addPassthroughCopy("./src/content/video");
   eleventyConfig.addPassthroughCopy("./src/content/images");
 
