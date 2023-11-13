@@ -458,9 +458,8 @@
         font-weight: 600;
     }
 }
-
 .timeline-item::after,
-.timeline-item__info::after {
+.timeline-item__info::after, .timeline::before {
     content: "";
     width: 2px;
     background-color: #fff;
@@ -470,6 +469,9 @@
     border-right: 3px solid $black;
     box-sizing: content-box;
     margin: 0 auto;
+}
+.timeline::before {
+    margin-top: 16px;
 }
 
 .timeline-item__info::before {
