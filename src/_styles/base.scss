@@ -29,15 +29,12 @@ body {
     font-size: 19px;
     @include mq(768) {
         font-size: 17px;
-        --bodyFontSize: 17;
     }
     @include mq(1024) {
         font-size: 19px;
-        --bodyFontSize: 19;
     }
     @include mq(1600) {
         font-size: 22px;
-        --bodyFontSize: 22;
     }
     &.blocked {
         overflow: hidden !important;
