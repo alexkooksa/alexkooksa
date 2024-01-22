@@ -955,6 +955,11 @@ video,
         border-color: #284356;
     }
 }
+.media-bg-layer--transparent {
+    .btn-zoom {
+        border-color: #fff;
+    }
+}
 .media-bg-layer--dark-gray {
     background-color: #3b3f4b;
     .btn-zoom {
