@@ -2,10 +2,11 @@
 tags: ['latest_ru', 'projects_ru']
 date: 2023-01-01
 title: Больше для Bright Rich
-meta_title: Кейс | Другие проекты для Bright Rich
+meta_title: Кейс | Другие проекты для Bright Rich, краткий обзор
 meta_description: BR Home, BR Cash, BR CRM etc.
 short_desc: BR Home, BR Cash, BR CRM etc.
-year: 2022–2023
+short_desc_add: Краткий обзор.
+year: 2022–2024
 folder: more-brightrich
 role:
 - Дизайн / редизайн
@@ -23,23 +24,144 @@ no_intro_block: true
                 <h2><span>О компании</span></h2>
                 <p>Bright Rich — первая российская компания, принятая в CORFAC, международную ассоциацию брокеров коммерческой недвижимости. На сегодня портфель сделок превышает 1,9 млн кв. м. Офисы открыты в Москве, Санкт-Петербурге, Дубае и Алматы.</p>
                 <h2><span>Задачи</span></h2>
-                <p>Помимо переноса основного сайта (о котором можно прочитать в <a href="/work/brightrich" class="link">этом кейсе</a>) для компании был выполнено множество других проектов. Вот некоторые из них.</p>
+                <p>Помимо переноса основного сайта (о котором можно прочитать в <a href="/work/brightrich" class="link">этом кейсе</a>) для компании было выполнено множество других проектов. Вот некоторые из них.</p>
+                <br>
+
+                <h3>Быстрый переход</h3>
+                <ul class="bulleted-list--custom">
+                    <li><a class="link" href="#dotcom">Отдельный шаблон для brightrich.com</a></li>
+                    <li><a class="link" href="#cash">Партнерская программа BR Cash</a></li>
+                    <li><a class="link" href="#crm">CRM для внутреннего использования</a></li>
+                    <li><a class="link" href="#home">BR Home</a></li>
+                    <li><a class="link" href="#city">Аренда в Москва-Сити</a></li>
+                </ul>
             </div>
         </div>
     </section>
 </div>
 
-<section class="border-top">
+<section class="border-top" id="dotcom">
+    <div class="wrap">
+        <h2><span class="gradient-text">Brightrich.com</span></h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p class="accent-font">2024</p>
+                <ul class="taglist taglist--small">
+                    <li class="taglist__item">Дизайн</li>
+                </ul>
+                <div>
+                    <h3>Задача</h3>
+                    <p>Сделать дизайн дополнительной версии сайта, которая будет ориентирована на недвижимость в Дубае.</p>
+                </div>
+                <div>
+                    <h3>Процесс</h3>
+                    <p>Цветовая схема содержит спокойные оттенки, сочетание песочно-бежевого с коралловым и мягкие градиенты. Сохранен основной шрифт — Euclid, а для заголовков использован контрастный Merriweather с засечками. Также была сохранена структура основного сайта. Удачные композиционные решения были адаптированы под новый стиль.</p>
+                </div>
+            </div>
+            <div class="solution-image">
+                {% image ["src/content/", folder, "/brcom-colors.jpg"] | join, "bordered", "Цветовая гамма brightrich.com",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcom-figma.jpg"] | join, "", "Превью всех макетов brightrich.com",  [995, 1493]  %}
+            </div>
+        </div>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <div>
+                    <h3>Результат</h3>
+                    <p>Макеты для 16 основных разделов одобрены руководством и переданы разработчикам.</p>
+                    <p class="footnote">Все данные на скриншотах вымышлены</p>
+                </div>
+            </div>
+            <div class="solution-image media-bg-layer--transparent">
+                <div class="long-image-crop" data-lightbox>
+                    {% image ["src/content/", folder, "/brcom-homepage-preview.jpg"] | join, "bordered", "Превью главной страницы brightrich.com",  [995]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/brcom-homepage.jpg"] | join, "", "brightrich.com - главная страница",  [1376]  %}</div>
+                </div>
+                {% image ["src/content/", folder, "/brcom-apartments.jpg"] | join, "bordered", "Страница апартаментов  - brightrich.com",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcom-commercial.jpg"] | join, "bordered", "Страница офисов  - brightrich.com",  [995, 1493]  %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="border-top" id="cash">
+    <div class="wrap">
+        <h2><span class="gradient-text">BR Cash</span></h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p class="accent-font">2023</p>
+                <ul class="taglist taglist--small">
+                    <li class="taglist__item">Дизайн</li>
+                    <li class="taglist__item">Вёрстка</li>
+                </ul>
+                <div>
+                    <h3>Задача</h3>
+                    <p>Разработать личный кабинет партнерской программы Bright&nbsp;Rich для частных агентов и брокеров</p>
+                </div>
+                <div>
+                    <h3>Результат</h3>
+                    <p>Сделки представлены в виде блоков со шкалой прогресса. Каждый тип недвижимости помечается определенным цветом. Есть возможность связаться с менеджером по каждой сделке. После закрытия сделки появляется возможность скачать документы. Сайдбар с воронкой продаж всегда в зоне видимости с возможностью свернуть. Проект запущен и активно используется брокерами.</p>
+                    <p class="footnote">Все данные на скриншотах вымышлены</p>
+                </div>
+                <p><a href="https://brcash.pro" target="_blank" class="btn btn-outline--default btn-external"><span>brcash.pro</span></a></p>
+            </div>
+            <div class="solution-image">
+                {% image ["src/content/", folder, "/brcash-01.jpg"] | join, "bordered", "BR Cash - скриншот 02",  [995, 1493]  %}
+
+                {% image ["src/content/", folder, "/brcash-02.jpg"] | join, "bordered", "BR Cash - скриншот 01",  [995, 1493]  %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="border-top" id="crm">
+    <div class="wrap">
+        <h2><span class="gradient-text">BR CRM</span></h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p class="accent-font">2023</p>
+                <ul class="taglist taglist--small">
+                    <li class="taglist__item">Дизайн</li>
+                    <li class="taglist__item">Вёрстка</li>
+                </ul>
+                <div>
+                    <h3>Задача</h3>
+                    <p>Разработать систему (CRM) для внутреннего использования брокерами Bright&nbsp;Rich.</p>
+                </div>
+                <div>
+                    <h3>Процесс</h3>
+                    <p>За основу взят классический вид CRM с боковым меню. Дизайн элементов интерфейса в привычной стилистике Bright Rich. Основной раздел — листинг предложений с фильтрами. Брокеры могут создавать подборки, а модераторы добавлять и редактировать объекты.</p>
+                </div>
+                <div>
+                    <h3>Результат</h3>
+                    <p>Система сверстана с использованием классического стека (HTML, SCSS, jQuery, шаблоны Smarty для переиспользования компонентов, PHP на бэкенде), запущена и поддерживается командой Evernet.</p>
+                    <p class="footnote">Все данные на скриншотах вымышлены</p>
+                </div>
+            </div>
+            <div class="solution-image">
+                {% image ["src/content/", folder, "/brcrm-grid.jpg"] | join, "bordered", "BR CRM - скриншот 01",  [995, 1493]  %}
+
+                {% image ["src/content/", folder, "/brcrm-list.jpg"] | join, "bordered", "BR CRM - скриншот 02",  [995, 1493]  %}
+
+                {% image ["src/content/", folder, "/brcrm-popup.jpg"] | join, "bordered", "BR CRM - скриншот 03",  [995, 1493]  %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="border-top" id="home">
     <div class="wrap">
         <h2><span class="gradient-text">BR Home</span></h2>
         <div class="solution-layout">
             <div class="solution-desc rows">
+                <p class="accent-font">2022</p>
                 <ul class="taglist taglist--small">
                     <li class="taglist__item">Вёрстка</li>
                 </ul>
                 <div>
                     <h3>Задача</h3>
-                    <p>Компания Bright Rich запустила новое направление &mdash; сегмент элитного жилья. Нужно разработать имиджевый сайт в кратчайшие сроки.</p>
+                    <p>Компания Bright&nbsp;Rich запустила новое направление&nbsp;&mdash; сегмент элитного жилья. Нужно разработать имиджевый сайт в кратчайшие сроки.</p>
                 </div>
 
                 <div>
@@ -79,11 +201,12 @@ no_intro_block: true
     </div>
 </section>
 
-<section class="border-top">
+<section class="border-top" id="city">
     <div class="wrap">
         <h2><span class="gradient-text">Moscow City Broker</span></h2>
 
         <div class="rows readable">
+            <p class="accent-font">2022</p>
             <ul class="taglist taglist--small">
                 <li class="taglist__item">Аудит</li>
                 <li class="taglist__item">Редизайн</li>
@@ -91,7 +214,7 @@ no_intro_block: true
             </ul>
             <div>
                 <h3>Задача</h3>
-                <p>Сделать небольшой редизайн и улучшить UX на имеющемся сайте. Сверстать с нуля на собственной CMS Evernet, заточенной под работу с недвижимостью.</p>
+                <p>Сделать небольшой редизайн и улучшить UI/UX на имеющемся сайте. Сверстать с нуля на собственной CMS, заточенной под работу с недвижимостью.</p>
             </div>
             <div>
                 <h3>Процесс</h3>
@@ -267,71 +390,6 @@ no_intro_block: true
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="border-top">
-    <div class="wrap">
-        <h2><span class="gradient-text">BR Cash</span></h2>
-        <div class="solution-layout">
-            <div class="solution-desc rows">
-                <ul class="taglist taglist--small">
-                    <li class="taglist__item">Дизайн</li>
-                    <li class="taglist__item">Вёрстка</li>
-                </ul>
-                <div>
-                    <h3>Задача</h3>
-                    <p>Разработать личный кабинет партнерской программы Bright Rich для частных агентов и брокеров</p>
-                </div>
-                <div>
-                    <h3>Результат</h3>
-                    <p>Сделки представлены в виде блоков со шкалой прогресса. Каждый тип недвижимости помечается определенным цветом. Есть возможность связаться с менеджером по каждой сделке. После закрытия сделки появляется возможность скачать документы. Сайдбар с воронкой продаж всегда в зоне видимости с возможностью свернуть. Проект запущен и активно используется брокерами.</p>
-                    <p class="footnote">Все данные на скриншотах вымышлены</p>
-                </div>
-                <p><a href="https://brcash.pro" target="_blank" class="btn btn-outline--default btn-external"><span>brcash.pro</span></a></p>
-            </div>
-            <div class="solution-image">
-                {% image ["src/content/", folder, "/brcash-01.jpg"] | join, "bordered", "BR Cash - скриншот 02",  [995, 1493]  %}
-
-                {% image ["src/content/", folder, "/brcash-02.jpg"] | join, "bordered", "BR Cash - скриншот 01",  [995, 1493]  %}
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="border-top">
-    <div class="wrap">
-        <h2><span class="gradient-text">BR CRM</span></h2>
-        <div class="solution-layout">
-            <div class="solution-desc rows">
-                <ul class="taglist taglist--small">
-                    <li class="taglist__item">Дизайн</li>
-                    <li class="taglist__item">Вёрстка</li>
-                </ul>
-                <div>
-                    <h3>Задача</h3>
-                    <p>Разработать систему (CRM) для внутреннего использования брокерами Bright&nbsp;Rich.</p>
-                </div>
-                <div>
-                    <h3>Процесс</h3>
-                    <p>За основу взят классический вид CRM с боковым меню. Дизайн элементов интерфейса в привычной стилистике Bright Rich. Основной раздел — листинг предложений с фильтрами. Брокеры могут создавать подборки, а модераторы добавлять и редактировать объекты.</p>
-                </div>
-                <div>
-                    <h3>Результат</h3>
-                    <p>Система сверстана с использованием классического стека (HTML, SCSS, jQuery, шаблоны Smarty для переиспользования компонентов, PHP на бэкенде), запущена и поддерживается командой Evernet.</p>
-                    <p class="footnote">Все данные на скриншотах вымышлены</p>
-                </div>
-            </div>
-            <div class="solution-image">
-                {% image ["src/content/", folder, "/brcrm-grid.jpg"] | join, "bordered", "BR CRM - скриншот 01",  [995, 1493]  %}
-
-                {% image ["src/content/", folder, "/brcrm-list.jpg"] | join, "bordered", "BR CRM - скриншот 02",  [995, 1493]  %}
-
-                {% image ["src/content/", folder, "/brcrm-popup.jpg"] | join, "bordered", "BR CRM - скриншот 03",  [995, 1493]  %}
 
             </div>
         </div>

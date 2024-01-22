@@ -7,14 +7,14 @@ module.exports = {
       role: "Web-разработчик (фрилансер)",
       responsibilities: [
         "разрабатываю дизайн сайтов и приложений",
-        "верстаю сайты, в том числе шаблоны для CMS ",
+        "занимаюсь версткой",
         "самообразовываюсь, улучшаю навыки JS, изучаю React и другие актуальные технологии, чтобы двигаться дальше",
       ],
     },
     {
       hidden: false,
       date: "апрель 2017 - сентябрь 2022",
-      company: "Evernet",
+      company: "Веб-студия Evernet",
       role: "Middle frontend-разработчик",
       responsibilities: [
         "участвовала во всех этапах разработки на большинстве проектов: <ul><li>дизайн,</li><li>создание шаблонов с версткой для CMS,</li><li>наполнение контентом,</li><li>настройка модулей для вывода клиентского контента в админке,</li><li>сопровождение и внедрение новых функций после запуска</li></ul>",
@@ -29,7 +29,7 @@ module.exports = {
     {
       hidden: false,
       date: "октябрь 2016 - октябрь 2017",
-      company: "Evernet",
+      company: "Веб-студия Evernet",
       role: "Junior frontend-разработчик + UI/UX-дизайнер",
       responsibilities: [
         "спустя некоторое время приняла на себя обязанности верстальщика, т. к. у меня были базовые знания HTML, CSS и jQuery",
@@ -43,7 +43,7 @@ module.exports = {
     {
       hidden: false,
       date: "март 2016 - сентябрь 2016",
-      company: "Evernet",
+      company: "Веб-студия Evernet",
       role: "UI/UX-дизайнер",
       responsibilities: [
         "получила работу без релевантных проектов в портфолио благодаря тестовому заданию и мотивации",
@@ -85,14 +85,14 @@ module.exports = {
       role: "Web Developer (freelance)",
       responsibilities: [
         "designing websites and applications",
-        "coding website layouts, including CMS templates",
+        "coding website layouts",
         "self-educating, improving JS skills, learning React and other modern technologies to move forward and grow"
       ],
     },
     {
       hidden: false,
       date: "October 2017 - September 2022",
-      company: "Evernet",
+      company: "Evernet, digital agency",
       role: "Middle Front-end Developer",
       responsibilities: [
         "participated in all stages of development on most of the projects:<ul><li>design,</li> <li>creation of templates and layout for CMS,</li><li>content management,</li><li>customization of modules for output of client content in the admin panel,</li><li>maintenance and implementation of new features after launch</li></ul>",
@@ -107,7 +107,7 @@ module.exports = {
     {
       hidden: false,
       date: "October 2016 - September 2017",
-      company: "Evernet",
+      company: "Evernet, digital agency",
       role: "Junior Front-end Developer + UI/UX Designer",
       responsibilities: [
         "after some time I took over the duties of a junior front-end developer as I had basic knowledge of HTML, CSS and jQuery",
@@ -121,7 +121,7 @@ module.exports = {
     {
       hidden: false,
       date: "March 2016 - September 2016",
-      company: "Evernet",
+      company: "Evernet, digital agency",
       role: "UI/UX Designer",
       responsibilities: [
         "got this position with no relevant projects in portfolio thanks to the test task and motivation",

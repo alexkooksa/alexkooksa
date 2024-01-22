@@ -1,6 +1,9 @@
 /node_modules
 .vscode
+.cache
 /img
 /public
-/stuff
+/temp
 gh-pages
+yarn-error.log
+desktop.ini

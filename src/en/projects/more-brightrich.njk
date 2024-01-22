@@ -4,8 +4,9 @@ date: 2023-01-01
 title: More for Bright Rich
 meta_title: Case study | More projects for Bright Rich
 meta_description: BR Home, BR Cash, BR CRM etc.
+short_desc_add: Projects overview.
 short_desc: BR Home, BR Cash, BR CRM etc.
-year: 2022–2023
+year: 2022–2024
 folder: more-brightrich
 role:
 - Design / Redesign
@@ -30,7 +31,115 @@ no_intro_block: true
     </section>
 </div>
 
-<section class="border-top">
+<section class="border-top" id="dotcom">
+    <div class="wrap">
+        <h2><span class="gradient-text">Brightrich.com</span></h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <p class="accent-font">2024</p>
+                <ul class="taglist taglist--small">
+                    <li class="taglist__item">Design</li>
+                </ul>
+                <div>
+                    <h3>Goals</h3>
+                    <p>Design an additional version of the website focused on real estate in Dubai.</p>
+                </div>
+                <div>
+                    <h3>Process</h3>
+                    <p>The palette includes muted tones, a combination of sand beige and coral, and soft gradients. The main typeface remains Euclid, with the contrasting serif Merriweather used for headlines. The structure of the main page was also retained. Well-performing compositional solutions have been adapted to the new style.</p>
+                </div>
+            </div>
+            <div class="solution-image">
+                {% image ["src/content/", folder, "/brcom-colors.jpg"] | join, "bordered", "Color palette -  brightrich.com",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcom-figma.jpg"] | join, "", "Figma preview brightrich.com",  [995, 1493]  %}
+            </div>
+        </div>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <div>
+                    <h3>Result</h3>
+                    <p>Layouts for the 16 major sections have been approved by management and submitted to the developers.</p>
+                    <p class="footnote">All data in the screenshots is fictional.</p>
+                </div>
+            </div>
+            <div class="solution-image media-bg-layer--transparent">
+                <div class="long-image-crop" data-lightbox>
+                    {% image ["src/content/", folder, "/brcom-homepage-preview.jpg"] | join, "bordered", "brightrich.com - homepage preview",  [995]  %}
+                    <div data-full-image>{% image ["src/content/", folder, "/brcom-homepage.jpg"] | join, "", "brightrich.com - homepage",  [1376]  %}</div>
+                </div>
+                {% image ["src/content/", folder, "/brcom-apartments.jpg"] | join, "bordered", "Apartments page  - brightrich.com",  [995, 1493]  %}
+                {% image ["src/content/", folder, "/brcom-commercial.jpg"] | join, "bordered", "Offices page  - brightrich.com",  [995, 1493]  %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="border-top" id="cash">
+    <div class="wrap">
+        <h2><span class="gradient-text">BR Cash</span></h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <ul class="taglist taglist--small">
+                    <li class="taglist__item">Design</li>
+                    <li class="taglist__item">Front-end development</li>
+                </ul>
+                <div>
+                    <h3>Goals</h3>
+                    <p>Develop a personal account for the Bright Rich affiliate programme for private agents and brokers.</p>
+                </div>
+                <div>
+                    <h3>Result</h3>
+                    <p>The deals are displayed in blocks with a progress bar and are categorised by property type using specific colours. It is possible to contact a manager for each deal. After closure, relevant documents can be downloaded. The sales funnel sidebar remains visible at all times and can be collapsed if necessary. The project has been launched and is actively used by brokers.</p>
+                    <p class="footnote">All data in the screenshots is fictional.</p>
+                </div>
+               <p><a href="https://brcash.pro" target="_blank" class="btn btn-outline--default btn-external"><span>brcash.pro</span></a></p>
+            </div>
+            <div class="solution-image">
+                {% image ["src/content/", folder, "/brcash-01.jpg"] | join, "bordered", "BR Cash - screenshot 02",  [995, 1493]  %}
+
+                {% image ["src/content/", folder, "/brcash-02.jpg"] | join, "bordered", "BR Cash - screenshot 01",  [995, 1493]  %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="border-top" id="crm">
+    <div class="wrap">
+        <h2><span class="gradient-text">BR CRM</span></h2>
+        <div class="solution-layout">
+            <div class="solution-desc rows">
+                <ul class="taglist taglist--small">
+                    <li class="taglist__item">Design</li>
+                    <li class="taglist__item">Front-end development</li>
+                </ul>
+                <div>
+                    <h3>Goals</h3>
+                    <p>Develop a system (CRM) for the internal usage of Bright Rich brokers.</p>
+                </div>
+                <div>
+                    <h3>Process</h3>
+                    <p>The standard CRM layout with sidebar was used as the basis. The interface design follows the typical Bright Rich style.The primary section displays a list of offers, which can be filtered. Brokers are allowed to create selections, while moderators can add and modify items.</p>
+                </div>
+                <div>
+                    <h3>Result</h3>
+                    <p>The Evernet team runs and maintains the system, which is built with the classic stack featuring HTML, SCSS, jQuery and Smarty templates for component reuse. PHP is used on the backend for efficient functionality.</p>
+                    <p class="footnote">All data in the screenshots is fictional.</p>
+                </div>
+            </div>
+            <div class="solution-image">
+                {% image ["src/content/", folder, "/brcrm-grid.jpg"] | join, "bordered", "BR CRM - screenshot 01",  [995, 1493]  %}
+
+                {% image ["src/content/", folder, "/brcrm-list.jpg"] | join, "bordered", "BR CRM - screenshot 02",  [995, 1493]  %}
+
+                {% image ["src/content/", folder, "/brcrm-popup.jpg"] | join, "bordered", "BR CRM - screenshot 03",  [995, 1493]  %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="border-top" id="home">
     <div class="wrap">
         <h2><span class="gradient-text">BR Home</span></h2>
         <div class="solution-layout">
@@ -78,9 +187,10 @@ no_intro_block: true
             </div>
         </div>
     </div>
-</section>
+</section
 
-<section class="border-top">
+
+<section class="border-top" id="city">
     <div class="wrap">
         <h2><span class="gradient-text">Moscow City Broker</span></h2>
 
@@ -240,6 +350,7 @@ no_intro_block: true
         </div>
     </div>
 </section>
+
 <section class="border-top--light">
     <div class="wrap">
         <div class="solution-layout">
@@ -264,71 +375,6 @@ no_intro_block: true
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="border-top">
-    <div class="wrap">
-        <h2><span class="gradient-text">BR Cash</span></h2>
-        <div class="solution-layout">
-            <div class="solution-desc rows">
-                <ul class="taglist taglist--small">
-                    <li class="taglist__item">Design</li>
-                    <li class="taglist__item">Front-end development</li>
-                </ul>
-                <div>
-                    <h3>Goals</h3>
-                    <p>Develop a personal account for the Bright Rich affiliate programme for private agents and brokers.</p>
-                </div>
-                <div>
-                    <h3>Result</h3>
-                    <p>The deals are displayed in blocks with a progress bar and are categorised by property type using specific colours. It is possible to contact a manager for each deal. After closure, relevant documents can be downloaded. The sales funnel sidebar remains visible at all times and can be collapsed if necessary. The project has been launched and is actively used by brokers.</p>
-                    <p class="footnote">All data in the screenshots is fictional.</p>
-                </div>
-               <p><a href="https://brcash.pro" target="_blank" class="btn btn-outline--default btn-external"><span>brcash.pro</span></a></p>
-            </div>
-            <div class="solution-image">
-                {% image ["src/content/", folder, "/brcash-01.jpg"] | join, "bordered", "BR Cash - screenshot 02",  [995, 1493]  %}
-
-                {% image ["src/content/", folder, "/brcash-02.jpg"] | join, "bordered", "BR Cash - screenshot 01",  [995, 1493]  %}
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="border-top">
-    <div class="wrap">
-        <h2><span class="gradient-text">BR CRM</span></h2>
-        <div class="solution-layout">
-            <div class="solution-desc rows">
-                <ul class="taglist taglist--small">
-                    <li class="taglist__item">Design</li>
-                    <li class="taglist__item">Front-end development</li>
-                </ul>
-                <div>
-                    <h3>Goals</h3>
-                    <p>Develop a system (CRM) for the internal usage of Bright Rich brokers.</p>
-                </div>
-                <div>
-                    <h3>Process</h3>
-                    <p>The standard CRM layout with sidebar was used as the basis. The interface design follows the typical Bright Rich style.The primary section displays a list of offers, which can be filtered. Brokers are allowed to create selections, while moderators can add and modify items.</p>
-                </div>
-                <div>
-                    <h3>Result</h3>
-                    <p>The Evernet team runs and maintains the system, which is built with the classic stack featuring HTML, SCSS, jQuery and Smarty templates for component reuse. PHP is used on the backend for efficient functionality.</p>
-                    <p class="footnote">All data in the screenshots is fictional.</p>
-                </div>
-            </div>
-            <div class="solution-image">
-                {% image ["src/content/", folder, "/brcrm-grid.jpg"] | join, "bordered", "BR CRM - screenshot 01",  [995, 1493]  %}
-
-                {% image ["src/content/", folder, "/brcrm-list.jpg"] | join, "bordered", "BR CRM - screenshot 02",  [995, 1493]  %}
-
-                {% image ["src/content/", folder, "/brcrm-popup.jpg"] | join, "bordered", "BR CRM - screenshot 03",  [995, 1493]  %}
 
             </div>
         </div>
