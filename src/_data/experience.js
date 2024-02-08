@@ -8,7 +8,7 @@ module.exports = {
       responsibilities: [
         "разрабатываю дизайн сайтов и приложений",
         "занимаюсь версткой",
-        "самообразовываюсь, улучшаю навыки JS, изучаю React и другие актуальные технологии, чтобы двигаться дальше",
+        "самообразовываюсь, улучшаю навыки JS, изучаю актуальные фреймворки, чтобы двигаться дальше",
       ],
     },
     {
@@ -86,7 +86,7 @@ module.exports = {
       responsibilities: [
         "designing websites and applications",
         "coding website layouts",
-        "self-educating, improving JS skills, learning React and other modern technologies to move forward and grow"
+        "self-educating, improving JS skills, learning modern frameworks to move forward and grow"
       ],
     },
     {
